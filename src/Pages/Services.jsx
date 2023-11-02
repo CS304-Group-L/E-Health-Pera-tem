@@ -3,7 +3,15 @@ import Navbar from "../components/Navbar";
 import Footer from "../components/Footer";
 import image from "../Assets/Photo2.jpg";
 import { Link } from "react-router-dom";
-
+const buttons = [
+  {id: 1, name: "Student", path: "/DoctorBoard"},
+  {id: 2, name: "Staff", path: "/DoctorBoard"},
+  {id: 3, name: "Doctor", path: "/DoctorBoard"},
+  {id: 4, name: "Pharmacy", path: "/Pharmacy"},
+  {id: 5, name: "Laboratary", path: "/Pharmacy"},
+  {id: 6, name: "Ward", path: "/Pharmacy"},
+  {id: 7, name: "Nurse", path: "/Pharmacy"},
+]
 function Services() {
   return (
     <div className="flex flex-col h-screen">
@@ -17,30 +25,15 @@ function Services() {
       </div>
 
       <div className="mt-0">
-        <div class="min-h-full pt-1 flex items-center justify-center h-[51vh]">
-          <div class="flex flex-wrap justify-center space-x-2 pt-5">
-            <button class="bg-red-800 hover:bg-yellow-300 text-black font-bold py-2 px-4 rounded">
-              Student
-            </button>
-            <button class="bg-red-800 hover:bg-yellow-300 text-black font-bold py-2 px-4 rounded">
-              Staff
-            </button>
-            <button class="bg-red-800 hover:bg-yellow-300 text-black font-bold py-2 px-4 rounded">
-              <Link to="/DoctorBoard">Doctor</Link>
-            </button>
-            <button class="bg-red-800 hover:bg-yellow-300 text-black font-bold py-2 px-4 rounded">
-              <Link to="/Pharmacy"> Pharmacy </Link>
-            </button>
-
-            <button class="bg-red-800 hover:bg-yellow-300 text-black font-bold py-2 px-4 rounded">
-              Laboratory
-            </button>
-            <button class="bg-red-800 hover:bg-yellow-300 text-black font-bold py-2 px-4 rounded">
-              Ward
-            </button>
-            <button class="bg-red-800 hover:bg-yellow-300 text-black font-bold py-2 px-4 rounded">
-              Nurse
-            </button>
+        <div className="min-h-full pt-1 flex items-center justify-center h-[51vh]">
+          <div className="flex flex-wrap justify-center pt-5 space-x-2">
+            {buttons.map((item) =>(
+              <button key={item.id} className="px-4 py-2 font-bold text-black bg-red-800 rounded hover:bg-yellow-300">
+              <Link to={item.path}>{item.name}</Link>
+              </button>
+            ))
+              
+            }
           </div>
         </div>
       </div>
