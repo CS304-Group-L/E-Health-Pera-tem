@@ -28,9 +28,9 @@ const router = createBrowserRouter([
 
   { path: "/About", element: <Aboutus /> },
 
-  { path: "/Pharmacy", element: <Pharmacy/> },
-  
-  { path: "/DoctorBoard", element: <DoctorBoard /> }
+  { path: "/Pharmacy", element: <Pharmacy /> },
+
+  { path: "/DoctorBoard", element: <DoctorBoard /> },
 ]);
 
 export default function App() {
