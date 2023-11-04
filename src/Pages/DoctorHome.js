@@ -1,35 +1,38 @@
 import React from "react";
 import Navbar from "../components/Navbar";
 import medicalRecord from "../Assets/medical_record.png";
+import medicine from "../Assets/medicine_icon.png";
+import lab from "../Assets/lab icon.png";
+import medical from "../Assets/medical.png"
 
 const options = [
   {
     id: 1,
     name: "Health Record",
-    bg_color: "bg-green-600",
+    bg_color: "bg-green-500",
     img: medicalRecord,
   },
   {
     id: 2,
     name: "Medical Report",
     bg_color: "bg-blue-500",
-    img: medicalRecord,
+    img: medical,
   },
-  { id: 3, name: "Medicine", bg_color: "bg-yellow-500", img: medicalRecord },
+  { id: 3, 
+    name: "Medicine", 
+    bg_color: "bg-purple-600", 
+    img: medicine },
   {
     id: 4,
     name: "Laboratary Test",
-    bg_color: "bg-purple-600",
-    img: medicalRecord,
+    bg_color: "bg-yellow-300",
+    img: lab,
   },
 ];
 
 function DoctorBoard() {
   return (
     <div>
-      <div>
-        <Navbar />
-      </div>
     <div className = "flex justify-center">
       <div className="grid w-1/2 grid-cols-2 gap-10 mt-20 ">
         {options.map((item) => (
