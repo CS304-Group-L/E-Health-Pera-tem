@@ -9,6 +9,9 @@ import Contactus from "./Pages/Contactus";
 import Aboutus from "./Pages/About";
 import Pharmacy from "./Pages/Pharmacy";
 import DoctorBoard from "./Pages/DoctorHome";
+import Medicines from "./Pages/Medicine";
+import HealthRecords from "./Pages/HealthRecord";
+import GiveMedicine from "./Pages/GiveMedicine";
 
 const router = createBrowserRouter([
   {
@@ -31,6 +34,12 @@ const router = createBrowserRouter([
   { path: "/Pharmacy", element: <Pharmacy /> },
 
   { path: "/DoctorBoard", element: <DoctorBoard /> },
+
+  { path : "/Medicines" , element: <Medicines/>},
+
+  { path : "/HealthRecords" , element: <HealthRecords/>},
+  
+  { path : "/GiveMedicine" , element: <GiveMedicine/>}
 ]);
 
 export default function App() {
