@@ -17,7 +17,7 @@ const topButtons = [
         id: 2,
         name: "Medical Report",
         bg_color: "bg-blue-500",
-        path: "/HealthRecords"
+        path: "/MedicalReport"
     },
     {
         id: 3,
@@ -29,7 +29,7 @@ const topButtons = [
         id: 4,
         name: "Laboratary Test",
         bg_color: "bg-yellow-300",
-        path: "/HealthRecords"
+        path: "/LabReport"
     }
 ];
 const buttons = [
@@ -44,7 +44,8 @@ const buttons = [
         id: 2,
         name: "View Past Medicine Records",
         bg_color: "bg-red-400",
-        img: searchs
+        img: searchs,
+        path : "/ViewPastMedicineRecordsSearch"
     }
 
 ];
@@ -54,26 +55,26 @@ function Medicines() {
     return (
         <div>
 
-            <div className="w-full">
+
                 <div className="flex justify-center">
-                    <div className="grid w-1/2 grid-cols-4 gap-0 mt-1 grid-rows-1">
+                    <div className="grid w-full grid-cols-4 gap-0 mt-1 grid-rows-1">
                         {topButtons.map((item => (
-                            <button key={item.id} className={`flex flex-col item-center p-5 ${item.name === 'Medicine' ? `bg-gray-200 text-red-500 underline` : item.bg_color} hover:bg-gray-200`}>
-                                <div className="flex justify-center text-end"></div>
+                            <button key={item.id} className={`flex flex-col item-center p-5 ${item.name === 'Medicine' ? `bg-gray-200  underline` : item.bg_color} hover:bg-gray-200`}>
+                                <div className="flex justify-center text-end">
                                 <Link to={item.path}>
                                     {item.name}
                                 </Link>
+                                </div>
+                                
                             </button>
                         ))
 
                         )}
-                    </div>
+                
                 </div>
             </div>
             <div>
-                <Link to="/DoctorBoard">
-                    Home
-                </Link>
+            <Link to="/DoctorBoard"><img className="w-12 m-5 ml-5 " src={home} alt='Doctor-Home'/></Link>
             </div>
             <div className="flex justify-center">
                 <div className="grid w-1/2 grid-cols-2 gap-10 mt-20 grid-rows-1">

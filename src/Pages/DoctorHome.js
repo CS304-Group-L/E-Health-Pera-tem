@@ -12,7 +12,7 @@ const options = [
     name: "Health Record",
     bg_color: "bg-green-500",
     img: medicalRecord,
-    path:"/HealthRecord"
+    path:"/HealthRecords"
   },
   {
     id: 2,
@@ -49,10 +49,12 @@ function DoctorBoard() {
               src={item.img}
               alt="icon"
             />
-            <div className="flex justify-center text-end"></div>
+            <div className="flex justify-center text-end">
             <Link to={item.path}>
               {item.name}
               </Link> 
+            </div>
+            
           </button>
         ))}
       </div>
