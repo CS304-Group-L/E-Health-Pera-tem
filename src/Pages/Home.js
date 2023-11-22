@@ -2,6 +2,21 @@ import React from "react";
 import Navbar from "../components/Navbar";
 import Footer from "../components/Footer";
 import photo from "../Assets/photo.jpg";
+import "react-responsive-carousel/lib/styles/carousel.min.css";
+import { Carousel } from "react-responsive-carousel";
+import photo_1 from "../Assets/photo.jpg";
+import photo_2 from "../Assets/Uni_photo_2.jpeg";
+import photo_3 from "../Assets/Uni_photo_3.jpg";
+import photo_4 from "../Assets/Uni_photo_4.jpg";
+import photo_5 from "../Assets/Uni_photo_5.jpg";
+
+const back_ground_4to = [
+  { id: 1, img: photo_1 },
+  { id: 2, img: photo_2 },
+  { id: 3, img: photo_3 },
+  { id: 4, img: photo_4 },
+  { id: 5, img: photo_5 },
+];
 
 export default function Home() {
   return (
@@ -60,7 +75,21 @@ export default function Home() {
         </div>
 
         <div className="object-cover object-none w-full bg-yellow-300 h-200">
-           {<img src={photo} alt="University of Peradeniya Photo" /> }
+        <Carousel
+          showThumbs={false}
+          infiniteLoop={true}
+          interval={2000}
+          autoPlay={true}
+        >
+          {back_ground_4to.map((item) => (
+            <img
+              key={item.id}
+              className="object-cover w-full h-[500px] opacity-50"
+              src={item.img}
+              alt=""
+            />
+          ))}
+        </Carousel>
         </div>
       </div>
 
