@@ -38,7 +38,7 @@ const buttons = [
         name: "Add Medical",
         bg_color: "bg-blue-500",
         img: add,
-        path:""
+        path:"/CreateMedical"
     },
     {
         id: 2,
