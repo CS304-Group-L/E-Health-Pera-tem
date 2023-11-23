@@ -1,6 +1,6 @@
 import { Link, useNavigate } from 'react-router-dom';
 import home from '../Assets/home.png';
-import { useState,useEffect} from 'react';
+import { useState, useEffect } from 'react';
 
 
 const topButtons = [
@@ -18,8 +18,9 @@ const topButtons = [
     }];
 
 function IssueLaboratoryTest() {
-    const [text, setText] = useState('');
-    const [description, setDescription] = useState('');
+    const [enrollNumber, setenrollNumber] = useState('');
+    const [test, setTest] = useState('');
+    const [doctorName, setDoctorName] = useState('');
     const [successMessage, setSuccessMessage] = useState('');
     const [currentDateTime, setCurrentDateTime] = useState('');
     const navigate = useNavigate();
@@ -27,26 +28,26 @@ function IssueLaboratoryTest() {
     const updateCurrentDateTime = () => {
         const now = new Date();
         const formattedDateTime = now.toLocaleString('en-US', {
-          year: 'numeric',
-          month: 'short',
-          day: 'numeric',
-          hour: 'numeric',
-          minute: 'numeric',
-          second: 'numeric',
-          hour12: true,
+            year: 'numeric',
+            month: 'short',
+            day: 'numeric',
+            hour: 'numeric',
+            minute: 'numeric',
+            second: 'numeric',
+            hour12: true,
         });
         setCurrentDateTime(formattedDateTime);
-      };
+    };
 
-      useEffect(() => {
+    useEffect(() => {
         updateCurrentDateTime();
-   
+
         const interval = setInterval(() => {
-          updateCurrentDateTime();
+            updateCurrentDateTime();
         }, 1000);
-    
+
         return () => clearInterval(interval);
-      }, []);
+    }, []);
 
 
     const handleSubmit = (e) => {
@@ -84,15 +85,18 @@ function IssueLaboratoryTest() {
                 <Link to="/DoctorBoard"><img className="w-12 m-5 ml-5 " src={home} alt='Doctor-Home' /></Link>
             </div>
 
-            <div className='m-5 mt-40'>
+            <div className='m-5 mt-40 border border-gray-300 p-9'>
                 {successMessage && <p>{successMessage}</p>}
                 <div className="mb-2 text-right text-gray-500">{currentDateTime}</div>
+                <div className='text-3xl font-bold mb-8 underline'>
+                    Request For Laboratory Test
+                </div>
                 <form onSubmit={handleSubmit}>
                     <div className='m-5'>
                         <label>
-                            Enter Enrollment Number:
+                            Student Enrollment Number:
                             <div className='mt-5'>
-                                <input type="text" value={text} onChange={(e) => setText(e.target.value)}
+                                <input type="text" value={enrollNumber} onChange={(e) => setenrollNumber(e.target.value)}
                                     className="border border-gray-300 px-3 py-2 rounded-md focus:outline-none focus:ring focus:border-blue-500 w-1/2"
                                     placeholder="Enter number here" />
                             </div>
@@ -102,7 +106,7 @@ function IssueLaboratoryTest() {
                         <label>
                             Test Name:
                             <div className='mt-5'>
-                                <input type="text" value={text} onChange={(e) => setText(e.target.value)}
+                                <input type="text" value={test} onChange={(e) => setTest(e.target.value)}
                                     className="border border-gray-300 px-3 py-2 rounded-md focus:outline-none focus:ring focus:border-blue-500 w-1/2"
                                     placeholder="Test Name" />
                             </div>
@@ -112,17 +116,18 @@ function IssueLaboratoryTest() {
                         <label>
                             Doctor Name:
                             <div className='mt-5'>
-                                <input type="text" value={text} onChange={(e) => setText(e.target.value)}
+                                <input type="text" value={doctorName} onChange={(e) => setDoctorName(e.target.value)}
                                     className="border border-gray-300 px-3 py-2 rounded-md focus:outline-none focus:ring focus:border-blue-500 w-1/2"
                                     placeholder="Dr. " />
                             </div>
                         </label>
-                    </div>
-                    
-                    <div className='m-5 mt-5 mr-10'>
-                    <button type="submit" className="text-black bg-red-800 rounded hover:bg-yellow-300 text-white px-4 py-2 absolute right-0 mt-2 mr-10">
-                        Save & Send Copy To Laboratory
+                        <button type="submit" className="text-black bg-blue-500 rounded hover:bg-blue-600 text-white px-4 py-2 absolute right-0 mt-2 mr-10 mb-10 p-5">
+                            Save & Send Copy To Laboratory
                         </button>
+                    </div>
+
+                    <div className='m-5 mt-5 mr-10'>
+                        
                     </div>
                 </form>
             </div>
