@@ -52,7 +52,7 @@ const buttons = [
 function LabReport() {
 
     return (
-        <div>
+        <div className="block mb-2 font-semibold font-poppins">
 
                 <div className="flex justify-center">
                     <div className="grid w-full grid-cols-4 gap-0 mt-0 grid-rows-1">

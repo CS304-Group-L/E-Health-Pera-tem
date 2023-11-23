@@ -22,6 +22,7 @@ import ViewPastMedicineRecords from "./Pages/ViewPastMedicineRecords";
 import IssueLaboratoryTest from "./Pages/IssueLaboratoryTest";
 import CreateMedical from "./Pages/CreateMedical";
 
+
 const router = createBrowserRouter([
   {
     path: "/",
@@ -66,7 +67,9 @@ const router = createBrowserRouter([
 
   {path : "/IssueLaboratoryTest" , element : <IssueLaboratoryTest/>},
 
-  {path : "/CreateMedical",element : <CreateMedical/>}
+  {path : "/CreateMedical",element : <CreateMedical/>},
+
+
 ]);
 
 export default function App() {
