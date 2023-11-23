@@ -23,8 +23,7 @@ function ViewPastHealthRecordsSearch() {
     const [loading, setLoading] = useState(false);
 
     const handleSearch = async () => {
-        // You should make an API call to the backend here to fetch health records
-        // For this example, let's assume we have a mock API function
+        // API call to the backend here to fetch health records
         setLoading(true);
         try {
             const records = await fetchHealthRecordsFromBackend(enrollNumber);
