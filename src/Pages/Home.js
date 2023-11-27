@@ -74,7 +74,7 @@ export default function Home() {
           </div>
         </div>
 
-        <div className="object-cover object-none w-full bg-yellow-300 h-200">
+        <div className="object-cover object-none w-full h-200">
         <Carousel
           showThumbs={false}
           infiniteLoop={true}

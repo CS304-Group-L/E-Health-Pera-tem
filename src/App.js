@@ -12,12 +12,14 @@ import DoctorBoard from "./Pages/DoctorHome";
 import Medicines from "./Pages/Medicine";
 import HealthRecords from "./Pages/HealthRecord";
 import GiveMedicine from "./Pages/GiveMedicine";
+import DrugStore from "./Pages/drugStore";
+import AddDrugs from "./Pages/PharmacyFiles/AddDrugs";
+import DeleteDrugs from "./Pages/PharmacyFiles/DeleteDrugs";
+import UpdateDrugs from "./Pages/PharmacyFiles/UpdateDrugs";
+import ViewDrugs from "./Pages/PharmacyFiles/ViewDrugs";
 
 const router = createBrowserRouter([
-  {
-    path: "/",
-    element: <Home />,
-  },
+  { path: "/",element: <Home />,},
 
   { path: "/Login", element: <Login /> },
 
@@ -38,8 +40,18 @@ const router = createBrowserRouter([
   { path : "/Medicines" , element: <Medicines/>},
 
   { path : "/HealthRecords" , element: <HealthRecords/>},
+
+  { path : "/DrugStore" , element: <DrugStore/>},
   
-  { path : "/GiveMedicine" , element: <GiveMedicine/>}
+  { path : "/GiveMedicine" , element: <GiveMedicine/>},
+
+  { path : "/PharmacyFile/AddDrugs" , element: <AddDrugs/>},
+
+  { path : "/PharmacyFile/DeleteDrugs" , element: <DeleteDrugs/>},
+
+  { path : "/PharmacyFile/ViewDrugs" , element: <ViewDrugs/>},
+
+  { path : "/PharmacyFile/UpdateDrugs" , element: <UpdateDrugs/>},
 ]);
 
 export default function App() {

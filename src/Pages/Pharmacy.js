@@ -8,16 +8,18 @@ import bgimg2 from "../Assets/Back_drug2.jpg";
 import bgimg3 from "../Assets/Back_drug3.jpg";
 import bgimg4 from "../Assets/Back_drug4.jpg";
 import bgimg5 from "../Assets/Back_drug5.jpg";
+import { Link } from "react-router-dom";
 
 const options = [
   {
     id: 1,
     name: "Drug Store",
     bg_color: "bg-green-600",
+    path: "/DrugStore"
   },
   {
     id: 2,
-    name: "Medical Report",
+    name: "Drug Issueing",
     bg_color: "bg-blue-500",
   },
 ];
@@ -58,7 +60,10 @@ function Pharmacy() {
               key={item.id}
               className={`flex items-center justify-center p-5 ${item.bg_color}`}
             >
+              <Link to={item.path}>
               <p className="font-bold text-3xl">{item.name}</p>
+              <div className="flex justify-center text-end"></div>
+              </Link> 
             </button>
           ))}
         </div>
