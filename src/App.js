@@ -12,6 +12,16 @@ import DoctorBoard from "./Pages/DoctorHome";
 import Medicines from "./Pages/Medicine";
 import HealthRecords from "./Pages/HealthRecord";
 import GiveMedicine from "./Pages/GiveMedicine";
+import MedicalReport from "./Pages/MedicalReport";
+import LabReport from "./Pages/LabReport";
+import AddHealthRecord from "./Pages/AddHealthRecord";
+import ViewPastHealthRecordsSearch from "./Pages/ViewPastHealthRecordsSearch";
+import ViewPastHealthRecords from "./Pages/ViewPastHealthRecords";
+import ViewPastMedicineRecordsSearch from "./Pages/ViewPastMedicineRecordsSearch";
+import ViewPastMedicineRecords from "./Pages/ViewPastMedicineRecords";
+import IssueLaboratoryTest from "./Pages/IssueLaboratoryTest";
+import CreateMedical from "./Pages/CreateMedical";
+
 import DrugStore from "./Pages/drugStore";
 import AddDrugs from "./Pages/PharmacyFiles/AddDrugs";
 import DeleteDrugs from "./Pages/PharmacyFiles/DeleteDrugs";
@@ -52,6 +62,28 @@ const router = createBrowserRouter([
   { path : "/PharmacyFile/ViewDrugs" , element: <ViewDrugs/>},
 
   { path : "/PharmacyFile/UpdateDrugs" , element: <UpdateDrugs/>},
+
+  { path : "/GiveMedicine" , element: <GiveMedicine/>},
+
+  {path : "/MedicalReport" , element: <MedicalReport/>},
+
+  {path : "/LabReport" ,element : <LabReport/>},
+
+  {path : "AddHealthRecord", element : <AddHealthRecord/>},
+
+  {path : "/ViewPastHealthRecordsSearch",element : <ViewPastHealthRecordsSearch/>},
+
+  {path : "/ViewPastHealthRecords", element : <ViewPastHealthRecords/>},
+
+  {path : "/ViewPastMedicineRecordsSearch" , element : <ViewPastMedicineRecordsSearch/>},
+
+  {path : "/ViewPastMedicineRecords" , element : <ViewPastMedicineRecords/>},
+
+  {path : "/IssueLaboratoryTest" , element : <IssueLaboratoryTest/>},
+
+  {path : "/CreateMedical",element : <CreateMedical/>},
+
+
 ]);
 
 export default function App() {
