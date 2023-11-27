@@ -1,11 +1,14 @@
 import React from "react";
+import NavBar from "../../components/Navbar";
 
 function DeleteDrugs() {
-<div>
-     
-
-</div>
+  return (
+    <div>
+      <div>
+        <NavBar />
+      </div>
+    </div>
+  );
 }
-
 
 export default DeleteDrugs;

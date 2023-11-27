@@ -29,8 +29,8 @@ const topButtons = [
 ];
 
 function AddDrugs() {
-<div>
-<div className="w-full">
+    return (
+        <div className="w-full">
                 <div className="flex justify-center">
                     <div className="grid w-1/2 grid-cols-4 gap-0 mt-1 grid-rows-1">
                         {topButtons.map((item => (
@@ -45,10 +45,12 @@ function AddDrugs() {
                         )}
                     </div>
                 </div>
-            </div> 
 
 </div>
+    );
+
 }
 
 
 export default AddDrugs;
+
