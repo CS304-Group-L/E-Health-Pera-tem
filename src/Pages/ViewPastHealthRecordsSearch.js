@@ -2,9 +2,11 @@ import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import home from '../Assets/home.png';
 import medicalRecord from "../Assets/medical_record.png";
-import medicineT from "../Assets/medicine_icon.png";
+import medicine from "../Assets/medicine_icon.png";
 import lab from "../Assets/lab icon.png";
 import medical from "../Assets/medical.png";
+import add from "../Assets/add.png";
+import searchs from "../Assets/search.png";
 
 
 const topButtons = [
@@ -26,7 +28,7 @@ const topButtons = [
         id: 3,
         name: "Medicine",
         bg_color: "bg-purple-600",
-        img: medicineT,
+        img: medicine,
         path: "/Medicines"
     },
     {
@@ -50,12 +52,14 @@ const sideButtons = [
         id: 1,
         name: "Add Health Record",
         bg_color: "bg-green-600",
+        img: add,
         path: "/AddHealthRecord"
     },
     {
         id: 2,
         name: "View Past Health Records",
         bg_color: "bg-red-400",
+        img: searchs,
         path: "/ViewPastHealthRecordsSearch"
     }];
 
@@ -96,74 +100,100 @@ function ViewPastHealthRecordsSearch() {
         <div className="block mb-2 font-semibold font-poppins">
             <div className="flex justify-center">
                 <div className="flex justify-center w-full grid-cols-4 gap-10 mt-0 grid-rows-1">
-                {topButtons.map((item => (
-                            
-                            <button key={item.id} className={`flex flex-col object-cover h-20 w-20 items-center p-4 m-5 rounded-full ${item.name === 'View Past Health Records' ? `bg-gray-200  underline` : item.bg_color} hover:shadow-lg transform hover:scale-110 transition-all duration-300`}
-                            >
-                                <div className="flex justify-center">
-                            <Link to={item.path}>
+                    {topButtons.map((item => (
+
+                        <button key={item.id} className={`flex flex-col object-cover h-20 w-20 items-center p-4 m-5 rounded-full ${item.name === 'View Past Health Records' ? `bg-gray-200  underline` : item.bg_color} hover:shadow-lg transform hover:scale-110 transition-all duration-300`}
+                        >
+                            <div className="flex justify-center">
+                                <Link to={item.path}>
 
                                     <img
                                         className="justify-center"
                                         src={item.img}
                                     />
                                 </Link>
-                                </div>
+                            </div>
 
-                            </button>
-                        ))
+                        </button>
+                    ))
 
-                        )}
+                    )}
                 </div>
             </div>
-            
-            <div className='text-3xl font-bold mb-8 underline mt-20 m-3 '>
-                Student Past Health Records
-            </div>
-            <div className="p-5 text-center">
-                <label className="pt-5">
-                    Student Enrollment Number:
-                </label>
-                <div className="pt-5 text-center">
-                    <input
-                        type="text"
-                        value={enrollNumber}
-                        onChange={(e) => setEnrollNumber(e.target.value)}
-                        className="border border-gray-300 px-3 py-2 rounded-md focus:outline-none focus:ring focus:border-blue-500 w-1/2"
-                        placeholder="Enter number here"
-                    />
+            <div className="grid grid-cols-4 gap-10 mt-0">
+            <div>
+                    {sideButtons.map((item => (
+
+                        <button key={item.id} className={`flex flex-col object-cover h-20 w-20 items-center p-4 m-5 rounded-full ${item.name === 'View' ? `bg-gray-200  underline` : item.bg_color} hover:shadow-lg transform hover:scale-110 transition-all duration-300`}
+                        >
+                            <div className="flex justify-center">
+                                <Link to={item.path}>
+
+                                    <img
+                                        className="justify-center"
+                                        src={item.img}
+                                    />
+                                </Link>
+                            </div>
+
+                        </button>
+                    ))
+
+                    )}
                 </div>
-                <div>
-                    <button onClick={handleSearch} disabled={loading} className="text-black bg-blue-500 rounded hover:bg-blue-600 text-white px-4 py-2 mt-10 text-center">
-                        Search
-                    </button>
+
+
+                <div className='text-3xl font-bold mb-8 underline mt-20 m-3 '>
+                    Student Past Health Records
                 </div>
+                <div className="p-5 text-center">
+                    <label className="pt-5">
+                        Student Enrollment Number:
+                    </label>
+                    <div className="pt-5 text-center">
+                        <input
+                            type="text"
+                            value={enrollNumber}
+                            onChange={(e) => setEnrollNumber(e.target.value)}
+                            className="border border-gray-300 px-3 py-2 rounded-md focus:outline-none focus:ring focus:border-blue-500 w-1/2"
+                            placeholder="Enter number here"
+                        />
+                    </div>
+                    <div>
+                        <button onClick={handleSearch} disabled={loading} className="text-black bg-blue-500 rounded hover:bg-blue-600 text-white px-4 py-2 mt-10 text-center">
+                            Search
+                        </button>
+                    </div>
 
 
-            </div>
-            <div className="m-10 px-3 py-2 rounded-md p-5">
+                </div>
+                <div className="m-10 px-3 py-2 rounded-md p-5">
 
-                {loading && <p>Loading...</p>}
+                    {loading && <p>Loading...</p>}
 
-                <table className="w-full mt-4">
-                    <thead>
-                        <tr>
-                            <th className="border p-2"> </th>
-                            <th className="border p-2">Date</th>
-                            <th className="border p-2">Description</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        {healthRecords.map((record, index) => (
-                            <tr key={record.id}>
-                                <td className="border p-2">{index + 1}</td>
-                                <td className="border p-2">{record.date}</td>
-                                <td className="border p-2">{record.description}</td>
+                    <table className="w-full mt-4">
+                        <thead>
+                            <tr>
+                                <th className="border p-2"> </th>
+                                <th className="border p-2">Date</th>
+                                <th className="border p-2">Description</th>
                             </tr>
-                        ))}
-                    </tbody>
-                </table>
+                        </thead>
+                        <tbody>
+                            {healthRecords.map((record, index) => (
+                                <tr key={record.id}>
+                                    <td className="border p-2">{index + 1}</td>
+                                    <td className="border p-2">{record.date}</td>
+                                    <td className="border p-2">{record.description}</td>
+                                </tr>
+                            ))}
+                        </tbody>
+                    </table>
+                </div>
+                
+
             </div>
+
         </div>
     );
 }

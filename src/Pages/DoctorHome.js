@@ -43,16 +43,18 @@ function DoctorBoard() {
     <div className = "flex justify-center">
       <div className="grid w-1/2 grid-cols-2 gap-10 mt-20 ">
         {options.map((item) => (
-          <button key={item.id} className={`flex flex-col items-center p-5 ${item.bg_color} hover:bg-gray-200`}>
+          <button key={item.id} className={`flex flex-col items-center p-5 ${item.bg_color} hover:shadow-lg transform hover:scale-110 transition-all duration-300`}>
+            <Link to={item.path}>
             <img
               className="justify-center  h-32"
               src={item.img}
               alt="icon"
             />
+            </Link> 
             <div className="flex justify-center text-end">
-            <Link to={item.path}>
+            
               {item.name}
-              </Link> 
+              
             </div>
             
           </button>

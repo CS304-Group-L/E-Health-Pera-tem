@@ -130,9 +130,6 @@ function AddHealthRecord() {
                 </div>
 
             </div>
-            <div className='px-4 py-2 absolute right-0 mt-1 mr-10'>
-                <Link to="/DoctorBoard"><img className="w-12 m-5 ml-5 " src={home} alt='Doctor-Home' /></Link>
-            </div>
             <div className='m-5 mt-40'>
                 {successMessage && <p>{successMessage}</p>}
                 <div className="mb-2 text-right text-gray-500">{currentDateTime}</div>
