@@ -1,0 +1,154 @@
+[
+    {
+        "id":1,
+        "report_name":"ASOT Report"
+    },
+    {
+        "id":2,
+        "report_name":"Blood Group"
+    },
+    {
+        "id":3,
+        "report_name":"Covid 19 Rapid Antigen Test"
+    },
+    {
+        "id":4,
+        "report_name":"CRP"
+    },
+    {
+        "id":5,
+        "report_name":"CT BT"
+    },
+    {
+        "id":6,
+        "report_name":"Dengue"
+    },
+    {
+        "id":7,
+        "report_name":"ESR"
+    },
+    {
+        "id":8,
+        "report_name":"HBA1C"
+    },
+    {
+        "id":9,
+        "report_name":"HUG Test"
+    },
+    {
+        "id":10,
+        "report_name":"Hep B"
+    },
+    {
+        "id":11,
+        "report_name":"RH. Factor"
+    },
+    {
+        "id":12,
+        "report_name":"SFR"
+    },
+    {
+        "id":13,
+        "report_name":"UFR New"
+    },
+    {
+        "id":14,
+        "report_name":"Urine Protein"
+    },
+    {
+        "id":15,
+        "report_name":"VDRL"
+    },
+    {
+        "id":16,
+        "report_name":"WBCDC"
+    },
+    {
+        "id":17,
+        "report_name":"ALP"
+    },
+    {
+        "id":18,
+        "report_name":"OT-PT"
+    },
+    {
+        "id":19,
+        "report_name":"UFR NEW"
+    },
+    {
+        "id":20,
+        "report_name":"PT"
+    },
+    {
+        "id":21,
+        "report_name":"Total Bilirubin"
+    },
+    {
+        "id":22,
+        "report_name":"FBS"
+    },
+    {
+        "id":23,
+        "report_name":"Blood Urea"
+    },
+    {
+        "id":24,
+        "report_name":"Lipid Profile"
+    },
+    {
+        "id":25,
+        "report_name":"Creatinine"
+    },
+    {
+        "id":26,
+        "report_name":"HCG Test"
+    },
+    {
+        "id":27,
+        "report_name":"eGFR"
+    },
+    {
+        "id":28,
+        "report_name":"ppbs"
+    },
+    {
+        "id":29,
+        "report_name":"Total Protein New"
+    },
+    {
+        "id":30,
+        "report_name":"GGT"
+    },
+    {
+        "id":31,
+        "report_name":"DENGUE"
+    },
+    {
+        "id":32,
+        "report_name":"OGTT"
+    },
+    {
+        "id":33,
+        "report_name":"Toatl Protein"
+    },
+    {
+        "id":33,
+        "report_name":"FBC-Manual Report"
+    },
+    {
+        "id":34,
+        "report_name":"Liver Profile New"
+    },
+    {
+        "id":35,
+        "report_name":"RBS"
+    },
+    {
+        "id":36,
+        "report_name":"OGTT New"
+    },
+    {
+        "id":37,
+        "report_name":"TOTAL CHOLESTEROL"
+    }
+]

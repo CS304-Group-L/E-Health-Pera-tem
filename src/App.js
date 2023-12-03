@@ -19,8 +19,9 @@ import ViewPastHealthRecordsSearch from "./Pages/ViewPastHealthRecordsSearch";
 import ViewPastHealthRecords from "./Pages/ViewPastHealthRecords";
 import ViewPastMedicineRecordsSearch from "./Pages/ViewPastMedicineRecordsSearch";
 import ViewPastMedicineRecords from "./Pages/ViewPastMedicineRecords";
-import IssueLaboratoryTest from "./Pages/IssueLaboratoryTest";
+import IssueLaboratoryTest from "./Pages/DoctorLabPages/IssueLaboratoryTest";
 import CreateMedical from "./Pages/CreateMedical";
+import IssueLaboratoryTestNew from "./Pages/IssueLaboratoryTestNew";
 
 import DrugStore from "./Pages/drugStore";
 import AddDrugs from "./Pages/PharmacyFiles/AddDrugs";
@@ -82,6 +83,8 @@ const router = createBrowserRouter([
   {path : "/IssueLaboratoryTest" , element : <IssueLaboratoryTest/>},
 
   {path : "/CreateMedical",element : <CreateMedical/>},
+
+  {path : "/IssueLaboratoryTestNew" , element : <IssueLaboratoryTestNew/>}
 
 
 ]);
