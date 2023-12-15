@@ -1,14 +1,14 @@
 import { Link, useNavigate } from 'react-router-dom';
 import { useDrop } from 'react-dnd'
-import home from '../Assets/home.png';
-import medicalRecord from "../Assets/medical_record.png";
-import medicineT from "../Assets/medicine_icon.png";
-import lab from "../Assets/lab icon.png";
-import medical from "../Assets/medical.png";
+import home from '../../Assets/home.png';
+import medicalRecord from "../../Assets/medical_record.png";
+import medicineT from "../../Assets/medicine_icon.png";
+import lab from "../../Assets/lab icon.png";
+import medical from "../../Assets/medical.png";
 import { useState, useEffect } from 'react';
 import { DndProvider } from 'react-dnd';
 import { HTML5Backend } from 'react-dnd-html5-backend';
-import { LabReportTable } from './DoctorLabPages/LabReportTable/LabReportTable';
+import { LabReportTable } from '../DoctorLabPages/LabReportTable/LabReportTable';
 
 const topButtons = [
     {

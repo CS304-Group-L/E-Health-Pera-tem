@@ -1,12 +1,12 @@
 import React from "react";
-import medicine from "../Assets/medical.png";
-import add from "../Assets/add.png";
-import searchs from "../Assets/search.png";
-import medicalRecord from "../Assets/medical_record.png";
-import medicineT from "../Assets/medicine_icon.png";
-import lab from "../Assets/lab icon.png";
-import medical from "../Assets/medical.png";
-import home from "../Assets/home.png";
+import medicine from "../../Assets/medical.png";
+import add from "../../Assets/add.png";
+import searchs from "../../Assets/search.png";
+import medicalRecord from "../../Assets/medical_record.png";
+import medicineT from "../../Assets/medicine_icon.png";
+import lab from "../../Assets/lab icon.png";
+import medical from "../../Assets/medical.png";
+import home from "../../Assets/home.png";
 import { Link } from "react-router-dom";
 import { DndProvider } from "react-dnd";
 import { HTML5Backend } from "react-dnd-html5-backend"

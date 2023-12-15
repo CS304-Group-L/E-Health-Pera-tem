@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
-import home from '../Assets/home.png';
+import home from '../../Assets/home.png';
 
 const topButtons = [
     {

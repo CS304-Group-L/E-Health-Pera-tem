@@ -1,32 +1,33 @@
 import React from "react";
-import Home from "./Pages/Home";
+import Home from "./Pages/Home/Home";
 import Login from "./Pages/Login";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import HealthForm from "./Pages/Healthform";
 import Personinfo from "./Pages/Personinfo";
 import Services from "./Pages/Services";
-import Contactus from "./Pages/Contactus";
-import Aboutus from "./Pages/About";
+import Contactus from "./Pages/Home/Contactus";
+import Aboutus from "./Pages/Home/About";
 import Pharmacy from "./Pages/Pharmacy";
-import DoctorBoard from "./Pages/DoctorHome";
-import Medicines from "./Pages/Medicine";
-import HealthRecords from "./Pages/HealthRecord";
-import GiveMedicine from "./Pages/GiveMedicine";
-import MedicalReport from "./Pages/MedicalReport";
-import LabReport from "./Pages/LabReport";
-import AddHealthRecord from "./Pages/AddHealthRecord";
-import ViewPastHealthRecordsSearch from "./Pages/ViewPastHealthRecordsSearch";
-import ViewPastHealthRecords from "./Pages/ViewPastHealthRecords";
-import ViewPastMedicineRecordsSearch from "./Pages/ViewPastMedicineRecordsSearch";
-import ViewPastMedicineRecords from "./Pages/ViewPastMedicineRecords";
+import DoctorBoard from "./Pages/Doctor/DoctorHome";
+import Medicines from "./Pages/Doctor/Medicine";
+import HealthRecords from "./Pages/Doctor/HealthRecord";
+import GiveMedicine from "./Pages/Doctor/GiveMedicine";
+import MedicalReport from "./Pages/Doctor/MedicalReport";
+import LabReport from "./Pages/Doctor/LabReport";
+import AddHealthRecord from "./Pages/Doctor/AddHealthRecord";
+import ViewPastHealthRecordsSearch from "./Pages/Doctor/ViewPastHealthRecordsSearch";
+import ViewPastHealthRecords from "./Pages/Doctor/ViewPastHealthRecords";
+import ViewPastMedicineRecordsSearch from "./Pages/Doctor/ViewPastMedicineRecordsSearch";
+import ViewPastMedicineRecords from "./Pages/Doctor/ViewPastMedicineRecords";
 import IssueLaboratoryTest from "./Pages/DoctorLabPages/IssueLaboratoryTest";
-import CreateMedical from "./Pages/CreateMedical";
-import IssueLaboratoryTestNew from "./Pages/IssueLaboratoryTestNew";
+import CreateMedical from "./Pages/Doctor/CreateMedical";
+import IssueLaboratoryTestNew from "./Pages/Doctor/IssueLaboratoryTestNew";
 import Laboratory from "./Pages/Laboratory/Laboratory_Home";
 import DraftedLabReport from "./Pages/Laboratory/DraftedLabReport";
 import NewLabReportrequest from "./Pages/Laboratory/NewLabReportRequest";
 import SubmittedLabReport from "./Pages/Laboratory/SubmittedLabReport";
 import AllLabReports from "./Pages/Laboratory/AllLabReports";
+import ASOT_Report from "./Pages/LabReports/ASOT_Report";
 
 
 const router = createBrowserRouter([
@@ -85,7 +86,9 @@ const router = createBrowserRouter([
 
   {path: "/SubmittedLabReport", element: <SubmittedLabReport/>},
 
-  {path : "/AllLabReports",element: <AllLabReports/>}
+  {path : "/AllLabReports",element: <AllLabReports/>},
+
+  {path: "/ASOT_Report" ,element: <ASOT_Report/>}
 
 ]);
 

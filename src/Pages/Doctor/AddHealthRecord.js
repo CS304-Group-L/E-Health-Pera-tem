@@ -1,10 +1,10 @@
 import { Link, useNavigate } from 'react-router-dom';
 import { useState,useEffect } from 'react';
-import home from '../Assets/home.png';
-import medicalRecord from "../Assets/medical_record.png";
-import medicineT from "../Assets/medicine_icon.png";
-import lab from "../Assets/lab icon.png";
-import medical from "../Assets/medical.png";
+import home from '../../Assets/home.png';
+import medicalRecord from "../../Assets/medical_record.png";
+import medicineT from "../../Assets/medicine_icon.png";
+import lab from "../../Assets/lab icon.png";
+import medical from "../../Assets/medical.png";
 
 const topButtons = [
     {

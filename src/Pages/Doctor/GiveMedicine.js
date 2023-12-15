@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import home from "../Assets/home.png"
+import home from "../../Assets/home.png"
 import { Link } from "react-router-dom";
 
 

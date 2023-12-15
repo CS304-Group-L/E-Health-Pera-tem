@@ -1,5 +1,5 @@
 import { Link, useNavigate } from 'react-router-dom';
-import home from '../Assets/home.png';
+import home from '../../Assets/home.png';
 import { useState,useEffect } from 'react';
 
 

@@ -1,9 +1,9 @@
 import React from "react";
-import Navbar from "../components/Navbar";
-import medicalRecord from "../Assets/medical_record.png";
-import medicine from "../Assets/medicine_icon.png";
-import lab from "../Assets/lab icon.png";
-import medical from "../Assets/medical.png"
+import Navbar from "../../components/Navbar";
+import medicalRecord from "../../Assets/medical_record.png";
+import medicine from "../../Assets/medicine_icon.png";
+import lab from "../../Assets/lab icon.png";
+import medical from "../../Assets/medical.png"
 import { Link } from "react-router-dom";
 
 const options = [

@@ -77,10 +77,10 @@ function AllLabReports() {
                 <h1>All Laboratory Test Reports</h1>
             </div>
 
-            <div className="flex justify-center grid grid-cols-4 gap-3 m-3 mr-5 ml-5 grid-rows-5">
+            <div className="flex justify-center grid grid-cols-4 gap-8 m-3 mr-5 ml-5 grid-rows-5">
             {labReports.map((item => (
 
-<button key={item.id} className={`flex flex-col w-150 items-center bg-gray-200 p-5 h-20 ${item.name === 'View Past Health Records' ? `bg-gray-200  underline` : item.bg_color} hover:shadow-lg transform hover:scale-110 transition-all duration-300`}
+<button key={item.id} className={`flex flex-col w-150 items-center bg-gray-200 rounded p-5 h-20 ${item.name === 'View Past Health Records' ? `bg-gray-200  underline` : item.bg_color} hover:shadow-lg transform hover:scale-100 transition-all duration-300`}
 >
     <div className="flex justify-center">
         <Link to={item.path}>

@@ -1,14 +1,14 @@
 import React from "react";
-import Navbar from "../components/Navbar";
-import Footer from "../components/Footer";
-import photo from "../Assets/photo.jpg";
+import Navbar from "../../components/Navbar";
+import Footer from "../../components/Footer";
+import photo from "../../Assets/photo.jpg";
 import "react-responsive-carousel/lib/styles/carousel.min.css";
 import { Carousel } from "react-responsive-carousel";
-import photo_1 from "../Assets/photo.jpg";
-import photo_2 from "../Assets/Uni_photo_2.jpeg";
-import photo_3 from "../Assets/Uni_photo_3.jpg";
-import photo_4 from "../Assets/Uni_photo_4.jpg";
-import photo_5 from "../Assets/Uni_photo_5.jpg";
+import photo_1 from "../../Assets/photo.jpg";
+import photo_2 from "../../Assets/Uni_photo_2.jpeg";
+import photo_3 from "../../Assets/Uni_photo_3.jpg";
+import photo_4 from "../../Assets/Uni_photo_4.jpg";
+import photo_5 from "../../Assets/Uni_photo_5.jpg";
 
 const back_ground_4to = [
   { id: 1, img: photo_1 },
