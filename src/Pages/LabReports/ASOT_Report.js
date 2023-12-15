@@ -97,6 +97,9 @@ function ASOT_Report() {
                         <div>Name  </div>
                         <div>:</div>
                         <div>From Back End</div>
+                        <div>Age  </div>
+                        <div>:</div>
+                        <div>From Back End</div>
                         <div>Requested By  </div>
                         <div>:</div>
                         <div>From Back End</div>

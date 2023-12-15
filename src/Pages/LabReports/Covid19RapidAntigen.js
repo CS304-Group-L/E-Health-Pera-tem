@@ -101,6 +101,9 @@ function Covid19RapidAntigen() {
                         <div>Name  </div>
                         <div>:</div>
                         <div>From Back End</div>
+                        <div>Age </div>
+                        <div>:</div>
+                        <div>From Back End</div>
                         <div>Requested By  </div>
                         <div>:</div>
                         <div>From Back End</div>
@@ -128,13 +131,13 @@ function Covid19RapidAntigen() {
                             </th>
                             <th scope="col"
                                 className="px-6 py-3 text-left text-s font-medium text-black-500 uppercase tracking-wider">
-                               Covid - 19 Rapid Antigen
+                               Result
                             </th>
                         </thead>
                         <tbody>
                             <tr>
                                 <td className="px-6 py-4 whitespace-nowrap">
-                                    Result
+                                    Covid 19 Rapid Antigen
                                 </td>
                                 <td className="px-6 py-4 whitespace-nowrap"> 
                                 <select id="selectionList" value={result} onChange={handleResultonChange}>

@@ -17,12 +17,12 @@
     {
         "id":4,
         "report_name":"CRP",
-        "path": ""
+        "path": "/CRP_Report"
     },
     {
         "id":5,
         "report_name":"CT BT",
-        "path": ""
+        "path": "/CT_BT_Report"
     },
     {
         "id":6,
