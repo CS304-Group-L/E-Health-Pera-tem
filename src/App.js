@@ -32,6 +32,7 @@ import BloodGroup from "./Pages/LabReports/BooldGroup";
 import Covid19RapidAntigen from "./Pages/LabReports/Covid19RapidAntigen";
 import CRP_Report from "./Pages/LabReports/CRP.js";
 import CT_BT_Report from "./Pages/LabReports/CT_BT.js";
+import Dengue from "./Pages/LabReports/Dengue.js";
 
 
 const router = createBrowserRouter([
@@ -100,7 +101,9 @@ const router = createBrowserRouter([
 
   {path : "/CRP_Report",element: <CRP_Report/>},
 
-  {path : "CT_BT_Report", element: <CT_BT_Report/>}
+  {path : "/CT_BT_Report", element: <CT_BT_Report/>},
+
+  {path : "/Dengue",element: <Dengue/>}
 
 ]);
 
