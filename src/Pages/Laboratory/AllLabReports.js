@@ -4,6 +4,7 @@ import draftLabTest from "../../Assets/draft_lab_test.png";
 import submitedLabTest from "../../Assets/submit_lab_test.png";
 import allLabTest from "../../Assets/all_lab_reports.png";
 import home from "../../Assets/home.png";
+import labReports from "../DoctorLabPages/LabReportTable/ListOfLabReports.json"
 import { Link } from "react-router-dom";
 
 const topButtons = [
@@ -43,10 +44,10 @@ const topButtons = [
 }
 ];
 
-function SubmittedLabReport() {
+function AllLabReports() {
 
     return (
-        <div>
+        <div className="block mb-2 font-semibold font-poppins" >
 
 
             <div className="flex justify-center">
@@ -72,10 +73,32 @@ function SubmittedLabReport() {
 
                 </div>
             </div>
+            <div className="flex justify-center m-3">
+                <h1>All Laboratory Test Reports</h1>
+            </div>
+
+            <div className="flex justify-center grid grid-cols-4 gap-3 m-3 mr-5 ml-5 grid-rows-5">
+            {labReports.map((item => (
+
+<button key={item.id} className={`flex flex-col w-150 items-center bg-gray-200 p-5 h-20 ${item.name === 'View Past Health Records' ? `bg-gray-200  underline` : item.bg_color} hover:shadow-lg transform hover:scale-110 transition-all duration-300`}
+>
+    <div className="flex justify-center">
+        <Link to={item.path}>
+            {item.report_name}
+        </Link>
+    </div>
+
+</button>
+))
+
+)}
+
+
+            </div>
             
         
         </div>
     );
 }
 
-export default  SubmittedLabReport;
+export default  AllLabReports;

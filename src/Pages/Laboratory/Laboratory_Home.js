@@ -11,27 +11,27 @@ const options = [
     name: "New Lab Report Request",
     bg_color: "bg-green-500",
     img: newLabTest,
-    path:""
+    path:"/NewLabReportrequest"
   },
   {
     id: 2,
     name: "Drafted Lab Reports",
-    bg_color: "bg-red-300",
+    bg_color: "bg-red-400",
     img: draftLabTest,
-    path:""
+    path:"/DraftedLabReport"
   },
   { id: 3, 
     name: "Submitted Lab Reports", 
-    bg_color: "bg-blue-300", 
+    bg_color: "bg-blue-400", 
     img: submitedLabTest,
-    path:"" 
+    path:"/SubmittedLabReport" 
   },
   {
     id: 4,
     name: "All Lab Report Types",
-    bg_color: "bg-purple-300",
+    bg_color: "bg-purple-400",
     img: allLabTest,
-    path:""
+    path:"/AllLabReports"
   },
 ];
 

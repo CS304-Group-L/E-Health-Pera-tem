@@ -23,6 +23,10 @@ import IssueLaboratoryTest from "./Pages/DoctorLabPages/IssueLaboratoryTest";
 import CreateMedical from "./Pages/CreateMedical";
 import IssueLaboratoryTestNew from "./Pages/IssueLaboratoryTestNew";
 import Laboratory from "./Pages/Laboratory/Laboratory_Home";
+import DraftedLabReport from "./Pages/Laboratory/DraftedLabReport";
+import NewLabReportrequest from "./Pages/Laboratory/NewLabReportRequest";
+import SubmittedLabReport from "./Pages/Laboratory/SubmittedLabReport";
+import AllLabReports from "./Pages/Laboratory/AllLabReports";
 
 
 const router = createBrowserRouter([
@@ -73,8 +77,15 @@ const router = createBrowserRouter([
 
   {path : "/IssueLaboratoryTestNew" , element : <IssueLaboratoryTestNew/>},
 
-  {path: "/Laboratory" ,element : <Laboratory/>}
+  {path: "/Laboratory" ,element : <Laboratory/>},
 
+  {path: "/DraftedLabReport", element: <DraftedLabReport/>},
+
+  {path: "/NewLabReportrequest",element: <NewLabReportrequest/>},
+
+  {path: "/SubmittedLabReport", element: <SubmittedLabReport/>},
+
+  {path : "/AllLabReports",element: <AllLabReports/>}
 
 ]);
 
