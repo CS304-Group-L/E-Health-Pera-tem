@@ -29,6 +29,7 @@ import SubmittedLabReport from "./Pages/Laboratory/SubmittedLabReport";
 import AllLabReports from "./Pages/Laboratory/AllLabReports";
 import ASOT_Report from "./Pages/LabReports/ASOT_Report";
 import BloodGroup from "./Pages/LabReports/BooldGroup";
+import Covid19RapidAntigen from "./Pages/LabReports/Covid19RapidAntigen";
 
 
 const router = createBrowserRouter([
@@ -91,7 +92,9 @@ const router = createBrowserRouter([
 
   {path: "/ASOT_Report" ,element: <ASOT_Report/>},
 
-  {path:"/BloodGroup",element: <BloodGroup/>}
+  {path:"/BloodGroup",element: <BloodGroup/>},
+
+  {path: "/Covid19RapidAntigen",element: <Covid19RapidAntigen/>}
 
 ]);
 
