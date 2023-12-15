@@ -28,6 +28,7 @@ import NewLabReportrequest from "./Pages/Laboratory/NewLabReportRequest";
 import SubmittedLabReport from "./Pages/Laboratory/SubmittedLabReport";
 import AllLabReports from "./Pages/Laboratory/AllLabReports";
 import ASOT_Report from "./Pages/LabReports/ASOT_Report";
+import BloodGroup from "./Pages/LabReports/BooldGroup";
 
 
 const router = createBrowserRouter([
@@ -88,7 +89,9 @@ const router = createBrowserRouter([
 
   {path : "/AllLabReports",element: <AllLabReports/>},
 
-  {path: "/ASOT_Report" ,element: <ASOT_Report/>}
+  {path: "/ASOT_Report" ,element: <ASOT_Report/>},
+
+  {path:"/BloodGroup",element: <BloodGroup/>}
 
 ]);
 
