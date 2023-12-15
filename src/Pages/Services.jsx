@@ -8,7 +8,7 @@ const buttons = [
   {id: 2, name: "Staff", path: "/DoctorBoard"},
   {id: 3, name: "Doctor", path: "/DoctorBoard"},
   {id: 4, name: "Pharmacy", path: "/Pharmacy"},
-  {id: 5, name: "Laboratary", path: "/Pharmacy"},
+  {id: 5, name: "Laboratary", path: "/Laboratory"},
   {id: 6, name: "Ward", path: "/Pharmacy"},
   {id: 7, name: "Nurse", path: "/Pharmacy"},
 ]

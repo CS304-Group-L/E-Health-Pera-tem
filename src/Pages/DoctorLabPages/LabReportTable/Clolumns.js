@@ -1,6 +1,6 @@
 export const Columns = [
     {
-        Header :'Report Name',
+        Header :'Sort Lab Report By Name :',
         accessor : 'report_name'
     }
 
