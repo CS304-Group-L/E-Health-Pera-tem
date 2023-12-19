@@ -11,7 +11,7 @@ const topButtons = [
     {
         id: 1,
         name: "New Lab Report Request",
-        bg_color: "bg-green-510",
+        bg_color: "bg-green-520",
         img: newLabTest,
         path: "/NewLabReportrequest"
     },
