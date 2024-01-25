@@ -35,6 +35,9 @@ import CRP_Report from "./Pages/LabReports/CRP.js";
 import CT_BT_Report from "./Pages/LabReports/CT_BT.js";
 import Dengue from "./Pages/LabReports/Dengue.js";
 import ESR_Report from "./Pages/LabReports/ESR.js";
+import Hcg_test from "./Pages/LabReports/hcg_test.js";
+import Hep_B from "./Pages/LabReports/Hep_B.js";
+import VDRL from "./Pages/LabReports/VDRL.js";
 
 import DrugStore from "./Pages/drugStore";
 import AddDrugs from "./Pages/PharmacyFiles/AddDrugs";
@@ -133,6 +136,12 @@ const router = createBrowserRouter([
   { path: "/Dengue", element: <Dengue /> },
 
   { path: "/ESR_Report", element: <ESR_Report /> },
+
+  { path: "/Hcg_test", element: <Hcg_test /> },
+
+  { path: "/Hep_B", element: <Hep_B /> },
+
+  { path: "/VDRL", element: <VDRL /> },
 ]);
 
 export default function App() {

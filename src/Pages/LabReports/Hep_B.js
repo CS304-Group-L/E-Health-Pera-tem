@@ -45,7 +45,7 @@ const topButtons = [
     }
 ];
 
-function Hcg() {
+function Hep_B() {
     const [labNumber, setLabNumber] = useState('');
     const [referenceNumber, setReferenceNumber] = useState('');
     const [reult, setResult] = useState('');
@@ -115,7 +115,7 @@ function Hcg() {
                 </div>
                 <div className=" bg-blue-300 text-xl p-5 flex justify-center">
                     <h1>
-                    Urine HCG 
+                    Hepatitis B surface antigen test
                     </h1>
                 </div>
 
@@ -134,7 +134,7 @@ function Hcg() {
                         <tbody>
                             <tr>
                                 <td className="px-6 py-4 whitespace-nowrap">
-                                Urine HCG 
+                                Hepatitis B surface antigen test 
                                 </td>
                                 <td className="px-6 py-4 whitespace-nowrap"> 
                                 <select id="selectionList" value={reult} onChange={handleResultonChange}>
@@ -168,4 +168,4 @@ function Hcg() {
     );
 }
 
-export default  Hcg;
+export default  Hep_B;

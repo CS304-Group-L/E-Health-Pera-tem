@@ -45,7 +45,7 @@ const topButtons = [
     }
 ];
 
-function Hcg() {
+function VDRL() {
     const [labNumber, setLabNumber] = useState('');
     const [referenceNumber, setReferenceNumber] = useState('');
     const [reult, setResult] = useState('');
@@ -115,7 +115,7 @@ function Hcg() {
                 </div>
                 <div className=" bg-blue-300 text-xl p-5 flex justify-center">
                     <h1>
-                    Urine HCG 
+                    V.D.R.L
                     </h1>
                 </div>
 
@@ -134,13 +134,13 @@ function Hcg() {
                         <tbody>
                             <tr>
                                 <td className="px-6 py-4 whitespace-nowrap">
-                                Urine HCG 
+                                V.D.R.L 
                                 </td>
                                 <td className="px-6 py-4 whitespace-nowrap"> 
                                 <select id="selectionList" value={reult} onChange={handleResultonChange}>
         <option value="">Select Result</option>
-        <option value="possitive">Possitive</option>
-        <option value="negetive">Negetive</option>
+        <option value="possitive">Reactive</option>
+        <option value="negetive">Non-Reactive</option>
       </select>
                                 </td>
                             </tr>
@@ -168,4 +168,4 @@ function Hcg() {
     );
 }
 
-export default  Hcg;
+export default  VDRL;
