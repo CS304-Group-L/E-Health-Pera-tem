@@ -8,7 +8,7 @@ import update from "../Assets/update.png";
 import exit from "../Assets/exit.png";
 import { Link } from "react-router-dom";
 
-const topButtons = [
+/*const topButtons = [
   {
     id: 1,
     name: "Drug Store",
@@ -21,7 +21,7 @@ const topButtons = [
     bg_color: "bg-blue-500",
     path: "/Pharmacy",
   },
-];
+];*/
 
 const options = [
   {
@@ -67,27 +67,7 @@ function DrugStore() {
       <div>
         <NavBar />
       </div>
-      <div className="w-full">
-        <div className="flex justify-center">
-          <div className="grid w-3/4 grid-cols-2 gap-0 mt-1 grid-rows-1">
-            {topButtons.map((item) => (
-              <Link to={item.path}>
-                <button
-                  key={item.id}
-                  className={`flex flex-col item-center p-5 ${
-                    item.name === "Medicine"
-                      ? `bg-gray-200 text-red-500 underline`
-                      : item.bg_color
-                  } hover:bg-gray-200`}
-                >
-                  <div className="flex justify-items-center text-end"></div>
-                  {item.name}
-                </button>
-              </Link>
-            ))}
-          </div>
-        </div>
-      </div>
+   
       <div className="flex justify-center">
         <div className="grid w-1/2 grid-cols-3 gap-10 mt-20 ">
           {options.map((item) => (
