@@ -1,6 +1,7 @@
 import React from "react";
 import Home from "./Pages/Home/Home";
 import Login from "./Pages/Login";
+import Signup from "./Pages/Signup";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import HealthForm from "./Pages/Healthform";
 import Personinfo from "./Pages/Personinfo";
@@ -38,13 +39,16 @@ import ESR_Report from "./Pages/LabReports/ESR.js";
 import DrugStore from "./Pages/drugStore";
 import AddDrugs from "./Pages/PharmacyFiles/AddDrugs";
 import DeleteDrugs from "./Pages/PharmacyFiles/DeleteDrugs";
+import DeleteDrugs1 from "./Pages/PharmacyFiles/DeleteDrugs1";
 import UpdateDrugs from "./Pages/PharmacyFiles/UpdateDrugs";
 import ViewDrugs from "./Pages/PharmacyFiles/ViewDrugs";
 
 const router = createBrowserRouter([
-  { path: "/",element: <Home />,},
+  { path: "/", element: <Home /> },
 
   { path: "/Login", element: <Login /> },
+  
+  { path: "/Signup", element: <Signup /> },
 
   { path: "/Healthform", element: <HealthForm /> },
 
@@ -60,68 +64,75 @@ const router = createBrowserRouter([
 
   { path: "/DoctorBoard", element: <DoctorBoard /> },
 
-  { path : "/Medicines" , element: <Medicines/>},
+  { path: "/Medicines", element: <Medicines /> },
 
-  { path : "/HealthRecords" , element: <HealthRecords/>},
+  { path: "/HealthRecords", element: <HealthRecords /> },
 
-  { path : "/DrugStore" , element: <DrugStore/>},
-  
-  { path : "/GiveMedicine" , element: <GiveMedicine/>},
+  { path: "/DrugStore", element: <DrugStore /> },
 
-  { path : "/PharmacyFile/AddDrugs" , element: <AddDrugs/>},
+  { path: "/GiveMedicine", element: <GiveMedicine /> },
 
-  { path : "/PharmacyFile/DeleteDrugs" , element: <DeleteDrugs/>},
+  { path: "/PharmacyFile/AddDrugs", element: <AddDrugs /> },
 
-  { path : "/PharmacyFile/ViewDrugs" , element: <ViewDrugs/>},
+  { path: "/PharmacyFile/DeleteDrugs", element: <DeleteDrugs /> },
 
-  { path : "/PharmacyFile/UpdateDrugs" , element: <UpdateDrugs/>},
+  { path: "/PharmacyFile/DeleteDrugs1", element: <DeleteDrugs1 /> },
 
-  { path : "/GiveMedicine" , element: <GiveMedicine/>},
+  { path: "/PharmacyFile/ViewDrugs", element: <ViewDrugs /> },
 
-  {path : "/MedicalReport" , element: <MedicalReport/>},
+  { path: "/PharmacyFile/UpdateDrugs", element: <UpdateDrugs /> },
 
-  {path : "/LabReport" ,element : <LabReport/>},
+  { path: "/GiveMedicine", element: <GiveMedicine /> },
 
-  {path : "AddHealthRecord", element : <AddHealthRecord/>},
+  { path: "/MedicalReport", element: <MedicalReport /> },
 
-  {path : "/ViewPastHealthRecordsSearch",element : <ViewPastHealthRecordsSearch/>},
+  { path: "/LabReport", element: <LabReport /> },
 
-  {path : "/ViewPastHealthRecords", element : <ViewPastHealthRecords/>},
+  { path: "AddHealthRecord", element: <AddHealthRecord /> },
 
-  {path : "/ViewPastMedicineRecordsSearch" , element : <ViewPastMedicineRecordsSearch/>},
+  {
+    path: "/ViewPastHealthRecordsSearch",
+    element: <ViewPastHealthRecordsSearch />,
+  },
 
-  {path : "/ViewPastMedicineRecords" , element : <ViewPastMedicineRecords/>},
+  { path: "/ViewPastHealthRecords", element: <ViewPastHealthRecords /> },
 
-  {path : "/IssueLaboratoryTest" , element : <IssueLaboratoryTest/>},
+  {
+    path: "/ViewPastMedicineRecordsSearch",
+    element: <ViewPastMedicineRecordsSearch />,
+  },
 
-  {path : "/CreateMedical",element : <CreateMedical/>},
+  { path: "/ViewPastMedicineRecords", element: <ViewPastMedicineRecords /> },
 
-  {path : "/IssueLaboratoryTestNew" , element : <IssueLaboratoryTestNew/>},
+  { path: "/IssueLaboratoryTest", element: <IssueLaboratoryTest /> },
 
-  {path: "/Laboratory" ,element : <Laboratory/>},
+  { path: "/CreateMedical", element: <CreateMedical /> },
 
-  {path: "/DraftedLabReport", element: <DraftedLabReport/>},
+  { path: "/IssueLaboratoryTestNew", element: <IssueLaboratoryTestNew /> },
 
-  {path: "/NewLabReportrequest",element: <NewLabReportrequest/>},
+  { path: "/Laboratory", element: <Laboratory /> },
 
-  {path: "/SubmittedLabReport", element: <SubmittedLabReport/>},
+  { path: "/DraftedLabReport", element: <DraftedLabReport /> },
 
-  {path : "/AllLabReports",element: <AllLabReports/>},
+  { path: "/NewLabReportrequest", element: <NewLabReportrequest /> },
 
-  {path: "/ASOT_Report" ,element: <ASOT_Report/>},
+  { path: "/SubmittedLabReport", element: <SubmittedLabReport /> },
 
-  {path:"/BloodGroup",element: <BloodGroup/>},
+  { path: "/AllLabReports", element: <AllLabReports /> },
 
-  {path: "/Covid19RapidAntigen",element: <Covid19RapidAntigen/>},
+  { path: "/ASOT_Report", element: <ASOT_Report /> },
 
-  {path : "/CRP_Report",element: <CRP_Report/>},
+  { path: "/BloodGroup", element: <BloodGroup /> },
 
-  {path : "/CT_BT_Report", element: <CT_BT_Report/>},
+  { path: "/Covid19RapidAntigen", element: <Covid19RapidAntigen /> },
 
-  {path : "/Dengue",element: <Dengue/>},
+  { path: "/CRP_Report", element: <CRP_Report /> },
 
-  {path : "/ESR_Report" ,element: <ESR_Report/>}
+  { path: "/CT_BT_Report", element: <CT_BT_Report /> },
 
+  { path: "/Dengue", element: <Dengue /> },
+
+  { path: "/ESR_Report", element: <ESR_Report /> },
 ]);
 
 export default function App() {

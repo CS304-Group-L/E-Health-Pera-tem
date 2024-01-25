@@ -32,13 +32,13 @@ function Login() {
           />
 
           <div className="flex justify-between mb-6">
-            <button className="px-4 py-2 text-white bg-red-800 rounded hover:bg-yellow-300">
-              Log In
+          {buttons.map((item) => (
+            <Link to={item.path}>
+            <button key={item.id} className="px-4 py-2 text-white bg-red-800 rounded hover:bg-yellow-300">
+             {item.name}
             </button>
-            <button className="px-4 py-2 text-white bg-red-800 rounded hover:bg-yellow-300">
-              Sign Up 
-              <Link to = "./Signup.js"></Link>
-            </button>
+            </Link>
+            ))}
           </div>
         </div>
       </div>
