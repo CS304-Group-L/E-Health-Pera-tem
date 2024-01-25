@@ -10,6 +10,11 @@ export const LabReportTable = ()=>{
 
     const [draggedItem,setDraggedItem] = useState(null);
     const [textBoxValue,setTextBoxValue] = useState('');
+    const [doctorName,setDoctorName] = useState('');
+
+    const handleDoctorNameChange = (e) => {
+        setDoctorName(e.target.value);
+    };
 
     const handleDragStart = (event,item) => {
         console.log('Dragged value:', item);
@@ -59,11 +64,17 @@ export const LabReportTable = ()=>{
 
     return(
 
-        <div className="table-auto border-collapse p-5 ">
-            <div className="grid grid-cols-2 gap-50 table-auto border-collapse">
+        <div className="p-5 pr-5 pl-5 block mb-2 font-semibold font-poppins">
+            <div className="grid grid-cols-2 gap-5 table-auto border-collapse">
             <div className="border">
+                <div className="text-justify-center text-3xl m-3 p-5 bg-yellow-200">
+                    <h1>Laboratory Test List</h1>
+                </div>
+            <div className="justify-center p-5 pr-8">
             <SearchLabTest filter={globalFilter} setFilter={setGlobalFilter}/>
-            <table{...getTableProps()} className="min-w-full divide-y divide-gray-200">
+            </div>
+            
+            <table{...getTableProps()} className="border w-1/2  justify-center p-8">
                 <thead className="bg-gray-50">
                     {
                         headerGroups.map((headerGroup)=>(
@@ -73,7 +84,7 @@ export const LabReportTable = ()=>{
                                         <th {...column.getHeaderProps(column.getSortByToggleProps())} className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider" >
                                             {column.render('Header')}
                                             <span className="p-3 bg-blue-200 right-0 ml-10">
-                                                {column.isSorted ? (column.isSortedDesc ? ' Des' :  ' Ase'): 'For Sort'}
+                                                {column.isSorted ? (column.isSortedDesc ? 'By Des' :  'By Ase'): 'Sort'}
                                             </span>
 
                                         </th>
@@ -109,17 +120,45 @@ export const LabReportTable = ()=>{
                 </tbody>
             </table>
             </div>
-                <div className="center p-20 border w-full">
-                    <label className="">
-                        Test Name: 
+                <div className="center border w-full">
+                    <div className="text-justify-center text-3xl m-3 p-5 bg-yellow-200">
+                    <h1>Issuing Laboratory Test</h1>
+                </div>
+                    <div className="bg-gray-100 m-3 p-5" >
+                        
+                        <div className="p-1 m-1">
+                            <div>
+                            Student Name : S.S.K.Rathnapriya
+                            </div>
+                               <div>
+                                Student Number : S/18/486
+                                </div> 
+                            
+                        </div>
+                    <label >
+                        Test Name : 
                     </label>
                 <input
         type="text"
         value={textBoxValue}
         onChange={handleTextBoxChange}
-        placeholder="Drop values here"
+        placeholder="Drop Lab Test here"
         className="border w-3/4 m-5 center"
       />
+      <div>
+                    <label >
+                        Doctor Name : 
+                    </label>
+                <input
+        type="text"
+        value={doctorName}
+                        onChange={handleDoctorNameChange}
+        placeholder="Doctor Name"
+        className="border w-3/4 m-5 center"
+      />
+                    </div>
+                    </div>
+                    
                 </div>
 
             </div>

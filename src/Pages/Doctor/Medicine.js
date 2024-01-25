@@ -1,11 +1,11 @@
 import React from "react";
-import medicine from "../Assets/medicine_icon.png";
-import add from "../Assets/add.png";
-import searchs from "../Assets/search.png";
-import home from "../Assets/home.png";
-import medicalRecord from "../Assets/medical_record.png";
-import lab from "../Assets/lab icon.png";
-import medical from "../Assets/medical.png";
+import medicine from "../../Assets/medicine_icon.png";
+import add from "../../Assets/add.png";
+import searchs from "../../Assets/search.png";
+import home from "../../Assets/home.png";
+import medicalRecord from "../../Assets/medical_record.png";
+import lab from "../../Assets/lab icon.png";
+import medical from "../../Assets/medical.png";
 
 import { Link } from "react-router-dom";
 

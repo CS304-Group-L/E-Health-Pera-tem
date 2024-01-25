@@ -1,12 +1,12 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
-import home from '../Assets/home.png';
-import medicalRecord from "../Assets/medical_record.png";
-import medicine from "../Assets/medicine_icon.png";
-import lab from "../Assets/lab icon.png";
-import medical from "../Assets/medical.png";
-import add from "../Assets/add.png";
-import searchs from "../Assets/search.png";
+import home from '../../Assets/home.png';
+import medicalRecord from "../../Assets/medical_record.png";
+import medicine from "../../Assets/medicine_icon.png";
+import lab from "../../Assets/lab icon.png";
+import medical from "../../Assets/medical.png";
+import add from "../../Assets/add.png";
+import searchs from "../../Assets/search.png";
 
 
 const topButtons = [

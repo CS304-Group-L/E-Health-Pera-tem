@@ -1,31 +1,38 @@
 [
     {
         "id":1,
-        "report_name":"ASOT Report"
+        "report_name":"ASOT Report",
+        "path": "/ASOT_Report"
     },
     {
         "id":2,
-        "report_name":"Blood Group"
+        "report_name":"Blood Group",
+        "path": "/BloodGroup"
     },
     {
         "id":3,
-        "report_name":"Covid 19 Rapid Antigen Test"
+        "report_name":"Covid 19 Rapid Antigen Test",
+        "path": "/Covid19RapidAntigen"
     },
     {
         "id":4,
-        "report_name":"CRP"
+        "report_name":"CRP",
+        "path": "/CRP_Report"
     },
     {
         "id":5,
-        "report_name":"CT BT"
+        "report_name":"CT BT",
+        "path": "/CT_BT_Report"
     },
     {
         "id":6,
-        "report_name":"Dengue"
+        "report_name":"Dengue",
+        "path": "/Dengue"
     },
     {
         "id":7,
-        "report_name":"ESR"
+        "report_name":"ESR",
+        "path": "/ESR_Report"
     },
     {
         "id":8,
@@ -33,122 +40,152 @@
     },
     {
         "id":9,
-        "report_name":"HUG Test"
+        "report_name":"HUG Test",
+        "path": ""
     },
     {
         "id":10,
-        "report_name":"Hep B"
+        "report_name":"Hep B",
+        "path": ""
     },
     {
         "id":11,
-        "report_name":"RH. Factor"
+        "report_name":"RH. Factor",
+        "path": ""
     },
     {
         "id":12,
-        "report_name":"SFR"
+        "report_name":"SFR",
+        "path": ""
     },
     {
         "id":13,
-        "report_name":"UFR New"
+        "report_name":"UFR New",
+        "path": ""
     },
     {
         "id":14,
-        "report_name":"Urine Protein"
+        "report_name":"Urine Protein",
+        "path": ""
     },
     {
         "id":15,
-        "report_name":"VDRL"
+        "report_name":"VDRL",
+        "path": ""
     },
     {
         "id":16,
-        "report_name":"WBCDC"
+        "report_name":"WBCDC",
+        "path": ""
     },
     {
         "id":17,
-        "report_name":"ALP"
+        "report_name":"ALP",
+        "path": ""
     },
     {
         "id":18,
-        "report_name":"OT-PT"
+        "report_name":"OT-PT",
+        "path": ""
     },
     {
         "id":19,
-        "report_name":"UFR NEW"
+        "report_name":"UFR NEW",
+        "path": ""
     },
     {
         "id":20,
-        "report_name":"PT"
+        "report_name":"PT",
+        "path": ""
     },
     {
         "id":21,
-        "report_name":"Total Bilirubin"
+        "report_name":"Total Bilirubin",
+        "path": ""
     },
     {
         "id":22,
-        "report_name":"FBS"
+        "report_name":"FBS",
+        "path": ""
     },
     {
         "id":23,
-        "report_name":"Blood Urea"
+        "report_name":"Blood Urea",
+        "path": ""
     },
     {
         "id":24,
-        "report_name":"Lipid Profile"
+        "report_name":"Lipid Profile",
+        "path": ""
     },
     {
         "id":25,
-        "report_name":"Creatinine"
+        "report_name":"Creatinine",
+        "path": ""
     },
     {
         "id":26,
-        "report_name":"HCG Test"
+        "report_name":"HCG Test",
+        "path": ""
     },
     {
         "id":27,
-        "report_name":"eGFR"
+        "report_name":"eGFR",
+        "path": ""
     },
     {
         "id":28,
-        "report_name":"ppbs"
+        "report_name":"ppbs",
+        "path": ""
     },
     {
         "id":29,
-        "report_name":"Total Protein New"
+        "report_name":"Total Protein New",
+        "path": ""
     },
     {
         "id":30,
-        "report_name":"GGT"
+        "report_name":"GGT",
+        "path": ""
     },
     {
         "id":31,
-        "report_name":"DENGUE"
+        "report_name":"DENGUE",
+        "path": ""
     },
     {
         "id":32,
-        "report_name":"OGTT"
+        "report_name":"OGTT",
+        "path": ""
     },
     {
         "id":33,
-        "report_name":"Toatl Protein"
+        "report_name":"Toatl Protein",
+        "path": ""
     },
     {
         "id":33,
-        "report_name":"FBC-Manual Report"
+        "report_name":"FBC-Manual Report",
+        "path": ""
     },
     {
         "id":34,
-        "report_name":"Liver Profile New"
+        "report_name":"Liver Profile New",
+        "path": ""
     },
     {
         "id":35,
-        "report_name":"RBS"
+        "report_name":"RBS",
+        "path": ""
     },
     {
         "id":36,
-        "report_name":"OGTT New"
+        "report_name":"OGTT New",
+        "path": ""
     },
     {
         "id":37,
-        "report_name":"TOTAL CHOLESTEROL"
+        "report_name":"TOTAL CHOLESTEROL",
+        "path": ""
     }
 ]
