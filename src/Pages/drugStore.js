@@ -1,6 +1,4 @@
 import React from "react";
-import NavBar from "../components/Navbar";
-import Footer from "../components/Footer";
 import add from "../Assets/add.png";
 import view from "../Assets/view.png";
 import deelete from "../Assets/delete.png";
@@ -64,10 +62,6 @@ const options = [
 function DrugStore() {
   return (
     <div>
-      <div>
-        <NavBar />
-      </div>
-   
       <div className="flex justify-center">
         <div className="grid w-1/2 grid-cols-3 gap-10 mt-20 ">
           {options.map((item) => (
@@ -87,9 +81,6 @@ function DrugStore() {
             </Link>
           ))}
         </div>
-      </div>
-      <div>
-        <Footer />
       </div>
     </div>
   );

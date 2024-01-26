@@ -1,6 +1,5 @@
 import React from "react";
-import NavBar from "../components/Navbar";
-import Footer from "../components/Footer";
+
 import "react-responsive-carousel/lib/styles/carousel.min.css";
 import { Carousel } from "react-responsive-carousel";
 import bgimg1 from "../Assets/Back_drug1.jpg";
@@ -34,9 +33,7 @@ const back_ground_4to = [
 function Pharmacy() {
   return (
     <div>
-      <div>
-        <NavBar />
-      </div>
+      
       <div className="relative w-full overflow-hidden bg-center bg-cover h-[500px] bg-gray-950">
         <Carousel
           showThumbs={false}
@@ -68,9 +65,7 @@ function Pharmacy() {
           ))}
         </div>
       </div>
-      <div>
-        <Footer />
-      </div>
+      
     </div>
   );
 }
