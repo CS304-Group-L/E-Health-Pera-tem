@@ -1,6 +1,4 @@
 import React from "react";
-import Navbar from "../components/Navbar";
-import Footer from "../components/Footer";
 import image from "../Assets/Photo2.jpg";
 import { Link } from "react-router-dom";
 const buttons = [
@@ -15,9 +13,7 @@ const buttons = [
 function Services() {
   return (
     <div className="flex flex-col h-screen">
-      <div>
-        <Navbar />
-      </div>
+      
 
       <div className="p-4 mb-6 text-2xl font-bold text-center bg-gray-100">
         <div>Health Center - University of Peradeniya</div>
@@ -38,9 +34,7 @@ function Services() {
         </div>
       </div>
 
-      <footer>
-        <Footer />
-      </footer>
+     
     </div>
   );
 }

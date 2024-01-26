@@ -1,18 +1,12 @@
 import React from "react";
-import Navbar from "../components/Navbar";
-import Footer from "../components/Footer";
-import { Link } from "react-router-dom";
 
-function Signup() {
-<div>
-      <div>
-      <Navbar />
-      </div>
 
+function SignUp() {
+  return (
     <div>
-        <Footer />
-      </div>
-</div>
+   
+    </div>
+  );
 }
 
-export default Signup;
+export default SignUp;

@@ -1,6 +1,5 @@
 import React from "react";
-import NavBar from "../../components/Navbar";
-import Footer from "../../components/Footer";
+
 import { Link } from "react-router-dom";
 import home from "../../Assets/home.png";
 import add from "../../Assets/add.png";
@@ -49,9 +48,6 @@ const topButtons = [
 function ViewDrugs() {
   return (
     <div>
-      <div>
-        <NavBar />
-      </div>
       <div className="flex justify-center">
         <div className="flex justify-center w-full grid-cols-4 gap-10 mt-0 grid-rows-1">
           {topButtons.map((item) => (
@@ -71,10 +67,6 @@ function ViewDrugs() {
             </button>
           ))}
         </div>
-      </div>
-
-      <div>
-        <Footer />
       </div>
     </div>
   );
