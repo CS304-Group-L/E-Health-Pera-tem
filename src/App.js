@@ -54,6 +54,8 @@ import UpdateDrugs1 from "./Pages/PharmacyFiles/UpdateDrugs1";
 import ViewDrugs from "./Pages/PharmacyFiles/ViewDrugs";
 import RootLayout from "./layouts/RootLayout.js";
 
+import NurseHome from "./Pages/Nurse/NurseHome.js";
+
 const router = createBrowserRouter([
   {
     path: "/",
@@ -151,6 +153,8 @@ const router = createBrowserRouter([
       { path: "/SubmittedLabReport", element: <SubmittedLabReport /> },
 
       { path: "/AllLabReports", element: <AllLabReports /> },
+
+      { path : "/NurseHome", element: <NurseHome/>}
     ],
   },
 

@@ -8,7 +8,7 @@ const buttons = [
   {id: 4, name: "Pharmacy", path: "/Pharmacy"},
   {id: 5, name: "Laboratary", path: "/Laboratory"},
   {id: 6, name: "Ward", path: "/Pharmacy"},
-  {id: 7, name: "Nurse", path: "/Pharmacy"},
+  {id: 7, name: "Nurse", path: "/NurseHome"},
 ]
 function Services() {
   return (
