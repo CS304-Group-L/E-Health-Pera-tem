@@ -46,7 +46,7 @@ const topButtons = [
   },
 ];
 
-function UpdateDrugs() {
+function UpdateDrugs1() {
   return (
     <div>
       <div>
@@ -72,39 +72,6 @@ function UpdateDrugs() {
           ))}
         </div>
       </div>
-
-      <div className="flex items-center justify-center h-screen ">
-        <div className="max-w-screen-md p-8 bg-white rounded-lg shadow-md">
-          <h1 className="mb-6 text-2xl font-bold text-center text-blue-900 ">
-            Update Drug
-          </h1>
-          <div className="mb-6 text-l px-3 py-2  text-blue-900 ">
-            Drug Name
-            <input
-              type="name"
-              placeholder="Drug Name"
-              className="w-full px-3 py-2 mb-6 border rounded"
-              required
-            />
-          </div>
-          <div className="mb-6 text-l px-3 py-2  text-blue-900 ">
-            Drug Brand
-            <input
-              type="brand"
-              placeholder="Drug Brand"
-              className="w-full px-3 py-2 mb-6 border rounded"
-              required
-            />
-          </div>
-          <div>
-            <Link to="/PharmacyFile/UpdateDrugs1">
-              <button className="px-4 py-2 text-white bg-red-800 rounded hover:bg-yellow-300 items-center justify-center text-center">
-                Search
-              </button>
-            </Link>
-          </div>
-        </div>
-      </div>
       <div>
         <Footer />
       </div>
@@ -112,4 +79,4 @@ function UpdateDrugs() {
   );
 }
 
-export default UpdateDrugs;
+export default UpdateDrugs1;

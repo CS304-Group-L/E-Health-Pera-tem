@@ -44,6 +44,7 @@ import AddDrugs from "./Pages/PharmacyFiles/AddDrugs";
 import DeleteDrugs from "./Pages/PharmacyFiles/DeleteDrugs";
 import DeleteDrugs1 from "./Pages/PharmacyFiles/DeleteDrugs1";
 import UpdateDrugs from "./Pages/PharmacyFiles/UpdateDrugs";
+import UpdateDrugs1 from "./Pages/PharmacyFiles/UpdateDrugs1";
 import ViewDrugs from "./Pages/PharmacyFiles/ViewDrugs";
 
 const router = createBrowserRouter([
@@ -84,6 +85,8 @@ const router = createBrowserRouter([
   { path: "/PharmacyFile/ViewDrugs", element: <ViewDrugs /> },
 
   { path: "/PharmacyFile/UpdateDrugs", element: <UpdateDrugs /> },
+
+  { path: "/PharmacyFile/UpdateDrugs1", element: <UpdateDrugs1 /> },
 
   { path: "/GiveMedicine", element: <GiveMedicine /> },
 
