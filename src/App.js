@@ -151,28 +151,28 @@ const router = createBrowserRouter([
       { path: "/SubmittedLabReport", element: <SubmittedLabReport /> },
 
       { path: "/AllLabReports", element: <AllLabReports /> },
-
-      { path: "/ASOT_Report", element: <ASOT_Report /> },
-
-      { path: "/BloodGroup", element: <BloodGroup /> },
-
-      { path: "/Covid19RapidAntigen", element: <Covid19RapidAntigen /> },
-
-      { path: "/CRP_Report", element: <CRP_Report /> },
-
-      { path: "/CT_BT_Report", element: <CT_BT_Report /> },
-
-      { path: "/Dengue", element: <Dengue /> },
-
-      { path: "/ESR_Report", element: <ESR_Report /> },
-
-      { path: "/Hcg_test", element: <Hcg_test /> },
-
-      { path: "/Hep_B", element: <Hep_B /> },
-
-      { path: "/VDRL", element: <VDRL /> },
     ],
   },
+
+  { path: "/ASOT_Report", element: <ASOT_Report /> },
+
+  { path: "/BloodGroup", element: <BloodGroup /> },
+
+  { path: "/Covid19RapidAntigen", element: <Covid19RapidAntigen /> },
+
+  { path: "/CRP_Report", element: <CRP_Report /> },
+
+  { path: "/CT_BT_Report", element: <CT_BT_Report /> },
+
+  { path: "/Dengue", element: <Dengue /> },
+
+  { path: "/ESR_Report", element: <ESR_Report /> },
+
+  { path: "/Hcg_test", element: <Hcg_test /> },
+
+  { path: "/Hep_B", element: <Hep_B /> },
+
+  { path: "/VDRL", element: <VDRL /> },
 ]);
 
 export default function App() {
