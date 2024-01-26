@@ -7,6 +7,12 @@ import HealthForm from "./Pages/Healthform";
 import Personinfo from "./Pages/Personinfo";
 import Services from "./Pages/Services";
 import Contactus from "./Pages/Home/Contactus";
+import Notices from "./Pages/Home/Notices";
+import Update from "./Pages/Home/Update";
+import Article from "./Pages/Home/Article";
+import Other from "./Pages/Home/Other";
+import Events from "./Pages/Home/Events";
+import News_page from "./Pages/Home/News_page";
 import Aboutus from "./Pages/Home/About";
 import Pharmacy from "./Pages/Pharmacy";
 import DoctorBoard from "./Pages/Doctor/DoctorHome";
@@ -61,6 +67,18 @@ const router = createBrowserRouter([
   { path: "/Services", element: <Services /> },
 
   { path: "/Contactus", element: <Contactus /> },
+
+  { path: "/Notices", element: <Notices /> },
+
+  { path: "/Events", element: <Events /> },
+
+  { path: "/Other", element: <Other /> },
+
+  { path: "/Article", element: <Article /> },
+
+  { path: "/News_page", element: <News_page /> },
+
+  { path: "/Update", element: <Update /> },
 
   { path: "/About", element: <Aboutus /> },
 

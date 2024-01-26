@@ -1,5 +1,6 @@
 import React from "react";
 import Navbar from "../../components/Navbar";
+import Footer from "../../components/Footer";
 
 function About() {
   return (
@@ -117,6 +118,9 @@ function About() {
             disposal, environmental sanitation and pest control.
           </p>
         </div>
+      </div>
+      <div>
+        <Footer />
       </div>
     </div>
   );
