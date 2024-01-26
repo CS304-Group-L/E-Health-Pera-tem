@@ -6,7 +6,7 @@ import { SiFacebook } from "react-icons/si";
 
 export default function Footer() {
   return (
-    <footer className="bottom-0 right-0 z-40 flex p-[10px] bg-gray-800 text-white py-6 ">
+    <footer className="bottom-0 right-0 z-30 flex p-[10px] bg-gray-800 text-white py-1 ">
       <div className="flex">
         <img src={Uniname} className="" alt="" />
       </div>

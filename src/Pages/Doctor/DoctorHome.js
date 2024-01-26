@@ -40,6 +40,9 @@ const options = [
 function DoctorBoard() {
   return (
     <div>
+      <div>
+        <Navbar />
+      </div>
     <div className = "flex justify-center">
       <div className="grid w-1/2 grid-cols-2 gap-10 mt-20 ">
         {options.map((item) => (

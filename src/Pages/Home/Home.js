@@ -4,6 +4,7 @@ import Footer from "../../components/Footer";
 import photo from "../../Assets/photo.jpg";
 import "react-responsive-carousel/lib/styles/carousel.min.css";
 import { Carousel } from "react-responsive-carousel";
+import { Link } from "react-router-dom";
 import photo_1 from "../../Assets/photo.jpg";
 import photo_2 from "../../Assets/Uni_photo_2.jpeg";
 import photo_3 from "../../Assets/Uni_photo_3.jpg";
@@ -30,39 +31,51 @@ export default function Home() {
       <div className="flex pl-5 pr-5 divide-x">
         <div className="flex flex-col w-80 ">
           <div>
+          <Link to="/Notices">
             <button className="items-center h-8 px-4 font-bold text-white bg-red-800 rounded hover:bg-yellow-300 py-auto w-60">
               Notice Board
             </button>
+            </Link>
           </div>
           <div className="my-2"></div>
           <div>
+          <Link to="/Update">
             <button className="h-8 px-4 font-bold text-white bg-red-800 rounded hover:bg-yellow-300 py-auto w-60">
               Updates
             </button>
+            </Link>
           </div>
           <div className="my-2"></div>
           <div>
+          <Link to="/News_page">
             <button className="h-8 px-4 font-bold text-white bg-red-800 rounded hover:bg-yellow-300 py-auto w-60">
               News
             </button>
+            </Link>
           </div>
           <div className="my-2"></div>
           <div>
+          <Link to="/Article">
             <button className="h-8 px-4 font-bold text-white bg-red-800 rounded hover:bg-yellow-300 py-auto w-60">
               Articals
             </button>
+            </Link>
           </div>
           <div className="my-2"></div>
           <div>
+          <Link to="/Events">
             <button className="h-8 px-4 font-bold text-white bg-red-800 rounded hover:bg-yellow-300 py-auto w-60">
               Event
             </button>
+            </Link>
           </div>
           <div className="my-2"></div>
           <div>
+          <Link to="/Other">
             <button className="h-8 px-4 font-bold text-white bg-red-800 rounded hover:bg-yellow-300 py-auto w-60">
               Other
             </button>
+            </Link>
           </div>
           <div className="my-2"></div>
           <div className="text-center">
@@ -74,7 +87,7 @@ export default function Home() {
           </div>
         </div>
 
-        <div className="object-cover object-none w-full bg-yellow-300 h-200">
+        <div className="object-cover object-none w-full h-200">
         <Carousel
           showThumbs={false}
           infiniteLoop={true}
@@ -84,7 +97,7 @@ export default function Home() {
           {back_ground_4to.map((item) => (
             <img
               key={item.id}
-              className="object-cover w-full h-[500px] opacity-50"
+              className="object-cover w-full h-[500px] opacity-200"
               src={item.img}
               alt=""
             />

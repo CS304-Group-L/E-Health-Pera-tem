@@ -1,11 +1,18 @@
 import React from "react";
 import Home from "./Pages/Home/Home";
 import Login from "./Pages/Login";
+import Signup from "./Pages/Signup";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import HealthForm from "./Pages/Healthform";
 import Personinfo from "./Pages/Personinfo";
 import Services from "./Pages/Services";
 import Contactus from "./Pages/Home/Contactus";
+import Notices from "./Pages/Home/Notices";
+import Update from "./Pages/Home/Update";
+import Article from "./Pages/Home/Article";
+import Other from "./Pages/Home/Other";
+import Events from "./Pages/Home/Events";
+import News_page from "./Pages/Home/News_page";
 import Aboutus from "./Pages/Home/About";
 import Pharmacy from "./Pages/Pharmacy";
 import DoctorBoard from "./Pages/Doctor/DoctorHome";
@@ -34,15 +41,24 @@ import CRP_Report from "./Pages/LabReports/CRP.js";
 import CT_BT_Report from "./Pages/LabReports/CT_BT.js";
 import Dengue from "./Pages/LabReports/Dengue.js";
 import ESR_Report from "./Pages/LabReports/ESR.js";
+import Hcg_test from "./Pages/LabReports/hcg_test.js";
+import Hep_B from "./Pages/LabReports/Hep_B.js";
+import VDRL from "./Pages/LabReports/VDRL.js";
 
+import DrugStore from "./Pages/drugStore";
+import AddDrugs from "./Pages/PharmacyFiles/AddDrugs";
+import DeleteDrugs from "./Pages/PharmacyFiles/DeleteDrugs";
+import DeleteDrugs1 from "./Pages/PharmacyFiles/DeleteDrugs1";
+import UpdateDrugs from "./Pages/PharmacyFiles/UpdateDrugs";
+import UpdateDrugs1 from "./Pages/PharmacyFiles/UpdateDrugs1";
+import ViewDrugs from "./Pages/PharmacyFiles/ViewDrugs";
 
 const router = createBrowserRouter([
-  {
-    path: "/",
-    element: <Home />,
-  },
+  { path: "/", element: <Home /> },
 
   { path: "/Login", element: <Login /> },
+  
+  { path: "/Signup", element: <Signup /> },
 
   { path: "/Healthform", element: <HealthForm /> },
 
@@ -52,62 +68,101 @@ const router = createBrowserRouter([
 
   { path: "/Contactus", element: <Contactus /> },
 
+  { path: "/Notices", element: <Notices /> },
+
+  { path: "/Events", element: <Events /> },
+
+  { path: "/Other", element: <Other /> },
+
+  { path: "/Article", element: <Article /> },
+
+  { path: "/News_page", element: <News_page /> },
+
+  { path: "/Update", element: <Update /> },
+
   { path: "/About", element: <Aboutus /> },
 
   { path: "/Pharmacy", element: <Pharmacy /> },
 
   { path: "/DoctorBoard", element: <DoctorBoard /> },
 
-  { path : "/Medicines" , element: <Medicines/>},
+  { path: "/Medicines", element: <Medicines /> },
 
-  { path : "/HealthRecords" , element: <HealthRecords/>},
+  { path: "/HealthRecords", element: <HealthRecords /> },
 
-  { path : "/GiveMedicine" , element: <GiveMedicine/>},
+  { path: "/DrugStore", element: <DrugStore /> },
 
-  {path : "/MedicalReport" , element: <MedicalReport/>},
+  { path: "/GiveMedicine", element: <GiveMedicine /> },
 
-  {path : "/LabReport" ,element : <LabReport/>},
+  { path: "/PharmacyFile/AddDrugs", element: <AddDrugs /> },
 
-  {path : "AddHealthRecord", element : <AddHealthRecord/>},
+  { path: "/PharmacyFile/DeleteDrugs", element: <DeleteDrugs /> },
 
-  {path : "/ViewPastHealthRecordsSearch",element : <ViewPastHealthRecordsSearch/>},
+  { path: "/PharmacyFile/DeleteDrugs1", element: <DeleteDrugs1 /> },
 
-  {path : "/ViewPastHealthRecords", element : <ViewPastHealthRecords/>},
+  { path: "/PharmacyFile/ViewDrugs", element: <ViewDrugs /> },
 
-  {path : "/ViewPastMedicineRecordsSearch" , element : <ViewPastMedicineRecordsSearch/>},
+  { path: "/PharmacyFile/UpdateDrugs", element: <UpdateDrugs /> },
 
-  {path : "/ViewPastMedicineRecords" , element : <ViewPastMedicineRecords/>},
+  { path: "/PharmacyFile/UpdateDrugs1", element: <UpdateDrugs1 /> },
 
-  {path : "/IssueLaboratoryTest" , element : <IssueLaboratoryTest/>},
+  { path: "/GiveMedicine", element: <GiveMedicine /> },
 
-  {path : "/CreateMedical",element : <CreateMedical/>},
+  { path: "/MedicalReport", element: <MedicalReport /> },
 
-  {path : "/IssueLaboratoryTestNew" , element : <IssueLaboratoryTestNew/>},
+  { path: "/LabReport", element: <LabReport /> },
 
-  {path: "/Laboratory" ,element : <Laboratory/>},
+  { path: "AddHealthRecord", element: <AddHealthRecord /> },
 
-  {path: "/DraftedLabReport", element: <DraftedLabReport/>},
+  {
+    path: "/ViewPastHealthRecordsSearch",
+    element: <ViewPastHealthRecordsSearch />,
+  },
 
-  {path: "/NewLabReportrequest",element: <NewLabReportrequest/>},
+  { path: "/ViewPastHealthRecords", element: <ViewPastHealthRecords /> },
 
-  {path: "/SubmittedLabReport", element: <SubmittedLabReport/>},
+  {
+    path: "/ViewPastMedicineRecordsSearch",
+    element: <ViewPastMedicineRecordsSearch />,
+  },
 
-  {path : "/AllLabReports",element: <AllLabReports/>},
+  { path: "/ViewPastMedicineRecords", element: <ViewPastMedicineRecords /> },
 
-  {path: "/ASOT_Report" ,element: <ASOT_Report/>},
+  { path: "/IssueLaboratoryTest", element: <IssueLaboratoryTest /> },
 
-  {path:"/BloodGroup",element: <BloodGroup/>},
+  { path: "/CreateMedical", element: <CreateMedical /> },
 
-  {path: "/Covid19RapidAntigen",element: <Covid19RapidAntigen/>},
+  { path: "/IssueLaboratoryTestNew", element: <IssueLaboratoryTestNew /> },
 
-  {path : "/CRP_Report",element: <CRP_Report/>},
+  { path: "/Laboratory", element: <Laboratory /> },
 
-  {path : "/CT_BT_Report", element: <CT_BT_Report/>},
+  { path: "/DraftedLabReport", element: <DraftedLabReport /> },
 
-  {path : "/Dengue",element: <Dengue/>},
+  { path: "/NewLabReportrequest", element: <NewLabReportrequest /> },
 
-  {path : "/ESR_Report" ,element: <ESR_Report/>}
+  { path: "/SubmittedLabReport", element: <SubmittedLabReport /> },
 
+  { path: "/AllLabReports", element: <AllLabReports /> },
+
+  { path: "/ASOT_Report", element: <ASOT_Report /> },
+
+  { path: "/BloodGroup", element: <BloodGroup /> },
+
+  { path: "/Covid19RapidAntigen", element: <Covid19RapidAntigen /> },
+
+  { path: "/CRP_Report", element: <CRP_Report /> },
+
+  { path: "/CT_BT_Report", element: <CT_BT_Report /> },
+
+  { path: "/Dengue", element: <Dengue /> },
+
+  { path: "/ESR_Report", element: <ESR_Report /> },
+
+  { path: "/Hcg_test", element: <Hcg_test /> },
+
+  { path: "/Hep_B", element: <Hep_B /> },
+
+  { path: "/VDRL", element: <VDRL /> },
 ]);
 
 export default function App() {
