@@ -46,7 +46,7 @@
     {
         "id":10,
         "report_name":"Hep B",
-        "path": ""
+        "path": "/Hep_B"
     },
     {
         "id":11,
@@ -71,7 +71,7 @@
     {
         "id":15,
         "report_name":"VDRL",
-        "path": ""
+        "path": "/VDRL"
     },
     {
         "id":16,
@@ -126,7 +126,7 @@
     {
         "id":26,
         "report_name":"HCG Test",
-        "path": ""
+        "path": "/hcg_test"
     },
     {
         "id":27,

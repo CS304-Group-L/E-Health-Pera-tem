@@ -1,12 +1,9 @@
 import React from "react";
-import Navbar from "../../components/Navbar";
 
 function About() {
   return (
     <div>
-      <div>
-        <Navbar />
-      </div>
+      
       <div className="p-8 mb-6 text-2xl font-bold text-center bg-gray-100">
         <div>Health Center - University of Peradeniya</div>
         <div className="text-base font-normal">ABOUT US </div>
