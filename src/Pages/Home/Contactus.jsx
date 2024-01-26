@@ -1,13 +1,10 @@
 import React from "react";
-import Navbar from "../../components/Navbar";
-import Footer from "../../components/Footer";
+
 
 function Contactus() {
   return (
     <div>
-      <div>
-        <Navbar />
-      </div>
+      
       <div className="bg-gray-100 p-8 text-2xl font-bold text-center mb-6">
         <div>Health Center - University of Peradeniya</div>
         <div className="text-base font-normal">Contact Details</div>
@@ -40,9 +37,7 @@ function Contactus() {
         </div>
       </div>
 
-      <div>
-        <Footer />
-      </div>
+     
     </div>
   );
 }

@@ -1,22 +1,18 @@
-import React from 'react';
-import Navbar from '../components/Navbar';
+import React from "react";
 
 function HealthForm() {
   return (
     <div>
-      <div>
-        <Navbar/>
-      </div>
       <div className="bg-gray-100 p-8 text-2xl font-bold text-center mb-6">
-      <div>Health Center University of Peradeniya</div>
-      <div className="text-base font-normal">Student registation form</div>
+        <div>Health Center University of Peradeniya</div>
+        <div className="text-base font-normal">Student registation form</div>
       </div>
       <div>
         <div>Name with initials</div>
         <div>Enrolment Number</div>
         <div>National ID Number</div>
         <div>A/L Index No </div>
-        <div>Date of Birth  </div>
+        <div>Date of Birth </div>
         <div>Sex </div>
         <div>Nationality </div>
         <div>Religion </div>
@@ -34,21 +30,25 @@ function HealthForm() {
         <div>No of Brothers and Sisters</div>
         <div>ages</div>
         <div>Vegetarian or Non-Vegetarian</div>
-        <div>Have you been admitted to the Hospital in the past? If so wht is the condition? Have you undergone majoir surgery?</div>
-        <div>Are you taking treatment for a chronic disease? If so what?(eg. Diabetes mellitus, Bronchilal Asthma, Mental illness, Epilepsy, Arthritis, Heart diseases, Eczema ect) </div>
-        <div>Have you any physical disability? If so What type? Does it require any assistance by the University </div>
+        <div>
+          Have you been admitted to the Hospital in the past? If so wht is the
+          condition? Have you undergone majoir surgery?
+        </div>
+        <div>
+          Are you taking treatment for a chronic disease? If so what?(eg.
+          Diabetes mellitus, Bronchilal Asthma, Mental illness, Epilepsy,
+          Arthritis, Heart diseases, Eczema ect){" "}
+        </div>
+        <div>
+          Have you any physical disability? If so What type? Does it require any
+          assistance by the University{" "}
+        </div>
         <div>Are you having Allergy to food or drugs? Please specify</div>
         <div>Person to be contacted in an emergency? </div>
         <div>Adress of the person to be contacted in an emergency</div>
         <div>Telephone Numbe person to be contacted in an emergency</div>
       </div>
     </div>
-
-
-
-
-
-
 
     // <div className="bg-gray-100 p-8">
     //   <h1 className="text-2xl font-bold text-center mb-6">Health Center University of Peradeniya</h1>
