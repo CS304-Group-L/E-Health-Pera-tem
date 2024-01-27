@@ -101,13 +101,10 @@ export default function Home() {
       </div>
 
       <div className="text-2xl text-center pt-11">
-        <p>This is our vision</p>
+        <p> Our Vision</p>
       </div>
       <div className="pt-8 pl-40 pr-40">
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
-        tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim
-        veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
-        commodo consequat.
+      
       </div>
     </div>
   );

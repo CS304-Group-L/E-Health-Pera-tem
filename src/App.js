@@ -36,6 +36,7 @@ import SubmittedLabReport from "./Pages/Laboratory/SubmittedLabReport";
 import AllLabReports from "./Pages/Laboratory/AllLabReports";
 import ASOT_Report from "./Pages/LabReports/ASOT_Report";
 import BloodGroup from "./Pages/LabReports/BooldGroup";
+import Ppbs_Report from "./Pages/LabReports/Ppbs_Report.js";
 import Covid19RapidAntigen from "./Pages/LabReports/Covid19RapidAntigen";
 import CRP_Report from "./Pages/LabReports/CRP.js";
 import CT_BT_Report from "./Pages/LabReports/CT_BT.js";
@@ -185,6 +186,8 @@ const router = createBrowserRouter([
   { path: "/ASOT_Report", element: <ASOT_Report /> },
 
   { path: "/BloodGroup", element: <BloodGroup /> },
+
+  { path: "Ppbs_Report", element: <Ppbs_Report />},
 
   { path: "/Covid19RapidAntigen", element: <Covid19RapidAntigen /> },
 
