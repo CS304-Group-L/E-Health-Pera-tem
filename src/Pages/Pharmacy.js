@@ -20,6 +20,7 @@ const options = [
     id: 2,
     name: "Drug Issueing",
     bg_color: "bg-blue-500",
+    path: "/DrugIssueing"
   },
 ];
 const back_ground_4to = [

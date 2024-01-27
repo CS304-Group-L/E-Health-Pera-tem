@@ -1,9 +1,9 @@
 import React from "react";
-import add from "../Assets/add.png";
-import view from "../Assets/view.png";
-import deelete from "../Assets/delete.png";
-import update from "../Assets/update.png";
-import exit from "../Assets/exit.png";
+import add from "../../Assets/add.png";
+import view from "../../Assets/view.png";
+import deelete from "../../Assets/delete.png";
+import update from "../../Assets/update.png";
+import exit from "../../Assets/exit.png";
 import { Link } from "react-router-dom";
 
 /*const topButtons = [
@@ -62,7 +62,7 @@ const options = [
 function DrugStore() {
   return (
     <div>
-      <div className="flex justify-center">
+      <div className="flex justify-center ">
         <div className="grid w-1/2 grid-cols-3 gap-10 mt-20 ">
           {options.map((item) => (
             <Link to={item.path}>

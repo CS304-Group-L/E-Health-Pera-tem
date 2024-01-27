@@ -44,14 +44,17 @@ import ESR_Report from "./Pages/LabReports/ESR.js";
 import Hcg_test from "./Pages/LabReports/hcg_test.js";
 import Hep_B from "./Pages/LabReports/Hep_B.js";
 import VDRL from "./Pages/LabReports/VDRL.js";
+import RH_Factor from "./Pages/LabReports/RH_Factor.js";
+import Urine_Protein from "./Pages/LabReports/Urine_Protein.js";
 
-import DrugStore from "./Pages/drugStore";
+import DrugStore from "./Pages/PharmacyFiles/drugStore.js";
 import AddDrugs from "./Pages/PharmacyFiles/AddDrugs";
 import DeleteDrugs from "./Pages/PharmacyFiles/DeleteDrugs";
 import DeleteDrugs1 from "./Pages/PharmacyFiles/DeleteDrugs1";
 import UpdateDrugs from "./Pages/PharmacyFiles/UpdateDrugs";
 import UpdateDrugs1 from "./Pages/PharmacyFiles/UpdateDrugs1";
 import ViewDrugs from "./Pages/PharmacyFiles/ViewDrugs";
+import DrugIssueing from "./Pages/PharmacyFiles/DrugIssueing.js";
 import RootLayout from "./layouts/RootLayout.js";
 
 const router = createBrowserRouter([
@@ -110,6 +113,8 @@ const router = createBrowserRouter([
       { path: "/PharmacyFile/UpdateDrugs", element: <UpdateDrugs /> },
 
       { path: "/PharmacyFile/UpdateDrugs1", element: <UpdateDrugs1 /> },
+      
+      { path: "/PharmacyFile/DrugIssueing", element: <DrugIssueing /> },
 
       { path: "/GiveMedicine", element: <GiveMedicine /> },
 
@@ -173,6 +178,10 @@ const router = createBrowserRouter([
   { path: "/Hep_B", element: <Hep_B /> },
 
   { path: "/VDRL", element: <VDRL /> },
+
+  { path: "/RH_Factor", element: <RH_Factor /> },
+
+  { path: "/Urine_Protein", element: <Urine_Protein /> },
 ]);
 
 export default function App() {
