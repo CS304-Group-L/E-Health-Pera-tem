@@ -4,6 +4,7 @@ import Login from "./Pages/Login";
 import SignUp from "./Pages/Signup.js";
 import StudentSignUp from "./Pages/StudentSignup.js";
 import StaffSignUp from "./Pages/StaffSignup.js";
+import ForgotPassword from "./Pages/ForgotPassword.js";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import HealthForm from "./Pages/Healthform";
 import Personinfo from "./Pages/Personinfo";
@@ -90,7 +91,11 @@ const router = createBrowserRouter([
 
   
       { path: "/StudentSignup", element: <StudentSignUp/>},
+
       { path: "/StaffSignup", element: <StaffSignUp/>},
+
+      {path: "/ForgotPassword", element: <ForgotPassword/>},
+      
       { path: "/Healthform", element: <HealthForm /> },
 
       { path: "/Personinfo", element: <Personinfo /> },
