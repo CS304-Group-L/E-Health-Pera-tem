@@ -1,7 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
 
-function StudentSignUp({}){
+function StudentSignup({}){
     return(
         <section class="h-screen">
        
@@ -27,10 +27,6 @@ function StudentSignUp({}){
               </div>
             </div>
 
-            <div className="mb-4">
-                 <label for="full_name" class="block text-sm font-medium text-gray-600 mb-1">Full Name </label>
-                 <input type="text" id="full_name" name="full_name" placeholder="" autocomplete="given-name"class="w-full p-2 border rounded "> </input>
-                 </div>
 
             <div className="mb-4">
                  <label for="full_name" class="block text-sm font-medium text-gray-600 mb-1">Full Name </label>
@@ -46,7 +42,7 @@ function StudentSignUp({}){
                   -- Registration Number --
             <div className="mb-4">
                 <label for="registration_number" class="block text-sm font-medium text-gray-600 mb-1">Registration Number</label>
-                <input type="text" id="registration_number" name="registration_number" placeholder="" autocomplete="off" class="w-full p-2 border rounded"></input>
+                <input type="text" id="registration_number" name="registration_number" placeholder="s18916" autocomplete="off" class="w-full p-2 border rounded"></input>
                  </div>
 
                  -- Phone Number --
@@ -189,4 +185,4 @@ function StudentSignUp({}){
     );
 
     }
-export default StudentSignUp;
+export default StudentSignup;
