@@ -13,34 +13,34 @@ const options = [
       name: "Ward Forms",
       bg_color: "bg-blue-500",
       img:  ward,
-      path:"/NewLabReportrequest"
+      path:"/StudentNumberWard"
     },
     {
       id: 2,
       name: "Temperature Chart",
-      bg_color: "bg-yellow-400",
+      bg_color: "bg-yellow-300",
       img: temperature,
-      path:"/DraftedLabReport"
+      path:"/StudentNumberTemperature"
     },
     { id: 3, 
       name: "Intake Out Put Chart", 
       bg_color: "bg-green-400", 
       img:intake,
-      path:"/SubmittedLabReport" 
+      path:"/StudentNumberIntakeOutPutChart" 
     },
     {
       id: 4,
       name: "Drug Chart",
       bg_color: "bg-purple-400",
       img: medicine,
-      path:"/AllLabReports"
+      path:"/StudentNumberDurg"
     },
     {
         id: 5,
         name: "Full Blood Count Chart",
         bg_color: "bg-red-400",
         img: bloodcell,
-        path:"/AllLabReports"
+        path:"/StudentNumberFullBloodCount"
       },
       {
         id: 6,

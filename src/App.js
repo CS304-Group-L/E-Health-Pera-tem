@@ -55,6 +55,10 @@ import ViewDrugs from "./Pages/PharmacyFiles/ViewDrugs";
 import RootLayout from "./layouts/RootLayout.js";
 
 import NurseHome from "./Pages/Nurse/NurseHome.js";
+import StudentNumber from "./Pages/Nurse/StudentNumber.js"
+import WardFrom from "./Pages/Nurse/WardForm.js"
+import TemperatureForm from "./Pages/Nurse/TemperatureForm.js";
+
 
 const router = createBrowserRouter([
   {
@@ -73,7 +77,15 @@ const router = createBrowserRouter([
 
   { path: "/SignUp", element: <SignUp/>},
 
-  { path: "/ForgotPassword", element: <ForgotPassword/>},
+      { path: "/StudentNumberWard", element: <StudentNumber role="Ward" /> },
+      { path: "/StudentNumberTemperature", element: <StudentNumber role="Temperature" /> },
+      { path: "/StudentNumberIntakeOutPutChart", element: <StudentNumber role="IntakeOutPutChart" /> },
+      { path: "/StudentNumberDurg", element: <StudentNumber role="Durg" /> },
+      { path: "/StudentNumberFullBloodCount", element: <StudentNumber role="FullBloodCount" /> },
+      { path: "/StudentNumber", element: <StudentNumber role="ward" /> },
+      { path: "/StudentNumber", element: <StudentNumber role="nurse" /> },
+
+  
 
       { path: "/Healthform", element: <HealthForm /> },
 
@@ -162,7 +174,11 @@ const router = createBrowserRouter([
 
       { path: "/AllLabReports", element: <AllLabReports /> },
 
-      { path : "/NurseHome", element: <NurseHome/>}
+      { path : "/NurseHome", element: <NurseHome/>},
+
+      {path : "/WardForm",element:<WardFrom/>},
+
+      {path : "/TemperatureForm",element:<TemperatureForm/>}
     ],
   },
 
