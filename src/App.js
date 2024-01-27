@@ -29,7 +29,7 @@ import ViewPastMedicineRecords from "./Pages/Doctor/ViewPastMedicineRecords";
 import IssueLaboratoryTest from "./Pages/DoctorLabPages/IssueLaboratoryTest";
 import CreateMedical from "./Pages/Doctor/CreateMedical";
 import IssueLaboratoryTestNew from "./Pages/Doctor/IssueLaboratoryTestNew";
-import Laboratory from "./Pages/Laboratory/Laboratory_Home";
+import LaboratoryHome from "./Pages/Laboratory/LaboratoryHome.js";
 import DraftedLabReport from "./Pages/Laboratory/DraftedLabReport";
 import NewLabReportrequest from "./Pages/Laboratory/NewLabReportRequest";
 import SubmittedLabReport from "./Pages/Laboratory/SubmittedLabReport";
@@ -71,7 +71,7 @@ const router = createBrowserRouter([
       { path: "/StaffLogin", element: <Login role="staff" /> },
       { path: "/DoctorLogin", element: <Login role="doctor" /> },
       { path: "/PharmacyLogin", element: <Login role="pharmacy" /> },
-      { path: "/LabLogin", element: <Login role="laboratory" /> },
+      { path: "/LabLogin", element: <Login role="Laboratory" /> },
       { path: "/WardLogin", element: <Login role="ward" /> },
       { path: "/NurseLogin", element: <Login role="nurse" /> },
 
@@ -164,7 +164,7 @@ const router = createBrowserRouter([
 
       { path: "/IssueLaboratoryTestNew", element: <IssueLaboratoryTestNew /> },
 
-      { path: "/Laboratory", element: <Laboratory /> },
+      { path: "/LaboratoryHome", element: <LaboratoryHome /> },
 
       { path: "/DraftedLabReport", element: <DraftedLabReport /> },
 

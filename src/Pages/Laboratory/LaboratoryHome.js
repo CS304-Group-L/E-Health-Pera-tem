@@ -36,7 +36,7 @@ const options = [
 ];
 
 
-function Laboratory() {
+function LaboratoryHome() {
   return (
     <div>
     <div className = "flex justify-center">
@@ -64,4 +64,4 @@ function Laboratory() {
   );
 }
 
-export default Laboratory;
+export default LaboratoryHome;
