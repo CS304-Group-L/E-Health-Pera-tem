@@ -2,6 +2,7 @@ import React from "react";
 import Home from "./Pages/Home/Home";
 import Login from "./Pages/Login";
 import SignUp from "./Pages/SignUp.js";
+import ForgotPassword from "./Pages/ForgotPassword.js";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import HealthForm from "./Pages/Healthform";
 import Personinfo from "./Pages/Personinfo";
@@ -66,6 +67,8 @@ const router = createBrowserRouter([
   { path: "/Login", element: <Login /> },
 
   { path: "/SignUp", element: <SignUp/>},
+
+  { path: "/ForgotPassword", element: <ForgotPassword/>}
 
       { path: "/Healthform", element: <HealthForm /> },
 
