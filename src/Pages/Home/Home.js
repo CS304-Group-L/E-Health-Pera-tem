@@ -112,7 +112,7 @@ export default function Home() {
       2. We are committed to creating an inclusive environment that respects and values the diverse needs of every student, faculty, and staff member, ensuring that our health services cater to the unique requirements of our community.<br></br>
       3. Empowering individuals to take an active role in their health is at the core of our vision, providing resources and education to enable informed decision-making and fostering a sense of personal responsibility.<br></br>
       4. Striving for innovation in healthcare services, we aim to meet the evolving needs of our community while ensuring accessibility by removing barriers to healthcare and leveraging technology to enhance service delivery.<br></br>
-      5. Striving for innovation in healthcare services, we aim to meet the evolving needs of our community while ensuring accessibility by removing barriers to healthcare and leveraging technology to enhance service delivery.
+      5. Our vision involves a cultural transformation within the university, where health and well-being become integral aspects of our community's identity, promoting a positive and supportive atmosphere for healthy habits and lifestyle choices.
       </div>
 
       <div className="text-2xl text-center pt-11">
