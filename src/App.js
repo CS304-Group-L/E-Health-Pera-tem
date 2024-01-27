@@ -1,7 +1,7 @@
 import React from "react";
 import Home from "./Pages/Home/Home";
 import Login from "./Pages/Login";
-import SignUp from "./Pages/SignUp.js";
+import SignUp from "./Pages/Signup.js";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import HealthForm from "./Pages/Healthform";
 import Personinfo from "./Pages/Personinfo";
@@ -14,8 +14,8 @@ import Other from "./Pages/Home/Other";
 import Events from "./Pages/Home/Events";
 import News_page from "./Pages/Home/News_page";
 import Aboutus from "./Pages/Home/About";
-import Pharmacy from "./Pages/Pharmacy";
-import DoctorBoard from "./Pages/Doctor/DoctorHome";
+import Pharmacy from "./Pages/PharmacyFiles/PharmacyHome.js";
+import DoctorHome from "./Pages/Doctor/DoctorHome";
 import Medicines from "./Pages/Doctor/Medicine";
 import HealthRecords from "./Pages/Doctor/HealthRecord";
 import GiveMedicine from "./Pages/Doctor/GiveMedicine";
@@ -63,7 +63,13 @@ const router = createBrowserRouter([
     children: [
       { path: "/", element: <Home /> },
 
-  { path: "/Login", element: <Login /> },
+      { path: "/StudentLogin", element: <Login role="student" /> },
+      { path: "/StaffLogin", element: <Login role="staff" /> },
+      { path: "/DoctorLogin", element: <Login role="doctor" /> },
+      { path: "/PharmacyLogin", element: <Login role="pharmacy" /> },
+      { path: "/LabLogin", element: <Login role="laboratory" /> },
+      { path: "/WardLogin", element: <Login role="ward" /> },
+      { path: "/NurseLogin", element: <Login role="nurse" /> },
 
   { path: "/SignUp", element: <SignUp/>},
 
@@ -91,7 +97,7 @@ const router = createBrowserRouter([
 
       { path: "/Pharmacy", element: <Pharmacy /> },
 
-      { path: "/DoctorBoard", element: <DoctorBoard /> },
+      { path: "/DoctorHome", element: <DoctorHome /> },
 
       { path: "/Medicines", element: <Medicines /> },
 

@@ -2,11 +2,11 @@ import React from "react";
 
 import "react-responsive-carousel/lib/styles/carousel.min.css";
 import { Carousel } from "react-responsive-carousel";
-import bgimg1 from "../Assets/Back_drug1.jpg";
-import bgimg2 from "../Assets/Back_drug2.jpg";
-import bgimg3 from "../Assets/Back_drug3.jpg";
-import bgimg4 from "../Assets/Back_drug4.jpg";
-import bgimg5 from "../Assets/Back_drug5.jpg";
+import bgimg1 from "../../Assets/Back_drug1.jpg";
+import bgimg2 from "../../Assets/Back_drug2.jpg";
+import bgimg3 from "../../Assets/Back_drug3.jpg";
+import bgimg4 from "../../Assets/Back_drug4.jpg";
+import bgimg5 from "../../Assets/Back_drug5.jpg";
 import { Link } from "react-router-dom";
 
 const options = [
