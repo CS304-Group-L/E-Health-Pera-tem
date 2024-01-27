@@ -2,6 +2,7 @@ import React from "react";
 import Home from "./Pages/Home/Home";
 import Login from "./Pages/Login";
 import SignUp from "./Pages/Signup.js";
+import StudentSignUp from "./Pages/StudentSignup.js";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import HealthForm from "./Pages/Healthform";
 import Personinfo from "./Pages/Personinfo";
@@ -87,7 +88,7 @@ const router = createBrowserRouter([
       { path: "/StudentNumber", element: <StudentNumber role="nurse" /> },
 
   
-
+      { path: "/StudentSignup", element: <StudentSignUp/>},
       { path: "/Healthform", element: <HealthForm /> },
 
       { path: "/Personinfo", element: <Personinfo /> },
