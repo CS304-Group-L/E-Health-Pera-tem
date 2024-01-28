@@ -1,10 +1,12 @@
 import React from "react";
+import Navbar from "../components/Navbar";
+import Footer from "../components/Footer";
 
  function SignUp() {
     return(
         <div className="h-screen bg-">
-        
-        <div className = "flex items-center justify-center h-screen ">
+        <Navbar />
+          <div className = "flex items-center justify-center h-screen ">
           <div className = "max-w-screen-md p-8 bg-white rounded-lg shadow-md">
             <div>
             <h1 className = "mb-6 text-2xl font-bold text-center text-blue-900 ">  SignUp </h1>
@@ -30,10 +32,29 @@ import React from "react";
         </script>
         </div>
       </div>
-      
+      <Footer />
     </div>
        
     );
  }
 
  export default SignUp;               
+
+            
+         
+
+
+             
+        
+      
+                 
+                
+     
+      
+
+          
+     
+           
+       
+    
+    
