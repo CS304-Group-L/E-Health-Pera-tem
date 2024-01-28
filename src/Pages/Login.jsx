@@ -1,6 +1,7 @@
 import React from "react";
 import LoginLogo from "../Assets/Uni_photo_3.jpg";
 import { Link } from "react-router-dom";
+import { useState,useEffect } from 'react';
 
 const buttons = [
   { id: 1, name: "Login", path: "/DoctorBoard" },
@@ -8,6 +9,39 @@ const buttons = [
 ];
 
 function Login({ role }) {
+
+  const [email, setEmail] = useState('');
+  const [password, setPassword] = useState('');
+  const [statusMessage, setStatusMessage] = useState('');
+
+  const handleLogin = async () => {
+    try {
+      const response = await fetch('http://localhost:8080/api/v1/student/login', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({
+          email,
+          password,
+        }),
+      });
+
+      const data = await response.json();
+    console.log('Login Response:', data);
+
+      if (data.status) {
+        // If login is successful, redirect to the doctor page
+        window.location.href = `/${role}Home`;
+      } else {
+        // If login fails, set the status message
+        setStatusMessage(data.message);
+      }
+    } catch (error) {
+      console.error('Error during login:', error);
+    }
+  };
+
   return (
     <>
       <section class="h-screen">
@@ -97,9 +131,7 @@ function Login({ role }) {
                     Email address
                   </label>
                   <input
-                    type="text"
-                    class="peer block min-h-[auto] w-full p-2 border rounded bg-transparent px-3 py-[0.32rem] leading-[2.15] outline-none transition-all duration-200 ease-linear focus:placeholder:opacity-100 data-[te-input-state-active]:placeholder:opacity-100 motion-reduce:transition-none dark:text-neutral-200 dark:placeholder:text-neutral-200 [&:not([data-te-input-placeholder-active])]:placeholder:opacity-0"
-                    id="exampleFormControlInput2"
+                   type="text" value={email} onChange={(e) => setEmail(e.target.value)}
                     placeholder= "s18916@sci.pdn.ac.lk"
                   />
                  
@@ -113,9 +145,8 @@ function Login({ role }) {
                     Password
                   </label>
                   <input
-                    type="password"
-                    class="peer block min-h-[auto] w-full p-2 border rounded bg-transparent px-3 py-[0.32rem] leading-[2.15] outline-none transition-all duration-200 ease-linear focus:placeholder:opacity-100 data-[te-input-state-active]:placeholder:opacity-100 motion-reduce:transition-none dark:text-neutral-200 dark:placeholder:text-neutral-200 [&:not([data-te-input-placeholder-active])]:placeholder:opacity-0"
-                    id="exampleFormControlInput22"
+                    type="text" value={password} onChange={(e) => setPassword(e.target.value)}
+                    
                     placeholder="********"
                   />
                   
@@ -143,8 +174,9 @@ function Login({ role }) {
                 <div class="text-center lg:text-left">
                   <button
                     type="button" className="px-4 py-2 font-bold text-black bg-blue-800 rounded hover:bg-blue-300"
+                    onClick={handleLogin}
                   >
-                  <Link to={`/${role}Home`}>Login</Link>
+                  Login
                   </button>
 
                   <p class="mb-0 mt-2 pt-1 text-sm font-semibold">

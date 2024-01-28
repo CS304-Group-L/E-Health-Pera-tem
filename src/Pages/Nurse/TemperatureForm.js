@@ -33,11 +33,11 @@ function TemperatureForm(){
 
           const chartOptions = {
             scales: {
-              x: {
+              xAxes: {
                 type: "linear",
                 position: "bottom",
               },
-              y: {
+              yAxes: {
                 type: "linear",
                 position: "left",
               },
