@@ -36,7 +36,7 @@ const options = [
 ];
 
 
-function DoctorBoard() {
+function DoctorHome() {
   return (
     <div>
      
@@ -65,4 +65,4 @@ function DoctorBoard() {
   );
 }
 
-export default DoctorBoard;
+export default DoctorHome;
