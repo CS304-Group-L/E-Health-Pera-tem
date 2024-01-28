@@ -46,6 +46,9 @@ import Hep_B from "./Pages/LabReports/Hep_B.js";
 import VDRL from "./Pages/LabReports/VDRL.js";
 import RH_Factor from "./Pages/LabReports/RH_Factor.js";
 import Urine_Protein from "./Pages/LabReports/Urine_Protein.js";
+import Liver_Profile_New from "./Pages/LabReports/Liver_Profile_New.js";
+import UFR from "./Pages/LabReports/UFR.js";
+
 
 import DrugStore from "./Pages/PharmacyFiles/drugStore.js";
 import AddDrugs from "./Pages/PharmacyFiles/AddDrugs";
@@ -102,19 +105,19 @@ const router = createBrowserRouter([
 
       { path: "/GiveMedicine", element: <GiveMedicine /> },
 
-      { path: "/PharmacyFile/AddDrugs", element: <AddDrugs /> },
+      { path: "/AddDrugs", element: <AddDrugs /> },
 
-      { path: "/PharmacyFile/DeleteDrugs", element: <DeleteDrugs /> },
+      { path: "/DeleteDrugs", element: <DeleteDrugs /> },
 
-      { path: "/PharmacyFile/DeleteDrugs1", element: <DeleteDrugs1 /> },
+      { path: "/DeleteDrugs1", element: <DeleteDrugs1 /> },
 
-      { path: "/PharmacyFile/ViewDrugs", element: <ViewDrugs /> },
+      { path: "/ViewDrugs", element: <ViewDrugs /> },
 
-      { path: "/PharmacyFile/UpdateDrugs", element: <UpdateDrugs /> },
+      { path: "/UpdateDrugs", element: <UpdateDrugs /> },
 
-      { path: "/PharmacyFile/UpdateDrugs1", element: <UpdateDrugs1 /> },
+      { path: "/UpdateDrugs1", element: <UpdateDrugs1 /> },
       
-      { path: "/PharmacyFile/DrugIssueing", element: <DrugIssueing /> },
+      { path: "/DrugIssueing", element: <DrugIssueing /> },
 
       { path: "/GiveMedicine", element: <GiveMedicine /> },
 
@@ -182,6 +185,10 @@ const router = createBrowserRouter([
   { path: "/RH_Factor", element: <RH_Factor /> },
 
   { path: "/Urine_Protein", element: <Urine_Protein /> },
+
+  { path: "/Liver_Profile_New", element: <Liver_Profile_New /> },
+
+  { path: "/UFR", element: <UFR /> },
 ]);
 
 export default function App() {
