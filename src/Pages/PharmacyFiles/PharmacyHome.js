@@ -31,7 +31,7 @@ const back_ground_4to = [
   { id: 5, img: bgimg5 },
 ];
 
-function Pharmacy() {
+function PharmacyHome() {
   return (
     <div>
       
@@ -71,4 +71,4 @@ function Pharmacy() {
   );
 }
 
-export default Pharmacy;
+export default PharmacyHome;
