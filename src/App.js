@@ -2,6 +2,9 @@ import React from "react";
 import Home from "./Pages/Home/Home";
 import Login from "./Pages/Login";
 import SignUp from "./Pages/Signup.js";
+import StudentSignUp from "./Pages/StudentSignup.js";
+import StaffSignUp from "./Pages/StaffSignup.js";
+import ForgotPassword from "./Pages/ForgotPassword.js";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import HealthForm from "./Pages/Healthform";
 import Personinfo from "./Pages/Personinfo";
@@ -36,6 +39,7 @@ import SubmittedLabReport from "./Pages/Laboratory/SubmittedLabReport";
 import AllLabReports from "./Pages/Laboratory/AllLabReports";
 import ASOT_Report from "./Pages/LabReports/ASOT_Report";
 import BloodGroup from "./Pages/LabReports/BooldGroup";
+import Ppbs_Report from "./Pages/LabReports/Ppbs_Report.js";
 import Covid19RapidAntigen from "./Pages/LabReports/Covid19RapidAntigen";
 import CRP_Report from "./Pages/LabReports/CRP.js";
 import CT_BT_Report from "./Pages/LabReports/CT_BT.js";
@@ -86,7 +90,12 @@ const router = createBrowserRouter([
       { path: "/StudentNumber", element: <StudentNumber role="nurse" /> },
 
   
+      { path: "/StudentSignup", element: <StudentSignUp/>},
 
+      { path: "/StaffSignup", element: <StaffSignUp/>},
+
+      {path: "/ForgotPassword", element: <ForgotPassword/>},
+      
       { path: "/Healthform", element: <HealthForm /> },
 
       { path: "/Personinfo", element: <Personinfo /> },
@@ -185,6 +194,8 @@ const router = createBrowserRouter([
   { path: "/ASOT_Report", element: <ASOT_Report /> },
 
   { path: "/BloodGroup", element: <BloodGroup /> },
+
+  { path: "Ppbs_Report", element: <Ppbs_Report />},
 
   { path: "/Covid19RapidAntigen", element: <Covid19RapidAntigen /> },
 
