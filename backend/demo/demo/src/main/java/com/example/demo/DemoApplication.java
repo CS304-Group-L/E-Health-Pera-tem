@@ -8,7 +8,7 @@ import org.springframework.context.annotation.ComponentScan;
 import org.springframework.data.jpa.repository.config.EnableJpaRepositories;
 
 @SpringBootApplication(exclude= SecurityAutoConfiguration.class)
-@EntityScan(basePackages = "com.example.demo.entity")
+@EntityScan(basePackages = {"com.example.demo.entity", "com.example.demo.entity.Doctor"})
 public class DemoApplication {
 
 	public static void main(String[] args) {

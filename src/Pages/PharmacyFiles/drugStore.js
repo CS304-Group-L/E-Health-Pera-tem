@@ -1,9 +1,9 @@
 import React from "react";
-import add from "../Assets/add.png";
-import view from "../Assets/view.png";
-import deelete from "../Assets/delete.png";
-import update from "../Assets/update.png";
-import exit from "../Assets/exit.png";
+import add from "../../Assets/add.png";
+import view from "../../Assets/view.png";
+import deelete from "../../Assets/delete.png";
+import update from "../../Assets/update.png";
+import exit from "../../Assets/exit.png";
 import { Link } from "react-router-dom";
 
 /*const topButtons = [
@@ -27,28 +27,28 @@ const options = [
     name: "ADD DRUGS",
     bg_color: "bg-yellow-300",
     img: add,
-    path: "/PharmacyFile/AddDrugs",
+    path: "/AddDrugs",
   },
   {
     id: 2,
     name: "VIEW DRUGS",
     bg_color: "bg-blue-500",
     img: view,
-    path: "/PharmacyFile/ViewDrugs",
+    path: "/ViewDrugs",
   },
   {
     id: 3,
     name: "UPDATE DRUGS",
     bg_color: "bg-purple-600",
     img: update,
-    path: "/PharmacyFile/UpdateDrugs",
+    path: "/UpdateDrugs",
   },
   {
     id: 4,
     name: "DELETE DRUGS",
     bg_color: "bg-green-300",
     img: deelete,
-    path: "/PharmacyFile/DeleteDrugs",
+    path: "/DeleteDrugs",
   },
   {
     id: 5,
@@ -62,7 +62,7 @@ const options = [
 function DrugStore() {
   return (
     <div>
-      <div className="flex justify-center">
+      <div className="flex justify-center ">
         <div className="grid w-1/2 grid-cols-3 gap-10 mt-20 ">
           {options.map((item) => (
             <Link to={item.path}>

@@ -1,7 +1,7 @@
 import React from "react";
 import Home from "./Pages/Home/Home";
 import Login from "./Pages/Login";
-import SignUp from "./Pages/Signup.js";
+import SignUp from "./Pages/SignUp.js";
 import StudentSignUp from "./Pages/StudentSignup.js";
 import StaffSignUp from "./Pages/StaffSignup.js";
 import ForgotPassword from "./Pages/ForgotPassword.js";
@@ -17,7 +17,6 @@ import Other from "./Pages/Home/Other";
 import Events from "./Pages/Home/Events";
 import News_page from "./Pages/Home/News_page";
 import Aboutus from "./Pages/Home/About";
-import Pharmacy from "./Pages/PharmacyFiles/PharmacyHome.js";
 import DoctorHome from "./Pages/Doctor/DoctorHome";
 import Medicines from "./Pages/Doctor/Medicine";
 import HealthRecords from "./Pages/Doctor/HealthRecord";
@@ -49,21 +48,26 @@ import ESR_Report from "./Pages/LabReports/ESR.js";
 import Hcg_test from "./Pages/LabReports/hcg_test.js";
 import Hep_B from "./Pages/LabReports/Hep_B.js";
 import VDRL from "./Pages/LabReports/VDRL.js";
+import RH_Factor from "./Pages/LabReports/RH_Factor.js";
+import Urine_Protein from "./Pages/LabReports/Urine_Protein.js";
+import Liver_Profile_New from "./Pages/LabReports/Liver_Profile_New.js";
+import UFR from "./Pages/LabReports/UFR.js";
 
-import DrugStore from "./Pages/drugStore";
+import PharmacyHome from "./Pages/PharmacyFiles/PharmacyHome.js";
+import DrugStore from "./Pages/PharmacyFiles/drugStore.js";
 import AddDrugs from "./Pages/PharmacyFiles/AddDrugs";
 import DeleteDrugs from "./Pages/PharmacyFiles/DeleteDrugs";
 import DeleteDrugs1 from "./Pages/PharmacyFiles/DeleteDrugs1";
 import UpdateDrugs from "./Pages/PharmacyFiles/UpdateDrugs";
 import UpdateDrugs1 from "./Pages/PharmacyFiles/UpdateDrugs1";
 import ViewDrugs from "./Pages/PharmacyFiles/ViewDrugs";
+import DrugIssueing from "./Pages/PharmacyFiles/DrugIssueing.js";
 import RootLayout from "./layouts/RootLayout.js";
 
 import NurseHome from "./Pages/Nurse/NurseHome.js";
-import StudentNumber from "./Pages/Nurse/StudentNumber.js"
-import WardFrom from "./Pages/Nurse/WardForm.js"
+import StudentNumber from "./Pages/Nurse/StudentNumber.js";
+import WardFrom from "./Pages/Nurse/WardForm.js";
 import TemperatureForm from "./Pages/Nurse/TemperatureForm.js";
-
 
 const router = createBrowserRouter([
   {
@@ -80,23 +84,31 @@ const router = createBrowserRouter([
       { path: "/WardLogin", element: <Login role="ward" /> },
       { path: "/NurseLogin", element: <Login role="nurse" /> },
 
-  { path: "/SignUp", element: <SignUp/>},
+      { path: "/SignUp", element: <SignUp /> },
 
       { path: "/StudentNumberWard", element: <StudentNumber role="Ward" /> },
-      { path: "/StudentNumberTemperature", element: <StudentNumber role="Temperature" /> },
-      { path: "/StudentNumberIntakeOutPutChart", element: <StudentNumber role="IntakeOutPutChart" /> },
+      {
+        path: "/StudentNumberTemperature",
+        element: <StudentNumber role="Temperature" />,
+      },
+      {
+        path: "/StudentNumberIntakeOutPutChart",
+        element: <StudentNumber role="IntakeOutPutChart" />,
+      },
       { path: "/StudentNumberDurg", element: <StudentNumber role="Durg" /> },
-      { path: "/StudentNumberFullBloodCount", element: <StudentNumber role="FullBloodCount" /> },
+      {
+        path: "/StudentNumberFullBloodCount",
+        element: <StudentNumber role="FullBloodCount" />,
+      },
       { path: "/StudentNumber", element: <StudentNumber role="ward" /> },
       { path: "/StudentNumber", element: <StudentNumber role="nurse" /> },
 
-  
-      { path: "/StudentSignup", element: <StudentSignUp/>},
+      { path: "/StudentSignup", element: <StudentSignUp /> },
 
-      { path: "/StaffSignup", element: <StaffSignUp/>},
+      { path: "/StaffSignup", element: <StaffSignUp /> },
 
-      {path: "/ForgotPassword", element: <ForgotPassword/>},
-      
+      { path: "/ForgotPassword", element: <ForgotPassword /> },
+
       { path: "/Healthform", element: <HealthForm /> },
 
       { path: "/Personinfo", element: <Personinfo /> },
@@ -119,7 +131,7 @@ const router = createBrowserRouter([
 
       { path: "/About", element: <Aboutus /> },
 
-      { path: "/Pharmacy", element: <Pharmacy /> },
+      { path: "/PharmacyHome", element: <PharmacyHome /> },
 
       { path: "/DoctorHome", element: <DoctorHome /> },
 
@@ -131,17 +143,19 @@ const router = createBrowserRouter([
 
       { path: "/GiveMedicine", element: <GiveMedicine /> },
 
-      { path: "/PharmacyFile/AddDrugs", element: <AddDrugs /> },
+      { path: "/AddDrugs", element: <AddDrugs /> },
 
-      { path: "/PharmacyFile/DeleteDrugs", element: <DeleteDrugs /> },
+      { path: "/DeleteDrugs", element: <DeleteDrugs /> },
 
-      { path: "/PharmacyFile/DeleteDrugs1", element: <DeleteDrugs1 /> },
+      { path: "/DeleteDrugs1", element: <DeleteDrugs1 /> },
 
-      { path: "/PharmacyFile/ViewDrugs", element: <ViewDrugs /> },
+      { path: "/ViewDrugs", element: <ViewDrugs /> },
 
-      { path: "/PharmacyFile/UpdateDrugs", element: <UpdateDrugs /> },
+      { path: "/UpdateDrugs", element: <UpdateDrugs /> },
 
-      { path: "/PharmacyFile/UpdateDrugs1", element: <UpdateDrugs1 /> },
+      { path: "/UpdateDrugs1", element: <UpdateDrugs1 /> },
+
+      { path: "/DrugIssueing", element: <DrugIssueing /> },
 
       { path: "/GiveMedicine", element: <GiveMedicine /> },
 
@@ -184,11 +198,11 @@ const router = createBrowserRouter([
 
       { path: "/AllLabReports", element: <AllLabReports /> },
 
-      { path : "/NurseHome", element: <NurseHome/>},
+      { path: "/NurseHome", element: <NurseHome /> },
 
-      {path : "/WardForm",element:<WardFrom/>},
+      { path: "/WardForm", element: <WardFrom /> },
 
-      {path : "/TemperatureForm",element:<TemperatureForm/>}
+      { path: "/TemperatureForm", element: <TemperatureForm /> },
     ],
   },
 
@@ -196,7 +210,7 @@ const router = createBrowserRouter([
 
   { path: "/BloodGroup", element: <BloodGroup /> },
 
-  { path: "Ppbs_Report", element: <Ppbs_Report />},
+  { path: "Ppbs_Report", element: <Ppbs_Report /> },
 
   { path: "/Covid19RapidAntigen", element: <Covid19RapidAntigen /> },
 
@@ -213,6 +227,14 @@ const router = createBrowserRouter([
   { path: "/Hep_B", element: <Hep_B /> },
 
   { path: "/VDRL", element: <VDRL /> },
+
+  { path: "/RH_Factor", element: <RH_Factor /> },
+
+  { path: "/Urine_Protein", element: <Urine_Protein /> },
+
+  { path: "/Liver_Profile_New", element: <Liver_Profile_New /> },
+
+  { path: "/UFR", element: <UFR /> },
 ]);
 
 export default function App() {

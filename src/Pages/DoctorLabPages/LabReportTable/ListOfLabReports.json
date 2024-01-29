@@ -51,7 +51,7 @@
     {
         "id":11,
         "report_name":"RH. Factor",
-        "path": ""
+        "path": "/RH_Factor"
     },
     {
         "id":12,
@@ -61,12 +61,12 @@
     {
         "id":13,
         "report_name":"UFR New",
-        "path": ""
+        "path": "/UFR"
     },
     {
         "id":14,
         "report_name":"Urine Protein",
-        "path": ""
+        "path": "/Urine_Protein"
     },
     {
         "id":15,
@@ -171,7 +171,7 @@
     {
         "id":34,
         "report_name":"Liver Profile New",
-        "path": ""
+        "path": "/Liver_Profile_New"
     },
     {
         "id":35,
