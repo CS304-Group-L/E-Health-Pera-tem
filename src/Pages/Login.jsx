@@ -168,7 +168,9 @@ function Login({ role }) {
                     </label>
                   </div>
 
-                  <a href="#!">Forgot password?</a>
+                  <Link to="/ForgotPassword">
+                      Forgot password?
+                  </Link>
                 </div>
 
                 <div class="text-center lg:text-left">
