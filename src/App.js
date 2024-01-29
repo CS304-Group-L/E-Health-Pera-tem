@@ -40,6 +40,7 @@ import ASOT_Report from "./Pages/LabReports/ASOT_Report";
 import BloodGroup from "./Pages/LabReports/BooldGroup";
 import Ppbs_Report from "./Pages/LabReports/Ppbs_Report.js";
 import TotalProtein_Report from "./Pages/LabReports/TotalProtein_Report.js";
+import Creatinine_Report from "./Pages/LabReports/Creatinine_Report.js";
 import Covid19RapidAntigen from "./Pages/LabReports/Covid19RapidAntigen";
 import CRP_Report from "./Pages/LabReports/CRP.js";
 import CT_BT_Report from "./Pages/LabReports/CT_BT.js";
@@ -230,6 +231,10 @@ const router = createBrowserRouter([
   { path: "/VDRL", element: <VDRL /> },
 
   { path: "/RH_Factor", element: <RH_Factor /> },
+  
+  { path: "/TotalProtein_Report", element: <TotalProtein_Report /> },
+
+  {  path: "/Creatinine_Report", element: <Creatinine_Report /> },
 
   { path: "/Urine_Protein", element: <Urine_Protein /> },
 
