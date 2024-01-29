@@ -2,13 +2,13 @@ import React from "react";
 import image from "../Assets/Photo2.jpg";
 import { Link } from "react-router-dom";
 const buttons = [
-  {id: 1, name: "Student", path: "/DoctorBoard"},
-  {id: 2, name: "Staff", path: "/DoctorBoard"},
-  {id: 3, name: "Doctor", path: "/DoctorBoard"},
-  {id: 4, name: "Pharmacy", path: "/Pharmacy"},
-  {id: 5, name: "Laboratary", path: "/Laboratory"},
-  {id: 6, name: "Ward", path: "/Pharmacy"},
-  {id: 7, name: "Nurse", path: "/Pharmacy"},
+  {id: 1, name: "Student", path: "/StudentLogin"},
+  {id: 2, name: "Staff", path: "/StaffLogin"},
+  {id: 3, name: "Doctor", path: "/DoctorLogin"},
+  {id: 4, name: "Pharmacy", path: "/PharmacyLogin"},
+  {id: 5, name: "Laboratary", path: "/LabLogin" },
+  {id: 6, name: "Ward", path: "/WardLogin"},
+  {id: 7, name: "Nurse", path: "/NurseLogin"},
 ]
 function Services() {
   return (

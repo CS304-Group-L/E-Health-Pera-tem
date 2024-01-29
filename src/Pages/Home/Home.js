@@ -101,14 +101,28 @@ export default function Home() {
       </div>
 
       <div className="text-2xl text-center pt-11">
-        <p>This is our vision</p>
+        <p> Our Vision</p>
       </div>
       <div className="pt-8 pl-40 pr-40">
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
-        tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim
-        veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
-        commodo consequat.
+      At University Of Peradeniya Health Center, we envision a thriving and inclusive community where health and well-being are prioritized, fostering an environment that empowers every student, faculty, and staff member to achieve their full potential. Our vision is to be a leader in promoting holistic health, providing innovative and accessible healthcare services, and cultivating a culture of well-being that inspires lifelong wellness.<br></br> <br></br>
+      
+      In order to achieve this Vision, The University Health Center strives to be <br></br> <br></br>
+      
+      1. At University of Peradeniya Health Center, our vision is to foster a thriving and inclusive community where health and well-being are prioritized, embracing a holistic approach that addresses the interconnected dimensions of physical, mental, and emotional health.<br></br>
+      2. We are committed to creating an inclusive environment that respects and values the diverse needs of every student, faculty, and staff member, ensuring that our health services cater to the unique requirements of our community.<br></br>
+      3. Empowering individuals to take an active role in their health is at the core of our vision, providing resources and education to enable informed decision-making and fostering a sense of personal responsibility.<br></br>
+      4. Striving for innovation in healthcare services, we aim to meet the evolving needs of our community while ensuring accessibility by removing barriers to healthcare and leveraging technology to enhance service delivery.<br></br>
+      5. Our vision involves a cultural transformation within the university, where health and well-being become integral aspects of our community's identity, promoting a positive and supportive atmosphere for healthy habits and lifestyle choices.
       </div>
+
+      <div className="text-2xl text-center pt-11">
+        <p> Our Mission </p>
+      </div>
+
+      <div className="pt-8 pl-40 pr-40">
+      "To provide exceptional, inclusive, and student-centered healthcare services, fostering a proactive and preventive culture of well-being. We prioritize comprehensive resources, create a supportive environment, and collaborate with the community to empower individuals in achieving and maintaining optimal health throughout their academic journey." <br></br> <br></br>
+      </div>
+
     </div>
   );
 }
