@@ -2,9 +2,7 @@ package com.example.demo.entity;
 
 
 import jakarta.persistence.*;
-import lombok.AllArgsConstructor;
-import lombok.NoArgsConstructor;
-import lombok.Data;
+import lombok.*;
 
 import java.util.List;
 
@@ -34,9 +32,12 @@ public class User {
     @Column(name="phone_number",nullable = false)
     private String phoneNumber;
 
+    public String getPassword() {
+        return password;
+    }
 
 
-    //signup constructor
+//signup constructor
 
 }
 
