@@ -19,6 +19,7 @@ function Login({ role }) {
 
   const handleLogin = async () => {
     try {
+      console.log(email,password);
       const response = await fetch('http://localhost:8080/api/v1/student/login', {
         method: 'POST',
         headers: {
@@ -115,7 +116,7 @@ function Login({ role }) {
                     Password
                   </label><br></br> <br></br>
                   <input
-                    type="text" value={password} onChange={(e) => setPassword(e.target.value)}
+                    type="password" value={password} onChange={(e) => setPassword(e.target.value)}
                     
                     placeholder="********"
                   />

@@ -6,7 +6,7 @@ function StudentSignup({}){
         <section class="h-screen">
        
        
-        <div class="h-full">
+        <div class="h-screen bg-">
           <div
             class="g-6 flex h-full flex-wrap items-center justify-center
             lg:justify-between">
