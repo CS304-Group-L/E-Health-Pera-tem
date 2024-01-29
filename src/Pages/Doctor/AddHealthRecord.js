@@ -5,6 +5,7 @@ import medicalRecord from "../../Assets/medical_record.png";
 import medicineT from "../../Assets/medicine_icon.png";
 import lab from "../../Assets/lab icon.png";
 import medical from "../../Assets/medical.png";
+import axios from 'axios';
 
 const topButtons = [
     {
@@ -96,13 +97,30 @@ function AddHealthRecord() {
     const handleSubmit = (e) => {
         e.preventDefault();
 
-        // Simulate a successful submission
-        //replace this with an actual API call when have a backend
-        setTimeout(() => {
-            setSuccessMessage('Data saved successfully.');
+    try {
+      // Make an API call to your backend
+      const response = axios.post('http://localhost:8080/api/v1/healthRecord/addHealthRecords', {
+        // Provide the necessary data from your form
+        studentNumber: text,
+        description: description,
+        date:currentDateTime,
+        time:currentDateTime
 
-            navigate('/ViewPastHealthRecords');
-        }, 1000);
+        
+      });
+
+      // Check if the API call was successful
+      if (response.data) {
+        setSuccessMessage('Data saved successfully.');
+        navigate('/ViewPastHealthRecords');
+      } else {
+        // Handle errors if necessary
+        console.error('Failed to save data');
+      }
+    } catch (error) {
+      // Handle errors if necessary
+      console.error('Error:', error);
+    }
     };
 
     return (
@@ -154,7 +172,8 @@ function AddHealthRecord() {
                         </div>
                     </label>
                     <div className='m-5 mt-5 mr-10'>
-                    <button type="submit" className="text-black bg-red-800 rounded hover:bg-yellow-300 text-white px-4 py-2 absolute right-0 mt-2 mr-10">
+                    <button type="submit" className="text-black bg-red-800 rounded hover:bg-yellow-300 text-white px-4 py-2 absolute right-0 mt-2 mr-10"
+                    onClick={handleSubmit}>
                         Save & View Health Records
                         </button>
                     </div>

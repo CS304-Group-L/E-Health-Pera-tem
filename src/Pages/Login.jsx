@@ -2,6 +2,8 @@ import React from "react";
 import LoginLogo from "../Assets/Uni_photo_3.jpg";
 import { Link } from "react-router-dom";
 import { useState,useEffect } from 'react';
+import axios from 'axios';
+
 
 const buttons = [
   { id: 1, name: "Login", path: "/DoctorBoard" },
@@ -16,27 +18,19 @@ function Login({ role }) {
 
   const handleLogin = async () => {
     try {
-      const response = await fetch('http://localhost:8080/api/v1/student/login', {
-        method: 'POST',
-        headers: {
-          'Content-Type': 'application/json',
-        },
-        body: JSON.stringify({
-          email,
-          password,
-        }),
+      axios.post('http://localhost:8080/api/v1/student/login',{
+        email: email,
+        password: password
+      })
+      .then(function(response) {
+        console.log(response);
+        window.location.href= `/${role}Home`;
+      })
+      .catch(function(error) {
+        console.log(error);
+        setStatusMessage(error.message);
       });
 
-      const data = await response.json();
-    console.log('Login Response:', data);
-
-      if (data.status) {
-        // If login is successful, redirect to the doctor page
-        window.location.href = `/${role}Home`;
-      } else {
-        // If login fails, set the status message
-        setStatusMessage(data.message);
-      }
     } catch (error) {
       console.error('Error during login:', error);
     }
@@ -185,7 +179,7 @@ function Login({ role }) {
                       href="#!"
                       class="text-danger transition duration-150 ease-in-out hover:text-danger-600 focus:text-danger-600 active:text-danger-700"
                     >
-                      Register
+                      <Link to="/SignUp">Register</Link>
                     </a>
                   </p>
                 </div>
