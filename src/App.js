@@ -1,7 +1,7 @@
 import React from "react";
 import Home from "./Pages/Home/Home";
 import Login from "./Pages/Login";
-import SignUp from "./Pages/SignUp.js";
+import Signup from "./Pages/Signup.js";
 import StudentSignUp from "./Pages/StudentSignup.js";
 import StaffSignUp from "./Pages/StaffSignup.js";
 import ForgotPassword from "./Pages/ForgotPassword.js";
@@ -84,7 +84,7 @@ const router = createBrowserRouter([
       { path: "/WardLogin", element: <Login role="ward" /> },
       { path: "/NurseLogin", element: <Login role="nurse" /> },
 
-      { path: "/SignUp", element: <SignUp /> },
+      { path: "/Signup", element: <Signup /> },
 
       { path: "/StudentNumberWard", element: <StudentNumber role="Ward" /> },
       {
