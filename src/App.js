@@ -85,6 +85,7 @@ const router = createBrowserRouter([
       { path: "/NurseLogin", element: <Login role="nurse" /> },
 
       { path: "/Signup", element: <Signup /> },
+      { path: "/ForgotPassword", element: <ForgotPassword /> },
 
       { path: "/StudentNumberWard", element: <StudentNumber role="Ward" /> },
       {
@@ -107,7 +108,7 @@ const router = createBrowserRouter([
 
       { path: "/StaffSignup", element: <StaffSignUp /> },
 
-      { path: "/ForgotPassword", element: <ForgotPassword /> },
+      
 
       { path: "/Healthform", element: <HealthForm /> },
 

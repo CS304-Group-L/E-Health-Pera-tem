@@ -1,26 +1,28 @@
 import React from "react";
-import Navbar from "../components/Navbar";
-import Footer from "../components/Footer";
+
 
  function Signup() {
     return(
         <div className="h-screen bg-">
-        <Navbar />
-          <div className = "flex items-center justify-center h-screen ">
-          <div className = "max-w-screen-md p-8 bg-white rounded-lg shadow-md">
-            <div>
-            <h1 className = "mb-6 text-2xl font-bold text-center text-blue-900 ">  SignUp </h1>
+       
+       <div class="flex flex-col items-center justify-center px-6 py-8 mx-auto md:h-screen lg:py-0">
+      
+      <div class="w-full p-6 bg-white rounded-lg shadow dark:border md:mt-0 sm:max-w-md dark:bg-gray-800 dark:border-black sm:p-8">
+      
+          <h2 class="mb-1 text-xl text-center font-bold leading-tight tracking-tight text-gray-900 md:text-2xl dark:text-white">
+              SignUp
+          </h2> <br></br>
              <form id="signupForm" onSubmit="signup(event)"> </form>
             <div className="mb-6 text-center text-cyan-700">E-Health Pera</div>
                  <div className="mb-4">
                  <label for="email" class="block text-sm font-medium text-gray-600 mb-1">University Email Address</label>
                  <input type="email" id="email" name="email" placeholder="s18916@sci.pdn.ac.lk" class="w-full p-2 border rounded"/> 
-                 </div> 
+                 </div> <br></br>
                  <div className="mb-6">  
                  <label for="password" class="block text-sm font-medium text-gray-600 mb-1">Password</label>
                   <input type="password" id="password" name="password" placeholder="********" class="w-full p-2 border rounded"/> 
                  </div>
-                 <div>
+                 <div> 
                  <button type ="submit" class="bg-blue-500 text-white py-2 px-4 rounded flex justify-center items-center  ">Next</button>
                  </div>
             
@@ -32,8 +34,9 @@ import Footer from "../components/Footer";
         </script>
         </div>
       </div>
-      <Footer />
-    </div>
+      
+    
+    
        
     );
  }
