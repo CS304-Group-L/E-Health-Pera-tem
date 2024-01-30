@@ -138,7 +138,7 @@ function GGT() {
                                 Reference Range
                             </th>
                         </thead>
-                        <tbody>
+                        <tbody> 
                             
                             <tr>
                             <td className="px-6 py-4 whitespace-nowrap">
