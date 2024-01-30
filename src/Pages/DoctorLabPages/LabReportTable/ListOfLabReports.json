@@ -121,7 +121,7 @@
     {
         "id":25,
         "report_name":"Creatinine",
-        "path": ""
+        "path": "/Creatinine_Report"
     },
     {
         "id":26,
@@ -136,17 +136,17 @@
     {
         "id":28,
         "report_name":"ppbs",
-        "path": ""
+        "path": "/Ppbs_Report"
     },
     {
         "id":29,
         "report_name":"Total Protein New",
-        "path": ""
+        "path": "/TotalProtein_Report"
     },
     {
         "id":30,
         "report_name":"GGT",
-        "path": ""
+        "path": "/GGT"
     },
     {
         "id":31,
