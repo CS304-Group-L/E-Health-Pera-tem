@@ -55,7 +55,7 @@ const options = [
     name: "EXIT",
     bg_color: "bg-red-500",
     img: exit,
-    path: "/Pharmacy",
+    path: "/PharmacyHome",
   },
 ];
 

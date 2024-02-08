@@ -154,9 +154,9 @@ function Login({ role }) {
                 <div class="text-center lg:text-left">
                   <button
                     type="button" className="px-4 py-2 font-bold text-black bg-blue-800 rounded hover:bg-blue-300"
-                    onClick={handleLogin}
+                    //onClick={handleLogin}
                   >
-                  Login
+                  <Link to={`/${role}Home`}>Login</Link>
                   </button>
 
                   <p class="mb-0 mt-2 pt-1 text-sm font-semibold">

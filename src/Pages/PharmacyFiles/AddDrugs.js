@@ -13,28 +13,28 @@ const topButtons = [
     name: "Add Drugs",
     bg_color: "bg-green-600",
     img: add,
-    path: "/PharmacyFile/AddDrugs",
+    path: "/AddDrugs",
   },
   {
     id: 2,
     name: "Update Drugs",
     bg_color: "bg-blue-500",
     img: update,
-    path: "/PharmacyFile/UpdateDrugs",
+    path: "/UpdateDrugs",
   },
   {
     id: 3,
     name: "Delete Drugs",
     bg_color: "bg-purple-600",
     img: deelete,
-    path: "/PharmacyFile/DeleteDrugs",
+    path: "/DeleteDrugs",
   },
   {
     id: 4,
     name: "View Drugs",
     bg_color: "bg-yellow-300",
     img: view,
-    path: "/PharmacyFile/ViewDrugs",
+    path: "/ViewDrugs",
   },
   {
     id: 5,
@@ -103,7 +103,7 @@ function AddDrugs() {
             />
           </div>
           <div>
-            <Link to="/PharmacyFile/ViewDrugs">
+            <Link to="/ViewDrugs">
               <button className="px-4 py-2 text-white bg-red-800 rounded hover:bg-yellow-300 items-center justify-center text-center">
                 Add
               </button>
