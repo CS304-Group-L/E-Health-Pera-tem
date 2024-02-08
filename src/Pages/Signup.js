@@ -14,6 +14,10 @@ import React from "react";
           </h2> <br></br>
              <form id="signupForm" onSubmit="signup(event)"> </form>
             <div className="mb-6 text-center text-cyan-700">E-Health Pera</div>
+                <div class="mb-4">
+                <label for="name" class="block text-sm font-medium text-gray-600 mb-1">Name</label>
+                <input type="text" id="name" name="name" placeholder="Sahan Koralegedara" class="w-full p-2 border rounded"/> 
+                </div> <br></br>
                  <div className="mb-4">
                  <label for="email" class="block text-sm font-medium text-gray-600 mb-1">University Email Address</label>
                  <input type="email" id="email" name="email" placeholder="s18916@sci.pdn.ac.lk" class="w-full p-2 border rounded"/> 
@@ -22,20 +26,23 @@ import React from "react";
                  <label for="password" class="block text-sm font-medium text-gray-600 mb-1">Password</label>
                   <input type="password" id="password" name="password" placeholder="********" class="w-full p-2 border rounded"/> 
                  </div>
-                
-            <div className="mb-4">
-                <label for="employee_number" class="block text-sm font-medium text-gray-600 mb-1">Registration Number</label>
+                 
+                <div className="mb-4">
+                <label for="employee_number" class="block text-sm font-medium text-gray-600 mb-1">National ID</label>
                 <input type="text" id="employee_number" name="employee_number" placeholder="" autocomplete="off" class="w-full p-2 border rounded"></input>
                  </div>
 
                  
-            <div className="mb-4">
+                <div className="mb-4">
                 <label for="phone_number" class="block text-sm font-medium text-gray-600 mb-1">Phone Number</label>
                 <input type="tel" id="phone_number" name="phone_number" placeholder="" autocomplete="tel" class="w-full p-2 border rounded"></input>
+                </div> 
+
+                
+                <div class="mb-4">
+                <label for="id" class="block text-sm font-medium text-gray-600 mb-1">ID</label>
+                <input type="text" id="id" name="id" placeholder="123456" class="w-full p-2 border rounded"/> 
                 </div>
-                 <div> 
-                 <button type ="submit" class="bg-blue-500 text-white py-2 px-4 rounded flex justify-center items-center  ">Next</button>
-                 </div>
             
             </div>
         <script>
