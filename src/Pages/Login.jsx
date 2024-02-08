@@ -1,8 +1,10 @@
 import React from "react";
 import LoginLogo from "../Assets/Uni_photo_3.jpg";
 import { Link } from "react-router-dom";
-import { useState,useEffect } from 'react';
-import axios from "axios";
+import { useState,useEffect ,useRef} from 'react';
+import loginService from "../service/LoginService";
+
+import { Outlet, useNavigate } from 'react-router-dom';
 
 const buttons = [
   { id: 1, name: "Login", path: "/DoctorBoard" },
@@ -14,34 +16,61 @@ function Login({ role }) {
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
   const [statusMessage, setStatusMessage] = useState('');
+  const [errMsg, setErrMsg] = useState('');
+  const errRef = useRef();
 
-  const handleLogin = async () => {
+  const navigate = useNavigate();
+
+  const [user, setUser] = useState('');
+
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+
     try {
-      const response = await fetch('http://localhost:8080/api/v1/student/login', {
-        method: 'POST',
-        headers: {
-          'Content-Type': 'application/json',
-        },
-        body: JSON.stringify({
-          email,
-          password,
-        }),
+      // Make an API call to create a user using loginService
+      const response = await loginService.createUserLogin({
+          username: user,
+          password: password,
+        
       });
 
-      const data = await response.json();
-    console.log('Login Response:', data);
+      
+      console.log(response?.data);
+      //console.log(response?.accessToken);
+      console.log(JSON.stringify(response));
 
-      if (data.status) {
-        // If login is successful, redirect to the doctor page
-        window.location.href = `/${role}Home`;
+      //const accessToken = response?.data?.accessToken;
+      console.log({ user, password});
+
+      console.log(response?.data.username);
+      console.log(response?.data);
+      console.log({user}); 
+
+      /*
+      setUser('');
+      setPwd('');
+      setSuccess(true);
+     */
+      setUser(response?.data.username); // Assuming response.data contains user information
+
+
+      
+              navigate("/", { state: { user } },"Home");
+  
+
+
+  } catch (err) {
+      if (!err?.response) {
+          setErrMsg('No Server Response');
+      } else if (err.response?.status === 401) {
+          setErrMsg('Unauthorized');
       } else {
-        // If login fails, set the status message
-        setStatusMessage(data.message);
+          setErrMsg('Login Failed');
       }
-    } catch (error) {
-      console.error('Error during login:', error);
-    }
-  };
+      errRef.current.focus();
+  }
+
+}
 
   return (
     <>
@@ -177,9 +206,9 @@ function Login({ role }) {
                 <div class="text-center lg:text-left">
                   <button
                     type="button" className="px-4 py-2 font-bold text-black bg-blue-800 rounded hover:bg-blue-300"
-                    onClick={handleLogin}
+                    //onClick={handleLogin}
                   >
-                  Login
+                  <Link to={`/${role}Home`}>Login</Link>
                   </button>
 
                   <p class="mb-0 mt-2 pt-1 text-sm font-semibold">

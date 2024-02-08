@@ -15,6 +15,8 @@ public class StudentController {
     @Autowired
     private StudentServices studentServices;
 
+    //student registration
+
     //user Login
     @PostMapping("login")
     public ResponseEntity<?> loginUser(@RequestBody LoginDto loginDto){
