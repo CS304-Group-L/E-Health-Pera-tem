@@ -1,9 +1,7 @@
 package com.example.demo.dto;
 
 
-import lombok.AllArgsConstructor;
-import lombok.Data;
-import lombok.NoArgsConstructor;
+import lombok.*;
 
 @AllArgsConstructor
 @Data
@@ -11,4 +9,12 @@ import lombok.NoArgsConstructor;
 public class LoginDto{
     private String email;
     private String password;
+
+    public String getEmail() {
+        return email;
+    }
+
+    public String getPassword() {
+        return password;
+    }
 }

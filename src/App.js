@@ -40,10 +40,12 @@ import ASOT_Report from "./Pages/LabReports/ASOT_Report";
 import BloodGroup from "./Pages/LabReports/BooldGroup";
 import Ppbs_Report from "./Pages/LabReports/Ppbs_Report.js";
 import TotalProtein_Report from "./Pages/LabReports/TotalProtein_Report.js";
+import Creatinine_Report from "./Pages/LabReports/Creatinine_Report.js";
 import Covid19RapidAntigen from "./Pages/LabReports/Covid19RapidAntigen";
 import CRP_Report from "./Pages/LabReports/CRP.js";
 import CT_BT_Report from "./Pages/LabReports/CT_BT.js";
 import Dengue from "./Pages/LabReports/Dengue.js";
+import GGT from "./Pages/LabReports/GGT.js";
 import ESR_Report from "./Pages/LabReports/ESR.js";
 import Hcg_test from "./Pages/LabReports/hcg_test.js";
 import Hep_B from "./Pages/LabReports/Hep_B.js";
@@ -85,6 +87,7 @@ const router = createBrowserRouter([
       { path: "/NurseLogin", element: <Login role="nurse" /> },
 
       { path: "/Signup", element: <Signup /> },
+      { path: "/ForgotPassword", element: <ForgotPassword /> },
 
       { path: "/StudentNumberWard", element: <StudentNumber role="Ward" /> },
       {
@@ -107,7 +110,7 @@ const router = createBrowserRouter([
 
       { path: "/StaffSignup", element: <StaffSignUp /> },
 
-      { path: "/ForgotPassword", element: <ForgotPassword /> },
+      
 
       { path: "/Healthform", element: <HealthForm /> },
 
@@ -220,6 +223,8 @@ const router = createBrowserRouter([
 
   { path: "/Dengue", element: <Dengue /> },
 
+  {  path: "GGT", element: <GGT /> },
+
   { path: "/ESR_Report", element: <ESR_Report /> },
 
   { path: "/Hcg_test", element: <Hcg_test /> },
@@ -229,6 +234,10 @@ const router = createBrowserRouter([
   { path: "/VDRL", element: <VDRL /> },
 
   { path: "/RH_Factor", element: <RH_Factor /> },
+  
+  { path: "/TotalProtein_Report", element: <TotalProtein_Report /> },
+
+  {  path: "/Creatinine_Report", element: <Creatinine_Report /> },
 
   { path: "/Urine_Protein", element: <Urine_Protein /> },
 

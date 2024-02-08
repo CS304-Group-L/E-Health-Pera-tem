@@ -45,7 +45,7 @@ const topButtons = [
     }
 ];
 
-function TotalProtein_Report() {
+function Creatinine_Report() {
     const [labNumber, setLabNumber] = useState('');
     const [referenceNumber, setReferenceNumber] = useState('');
     const [result, setResult] = useState('');
@@ -114,7 +114,7 @@ function TotalProtein_Report() {
                 </div>
                 <div className=" bg-blue-300 text-xl p-5 flex justify-center">
                     <h1>
-                    TOTAL PROTEIN
+                        Creatinine Report
                     </h1>
                 </div>
 
@@ -139,54 +139,18 @@ function TotalProtein_Report() {
                             </th>
                         </thead>
                         <tbody>
-                            <tr>
-                                <td className="px-6 py-4 whitespace-nowrap">
-                                Total protein     
-                                </td>
-                                <td className="px-6 py-4 whitespace-nowrap">
-                                <input type="text" value={result} onChange={(e) => setResult(e.target.value)}
-                                    className="border border-blue-300 px-3 py-2 rounded-md focus:outline-none focus:ring focus:border-blue-500 w-full"
-                                    placeholder="Tested Value" />
-                                </td>
-                                <td className="px-6 py-4 whitespace-nowrap"> g/dl </td>
-                                <td className="px-6 py-4 whitespace-nowrap">  6.4 -8.2</td>
-                            </tr>
+                            
                             <tr>
                             <td className="px-6 py-4 whitespace-nowrap">
-                                 Albumin 
+                            SERUM CREATININE 
                                 </td>
                                 <td className="px-6 py-4 whitespace-nowrap">
                                 <input type="text" value={result} onChange={(e) => setResult(e.target.value)}
                                     className="border border-blue-300 px-3 py-2 rounded-md focus:outline-none focus:ring focus:border-blue-500 w-full"
                                     placeholder="Tested Value" />
                                 </td>
-                                <td className="px-6 py-4 whitespace-nowrap">  g/dl  </td>
-                                <td className="px-6 py-4 whitespace-nowrap">  3.4 - 5.0</td>
-                            </tr>
-
-                            <tr>
-                            <td className="px-6 py-4 whitespace-nowrap">
-                                   Globulin 
-                                </td>
-                                <td className="px-6 py-4 whitespace-nowrap">
-                                <input type="text" value={result} onChange={(e) => setResult(e.target.value)}
-                                    className="border border-blue-300 px-3 py-2 rounded-md focus:outline-none focus:ring focus:border-blue-500 w-full"
-                                    placeholder="Tested Value" />
-                                </td>
-                                <td className="px-6 py-4 whitespace-nowrap">  g/dl  </td>
-                                <td className="px-6 py-4 whitespace-nowrap">   2.5 -3.5 </td>
-                            </tr>
-
-                            <tr>
-                            <td className="px-6 py-4 whitespace-nowrap">
-                                   Albumin/Globulin Ratio
-                                </td>
-                                <td className="px-6 py-4 whitespace-nowrap">
-                                <input type="text" value={result} onChange={(e) => setResult(e.target.value)}
-                                    className="border border-blue-300 px-3 py-2 rounded-md focus:outline-none focus:ring focus:border-blue-500 w-full"
-                                    placeholder="Tested Value" />
-                                </td>
-                                
+                                <td className="px-6 py-4 whitespace-nowrap"> mg/dl</td>
+                                <td className="px-6 py-4 whitespace-nowrap">Male: 0.70 – 1.40 <br></br> Female:   0.60 – 1.20 </td>
                             </tr>
                         </tbody>
                     </table>
@@ -212,5 +176,4 @@ function TotalProtein_Report() {
     );
 }
 
-
-export default TotalProtein_Report;
+export default Creatinine_Report;
