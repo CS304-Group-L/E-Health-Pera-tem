@@ -70,6 +70,8 @@ import NurseHome from "./Pages/Nurse/NurseHome.js";
 import StudentNumber from "./Pages/Nurse/StudentNumber.js";
 import WardFrom from "./Pages/Nurse/WardForm.js";
 import TemperatureForm from "./Pages/Nurse/TemperatureForm.js";
+import IntakeOutPutForm  from "./Pages/Nurse/IntakeOutputForm.js";
+
 
 const router = createBrowserRouter([
   {
@@ -206,6 +208,8 @@ const router = createBrowserRouter([
       { path: "/WardForm", element: <WardFrom /> },
 
       { path: "/TemperatureForm", element: <TemperatureForm /> },
+
+      { path: "/IntakeOutPutForm", element: <IntakeOutPutForm /> }
     ],
   },
 
