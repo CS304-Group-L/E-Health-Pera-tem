@@ -1,6 +1,7 @@
 import React from "react";
 import image from "../Assets/Photo2.jpg";
 import { Link } from "react-router-dom";
+
 const buttons = [
   {id: 1, name: "Student", path: "/StudentLogin"},
   {id: 2, name: "Staff", path: "/StaffLogin"},
@@ -25,7 +26,7 @@ function Services() {
           <div className="flex flex-wrap justify-center pt-5 space-x-2">
             {buttons.map((item) =>(
               <button key={item.id} className="px-4 py-2 font-bold text-black bg-red-800 rounded hover:bg-yellow-300">
-              <Link to={item.path}>{item.name}</Link>
+              <Link to={{ pathname: item.path, state: { role: item.name } }}>{item.name}</Link>
               </button>
             ))
               
