@@ -64,6 +64,7 @@ import UpdateDrugs from "./Pages/PharmacyFiles/UpdateDrugs";
 import UpdateDrugs1 from "./Pages/PharmacyFiles/UpdateDrugs1";
 import ViewDrugs from "./Pages/PharmacyFiles/ViewDrugs";
 import DrugIssueing from "./Pages/PharmacyFiles/DrugIssueing.js";
+import DrugIssueing1 from "./Pages/PharmacyFiles/DrugIssueing1.js";
 import RootLayout from "./layouts/RootLayout.js";
 
 import NurseHome from "./Pages/Nurse/NurseHome.js";
@@ -159,6 +160,8 @@ const router = createBrowserRouter([
       { path: "/UpdateDrugs1", element: <UpdateDrugs1 /> },
 
       { path: "/DrugIssueing", element: <DrugIssueing /> },
+
+      { path: "/DrugIssueing1", element: <DrugIssueing1 /> },
 
       { path: "/GiveMedicine", element: <GiveMedicine /> },
 
