@@ -78,13 +78,13 @@ const router = createBrowserRouter([
     children: [
       { path: "/", element: <Home /> },
 
-      { path: "/StudentLogin", element: <Login role="student" /> },
-      { path: "/StaffLogin", element: <Login role="staff" /> },
-      { path: "/DoctorLogin", element: <Login role="doctor" /> },
-      { path: "/PharmacyLogin", element: <Login role="pharmacy" /> },
+      { path: "/StudentLogin", element: <Login role="Student" /> },
+      { path: "/StaffLogin", element: <Login role="Staff" /> },
+      { path: "/DoctorLogin", element: <Login role="Doctor" /> },
+      { path: "/PharmacyLogin", element: <Login role="Pharmacy" /> },
       { path: "/LabLogin", element: <Login role="Laboratory" /> },
-      { path: "/WardLogin", element: <Login role="ward" /> },
-      { path: "/NurseLogin", element: <Login role="nurse" /> },
+      { path: "/WardLogin", element: <Login role="Ward" /> },
+      { path: "/NurseLogin", element: <Login role="Nurse" /> },
 
       { path: "/Signup", element: <Signup /> },
       { path: "/ForgotPassword", element: <ForgotPassword /> },

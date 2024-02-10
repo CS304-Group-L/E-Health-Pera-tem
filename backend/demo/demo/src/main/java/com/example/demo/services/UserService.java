@@ -21,8 +21,9 @@ public class UserService {
         Optional<User> existingUser = Optional.ofNullable(userRepo.findByEmail(userDto.getEmail()));
         if(existingUser.isEmpty()){
             User user=new User();
-            user.setEmail(userDto.getEmail());
+
             user.setName(userDto.getName());
+            user.setEmail(userDto.getEmail());
             user.setPassword(userDto.getPassword());
             user.setPhoneNumber(userDto.getPhoneNumber());
             user.setNationalId(userDto.getNationalId());

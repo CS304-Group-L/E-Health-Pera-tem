@@ -19,27 +19,20 @@ public class LoginService {
     public PasswordEncoder passwordEncoder;
 
 
-    public ResponseEntity<Object> loginUser(LoginDto loginDto){
-        String message ="";
-        User user1= userRepo.findByEmail(loginDto.getEmail());
+    public ResponseEntity<Object> loginUser(LoginDto loginDto) {
+        User user = userRepo.findByEmail(loginDto.getEmail());
 
-        if(user1!=null){
-            String password=loginDto.getPassword();
-            String encodedPassword= user1.getPassword();
-            boolean isPWRight = passwordEncoder.matches(password,encodedPassword);
+        if (user != null) {
+            String password = loginDto.getPassword();
+            String encodedPassword = user.getPassword();
 
-            if(isPWRight){
-                Optional<User> user=userRepo.findOneEmailAndPassword(loginDto.getEmail(),encodedPassword);
-                if(user.isPresent()){
-                    return ResponseEntity.ok("Success");
-                }else{
-                    return ResponseEntity.status(401).body("");
-                }
-            }else{
-                return ResponseEntity.status(401).body("Password Mismatch!");
+            if (password.equals(encodedPassword)) {
+                return ResponseEntity.ok("Login successful");
+            } else {
+                return ResponseEntity.status(401).body("Password mismatch");
             }
-        }else{
-            return ResponseEntity.status(401).body("User Not found!");
+        } else {
+            return ResponseEntity.status(401).body("User not found");
         }
     }
 }
