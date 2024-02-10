@@ -35,6 +35,7 @@ import LaboratoryHome from "./Pages/Laboratory/LaboratoryHome.js";
 import DraftedLabReport from "./Pages/Laboratory/DraftedLabReport";
 import NewLabReportrequest from "./Pages/Laboratory/NewLabReportRequest";
 import SubmittedLabReport from "./Pages/Laboratory/SubmittedLabReport";
+
 import AllLabReports from "./Pages/Laboratory/AllLabReports";
 import ASOT_Report from "./Pages/LabReports/ASOT_Report";
 import BloodGroup from "./Pages/LabReports/BooldGroup";
@@ -67,9 +68,11 @@ import DrugIssueing from "./Pages/PharmacyFiles/DrugIssueing.js";
 import RootLayout from "./layouts/RootLayout.js";
 
 import NurseHome from "./Pages/Nurse/NurseHome.js";
-import StudentNumber from "./Pages/Nurse/StudentNumber.js";
+import StudentNumber from "./Pages/StudentNumber.js";
 import WardFrom from "./Pages/Nurse/WardForm.js";
 import TemperatureForm from "./Pages/Nurse/TemperatureForm.js";
+
+import DoctorStudentNumber from "./Pages/Doctor/StudentNumber.js";
 
 const router = createBrowserRouter([
   {
@@ -103,8 +106,10 @@ const router = createBrowserRouter([
         path: "/StudentNumberFullBloodCount",
         element: <StudentNumber role="FullBloodCount" />,
       },
-      { path: "/StudentNumber", element: <StudentNumber role="ward" /> },
-      { path: "/StudentNumber", element: <StudentNumber role="nurse" /> },
+      { path: "/LaboratoryStudentNumber", element: <StudentNumber role="Laboratory" /> },
+      { path: "/NurseStudentNumber", element: <StudentNumber role="Nurse" /> },
+      { path: "/DoctorStudentNumber", element: <StudentNumber role="Doctor" /> },
+      { path: "/PharmacyStudentNumber", element: <StudentNumber role="Pharmacy" /> },
 
       { path: "/StudentSignup", element: <StudentSignUp /> },
 

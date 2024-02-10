@@ -29,7 +29,7 @@ const Login = ({role}) => {
 
       if (response.data === 'Login successful') {
         console.log('Role:', role);
-        navigate(`/${role}Home`);
+        navigate(`/${role}StudentNumber`);
     } else {
         setErrorMessage(response.data || 'Login failed. Please try again!.');
     }
