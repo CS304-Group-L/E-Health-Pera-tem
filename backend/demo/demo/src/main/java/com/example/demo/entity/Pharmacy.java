@@ -34,6 +34,3 @@ public class Pharmacy {
         this.quantity = quantity;
     }
 }
-    public int builder() {
-        return builder;
-    }
