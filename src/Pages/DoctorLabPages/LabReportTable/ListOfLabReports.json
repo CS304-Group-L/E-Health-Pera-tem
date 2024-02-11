@@ -96,12 +96,12 @@
     {
         "id":20,
         "report_name":"PT",
-        "path": ""
+        "path": "/PT"
     },
     {
         "id":21,
         "report_name":"Total Bilirubin",
-        "path": ""
+        "path": "/TotalBilirubin"
     },
     {
         "id":22,
