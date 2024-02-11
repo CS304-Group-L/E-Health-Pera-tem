@@ -72,10 +72,89 @@ function NewLabReportrequest() {
 
                 </div>
             </div>
-            
-        
+
+
+
+                <div className=" bg-white border-b border-black-800">
+                    <table className="min-w-full divide-y divide-black-200 border border-gray-300">
+                        <thead className="bg-blue-200">
+                        <th scope="col"
+                                className="px-6 py-3 text-left text-s font-medium text-black-500 uppercase tracking-wider">
+                                
+                            </th>
+                            <th scope="col"
+                                className="px-6 py-3 text-left text-s font-medium text-black-500 uppercase tracking-wider">
+                                Student Name
+                            </th>
+                            <th scope="col"
+                                className="px-6 py-3 text-left text-s font-medium text-black-500 uppercase tracking-wider">
+                                Student Number
+                            </th>
+                            <th scope="col"
+                                className="px-6 py-3 text-left text-s font-medium text-black-500 uppercase tracking-wider">
+                                Test Name
+                            </th>
+                            <th scope="col"
+                                className="px-6 py-3 text-left text-s font-medium text-black-500 uppercase tracking-wider">
+                                Date
+                            </th>
+                            <th scope="col"
+                                className="px-6 py-3 text-left text-s font-medium text-black-500 uppercase tracking-wider">
+                                Time
+                            </th>
+                            <th scope="col"
+                                className="px-6 py-3 text-left text-s font-medium text-black-500 uppercase tracking-wider">
+                                Action
+                            </th>
+                           
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td className="px-6 py-4 whitespace-nowrap">
+                                S.G.P.T (ALT)   
+                                </td>
+                                <td className="px-6 py-4 whitespace-nowrap">
+                                <input type="text" value={result} onChange={(e) => setResult(e.target.value)}
+                                    className="border border-blue-300 px-3 py-2 rounded-md focus:outline-none focus:ring focus:border-blue-500 w-full"
+                                    placeholder="Tested Value" />
+                                </td>
+                                <td className="px-6 py-4 whitespace-nowrap"> U/L</td>
+                                <td className="px-6 py-4 whitespace-nowrap"> Up to 40</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <div>
+                   <div className="grid grid-cols-2 gap-0 w-1/2 mt-5">
+                    <div > Performed By : </div>
+                    <div className="bg-blue-100">
+                    <input type="text" value={performedBy} onChange={(e) => setPerformedBy(e.target.value)}
+                                    className="border border-blue-300 px-3 py-2 rounded-md focus:outline-none focus:ring focus:border-blue-500 w-full"
+                                    placeholder="Performed By" />
+                    </div>
+                   </div>
+
+                </div>
+                <div className="grid grid-cols-2 gap-5 mr-0 w-1/2 right-0 mt-10">
+                    <button className="bg-red-500 p-4 rounded-full  hover:shadow-lg transform hover:scale-105 transition-all duration-300">Save Draft</button>
+                    <button className="bg-blue-500 p-4 rounded-full hover:shadow-lg transform hover:scale-105 transition-all duration-300">Submit</button>
+                </div>
+            </div>
+
         </div>
     );
 }
+
+export default PT;
+
+
+
+        </div>
+    );
+}
+
+
+
+
 
 export default  NewLabReportrequest;
