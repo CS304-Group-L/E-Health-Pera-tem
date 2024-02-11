@@ -3,30 +3,14 @@ import { Link } from "react-router-dom";
 
 function StudentSignup({}){
     return(
-        <section class="h-screen">
-       
-       
-        <div class="h-screen bg-">
-          <div
-            class="g-6 flex h-full flex-wrap items-center justify-center
-            lg:justify-between">
-            <div>
-              <label class="block text-sm font-medium text-gray-700">
-                Photo
-              </label>
-              <div class="mt-1 flex items-center">
-                <span class="inline-block h-12 w-12 rounded-full overflow-hidden bg-gray-100">
-                  <svg class="h-full w-full text-gray-300" fill="currentColor" viewBox="0 0 24 24">
-                    <path d="M24 20.993V24H0v-2.996A14.977 14.977 0 0112.004 15c4.904 0 9.26 2.354 11.996 5.993zM16.002 8.999a4 4 0 11-8 0 4 4 0 018 0z" />
-                  </svg>
-                </span>
-                <button type="button" class="ml-5 bg-white py-2 px-3 border border-gray-300 rounded-md shadow-sm text-sm leading-4 font-medium text-gray-700 hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500">
-                  Change
-                </button>
-              </div>
-              </div>
-            </div>
-
+      <section class="bg-gray-50 dark:bg-gray-900">
+      <div class="flex flex-col items-center justify-center px-6 py-8 mx-auto md:h-screen lg:py-0">
+          
+          <div class="w-full p-6 bg-white rounded-lg shadow dark:border md:mt-0 sm:max-w-md dark:bg-gray-800 dark:border-gray-700 sm:p-8">
+              <h2 class="mb-1 text-xl font-bold leading-tight tracking-tight text-gray-900 md:text-2xl dark:text-white">
+                  Student Sign-Up
+              </h2>
+              <form class="mt-4 space-y-4 lg:mt-5 md:space-y-5" action="#">
 
             <div className="mb-4">
                  <label for="full_name" class="block text-sm font-medium text-gray-600 mb-1">Full Name </label>
@@ -168,6 +152,8 @@ function StudentSignup({}){
                   >
                   <Link to={``}>SUBMIT</Link>
                   </button>
+             </div>
+             </form>
              </div>
             </div>
             
