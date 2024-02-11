@@ -45,7 +45,7 @@ const topButtons = [
     }
 ];
 
-function PT() {
+function TotalBilirubin() {
     const [labNumber, setLabNumber] = useState('');
     const [referenceNumber, setReferenceNumber] = useState('');
     const [titreNumber, setTitreNumber] = useState('');
@@ -77,9 +77,7 @@ function PT() {
                 </div>
             </div>
 
-            <div className="flex justify-center border border-black-500 
-            
-            grid-cols-1 flex  w-3/4  p-10 gap-5 ml-20">
+            <div className="flex justify-center border border-black-500 grid grid-cols-1 flex  w-3/4  p-10 gap-5 ml-20">
                 <div className="flex justify-center underline text-xl">
                     <h1>Health Centre - Laboratory - University Of Peradeniya
                     </h1>
@@ -116,7 +114,7 @@ function PT() {
                 </div>
                 <div className=" bg-blue-300 text-xl p-5 flex justify-center">
                     <h1>
-                        PT Test
+                        Total Bilirubin
                     </h1>
                 </div>
 
@@ -133,7 +131,7 @@ function PT() {
                             </th>
                             <th scope="col"
                                 className="px-6 py-3 text-left text-s font-medium text-black-500 uppercase tracking-wider">
-                                Unit
+                                Units
                             </th>
                             <th scope="col"
                                 className="px-6 py-3 text-left text-s font-medium text-black-500 uppercase tracking-wider">
@@ -143,16 +141,16 @@ function PT() {
                         <tbody>
                             <tr>
                                 <td className="px-6 py-4 whitespace-nowrap">
-                                S.G.P.T (ALT)
+                                Total Bilirubin	
                                 </td>
                                 <td className="px-6 py-4 whitespace-nowrap">
                                 <input type="text" value={titreNumber} onChange={(e) => setTitreNumber(e.target.value)}
                                     className="border border-blue-300 px-3 py-2 rounded-md focus:outline-none focus:ring focus:border-blue-500 w-full"
                                     placeholder="Tested Value" />
                                 </td>
-                                <td className="px-6 py-4 whitespace-nowrap"> U/l</td>
+                                <td className="px-6 py-4 whitespace-nowrap"> mg/dl</td>
                                 <td className="px-6 py-4 whitespace-nowrap">
-                                Up to 40
+                                0.1-1.17
                                 </td>
                             </tr>
                         </tbody>
@@ -179,4 +177,4 @@ function PT() {
     ); 
 }
 
-export default PT;
+export default TotalBilirubin;

@@ -101,7 +101,7 @@
     {
         "id":21,
         "report_name":"Total Bilirubin",
-        "path": ""
+        "path": "/TotalBilirubin"
     },
     {
         "id":22,
