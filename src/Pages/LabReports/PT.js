@@ -29,6 +29,7 @@ const topButtons = [
         img: submitedLabTest,
         path: "/SubmittedLabReport"
     },
+    
     {
         id: 4,
         name: "All Lab Report Types",
