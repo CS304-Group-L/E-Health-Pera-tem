@@ -1,4 +1,4 @@
-package com.example.demo.controller;
+/*package com.example.demo.controller;
 
 import com.example.demo.dto.LoginDto;
 import com.example.demo.services.LoginResponse;
@@ -15,10 +15,12 @@ public class StudentController {
     @Autowired
     private StudentServices studentServices;
 
+    //student registration
+
     //user Login
     @PostMapping("login")
     public ResponseEntity<?> loginUser(@RequestBody LoginDto loginDto){
         LoginResponse loginResponse=studentServices.loginUser(loginDto);
         return ResponseEntity.ok(loginResponse);
     }
-}
+}*/

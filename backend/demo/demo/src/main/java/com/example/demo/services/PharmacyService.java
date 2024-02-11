@@ -41,7 +41,8 @@ public class PharmacyService {
     public PharmacyDto savePharmacy(PharmacyDto pharmacyDto){
 
 
-        return pharmacyRepo.save(PharmacyDto.builder());
+        //return pharmacyRepo.save(PharmacyDto.builder());
+        return pharmacyDto;
     }
 
 

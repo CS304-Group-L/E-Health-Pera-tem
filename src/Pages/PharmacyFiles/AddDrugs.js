@@ -1,11 +1,12 @@
-import React from "react";
-import { Link } from "react-router-dom";
-
+import React, { useState } from 'react';
+import { Link, useNavigate } from "react-router-dom";
+import axios from 'axios';
 import home from "../../Assets/home.png";
 import add from "../../Assets/add.png";
 import view from "../../Assets/view.png";
 import deelete from "../../Assets/delete.png";
 import update from "../../Assets/update.png";
+
 
 const topButtons = [
   {
@@ -45,7 +46,48 @@ const topButtons = [
   },
 ];
 
-function AddDrugs() {
+function AddDrugs({ role }) {
+  const [drugData, setDrugData] = useState({
+    drugName: '',
+    drugBrand: '',
+    drugAmount: '',
+  });
+
+  const [errorMessage, setErrorMessage] = useState('');
+  const navigate = useNavigate();
+
+  const handleChange = (e) => {
+    setDrugData({ ...drugData, [e.target.name]: e.target.value });
+  };
+
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+
+    try {
+      const response = await axios.put('http://localhost:8080/api/v1/pharmacy/savePharmacy', drugData);
+      console.log(response.data);
+
+      console.log('Before navigation');
+
+      if (response.data === 'Drug Added successfully') {
+        console.log('Role:', role);
+        navigate(`/viewDrugs`);
+      } else {
+        setErrorMessage(response.data || 'Fail to add the drug');
+      }
+
+      // Log after navigation
+      console.log('After navigation');
+
+    } catch (error) {
+      if (error.response) {
+        setErrorMessage(error.response.data || 'Fail to add the drug');
+      } else {
+        setErrorMessage('Fail to add the drug');
+      }
+    }
+  };
+
   return (
     <div>
       <div className="flex justify-center">
@@ -71,24 +113,33 @@ function AddDrugs() {
 
       <div className="flex items-center justify-center h-screen ">
         <div className="max-w-screen-md p-8 bg-white rounded-lg shadow-md">
+        <form onSubmit={handleSubmit} className="bg-white shadow-md rounded px-8 pt-6 pb-8 mb-4 h-full flex flex-col justify-center">
           <h1 className="mb-6 text-2xl font-bold text-center text-blue-900 ">
             Adding Drug
           </h1>
           <div className="mb-6 text-l px-3 py-2  text-blue-900 ">
             Drug Name
             <input
-              type="name"
-              placeholder="Drug Name"
               className="w-full px-3 py-2 mb-6 border rounded"
+              id="drugName"
+              type="drugName"
+              placeholder="Enter Drug Name"
+              name="drugName"
+              value={drugData.drugName}
+              onChange={handleChange}
               required
             />
           </div>
           <div className="mb-6 text-l px-3 py-2  text-blue-900 ">
             Drug Brand
             <input
-              type="brand"
-              placeholder="Drug Brand"
               className="w-full px-3 py-2 mb-6 border rounded"
+              id="drugBrand"
+              type="drugBrand"
+              placeholder="Enter Drug Brand"
+              name="drugBrand"
+              value={drugData.drugBrand}
+              onChange={handleChange}
               required
             />
           </div>
@@ -96,20 +147,26 @@ function AddDrugs() {
           <div className="mb-6 text-l px-3 py-2  text-blue-900 ">
             Amount
             <input
-              type="amount"
-              placeholder="Amount"
               className="w-full px-3 py-2 mb-6 border rounded"
+              id="drugAmount"
+              type="drugAmount"
+              placeholder="Enter Drug Amount"
+              name="drugAmount"
+              value={drugData.drugAmount}
+              onChange={handleChange}
               required
             />
           </div>
+          {errorMessage && <p className="text-red-500 text-xs italic mb-4">{errorMessage}</p>}
           <div>
-            <Link to="/ViewDrugs">
+            
               <button className="px-4 py-2 text-white bg-red-800 rounded hover:bg-yellow-300 items-center justify-center text-center">
                 Add
               </button>
-            </Link>
+            
           </div>
-        </div>
+          </form>
+        </div>   
       </div>
     </div>
   );

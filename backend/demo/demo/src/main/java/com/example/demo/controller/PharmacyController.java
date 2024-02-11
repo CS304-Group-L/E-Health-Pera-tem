@@ -11,7 +11,7 @@ import org.springframework.web.bind.annotation.*;
 
 @RestController
 @RequestMapping(value = "api/v1/pharmacy")
-@CrossOrigin
+@CrossOrigin("http://localhost:3000")
 
 public class PharmacyController {
     @Autowired
