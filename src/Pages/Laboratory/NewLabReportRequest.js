@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState, useEffect } from 'react';
 import newLabTest from "../../Assets/new_lab_test.png";
 import draftLabTest from "../../Assets/draft_lab_test.png";
 import submitedLabTest from "../../Assets/submit_lab_test.png";
@@ -45,116 +45,70 @@ const topButtons = [
 
 function NewLabReportrequest() {
 
+    const [students, setStudents] = useState([]);
+
+  useEffect(() => {
+    // Fetch data from backend and set it to the state
+    // Replace this fetch call with your actual backend API call
+    fetch('your_backend_api_endpoint')
+      .then(response => response.json())
+      .then(data => setStudents(data))
+      .catch(error => console.error('Error fetching data:', error));
+  }, []);
+
     return (
         <div>
-
-
             <div className="flex justify-center">
                 <div className="flex justify-center w-full grid-cols-4 gap-10 mt-0 grid-rows-1">
                     {topButtons.map((item => (
-
                         <button key={item.id} className={`flex flex-col object-cover h-20 w-20 items-center p-4 m-5 rounded-full ${item.name === 'View Past Health Records' ? `bg-gray-200  underline` : item.bg_color} hover:shadow-lg transform hover:scale-110 transition-all duration-300`}
                         >
                             <div className="flex justify-center">
                                 <Link to={item.path}>
-
                                     <img
                                         className="justify-center"
                                         src={item.img}
                                     />
                                 </Link>
                             </div>
-
                         </button>
-                    ))
-
-                    )}
-
+                    )))}
                 </div>
             </div>
-
-
-
-                <div className=" bg-white border-b border-black-800">
+           <div>
+            <div className="flex flex-col items-center">
+            <div className="mt-10  mb-6">
+                <h2>Student Information</h2>
+                </div>
+                <div className="bg-white border-b border-black-800">
                     <table className="min-w-full divide-y divide-black-200 border border-gray-300">
                         <thead className="bg-blue-200">
-                        <th scope="col"
-                                className="px-6 py-3 text-left text-s font-medium text-black-500 uppercase tracking-wider">
-                                
-                            </th>
-                            <th scope="col"
-                                className="px-6 py-3 text-left text-s font-medium text-black-500 uppercase tracking-wider">
-                                Student Name
-                            </th>
-                            <th scope="col"
-                                className="px-6 py-3 text-left text-s font-medium text-black-500 uppercase tracking-wider">
-                                Student Number
-                            </th>
-                            <th scope="col"
-                                className="px-6 py-3 text-left text-s font-medium text-black-500 uppercase tracking-wider">
-                                Test Name
-                            </th>
-                            <th scope="col"
-                                className="px-6 py-3 text-left text-s font-medium text-black-500 uppercase tracking-wider">
-                                Date
-                            </th>
-                            <th scope="col"
-                                className="px-6 py-3 text-left text-s font-medium text-black-500 uppercase tracking-wider">
-                                Time
-                            </th>
-                            <th scope="col"
-                                className="px-6 py-3 text-left text-s font-medium text-black-500 uppercase tracking-wider">
-                                Action
-                            </th>
-                           
+                            <tr>
+                                <th scope="col" className="px-6 py-3 text-left text-s font-medium text-black-500 uppercase tracking-wider">Student Name</th>
+                                <th scope="col" className="px-6 py-3 text-left text-s font-medium text-black-500 uppercase tracking-wider">Student Number</th>
+                                <th scope="col" className="px-6 py-3 text-left text-s font-medium text-black-500 uppercase tracking-wider">Date</th>
+                                <th scope="col" className="px-6 py-3 text-left text-s font-medium text-black-500 uppercase tracking-wider">Time</th>
+                                <th scope="col" className="px-6 py-3 text-left text-s font-medium text-black-500 uppercase tracking-wider">Action</th>
+                            </tr>
                         </thead>
                         <tbody>
-                            <tr>
-                                <td className="px-6 py-4 whitespace-nowrap">
-                                S.G.P.T (ALT)   
-                                </td>
-                                <td className="px-6 py-4 whitespace-nowrap">
-                                <input type="text" value={result} onChange={(e) => setResult(e.target.value)}
-                                    className="border border-blue-300 px-3 py-2 rounded-md focus:outline-none focus:ring focus:border-blue-500 w-full"
-                                    placeholder="Tested Value" />
-                                </td>
-                                <td className="px-6 py-4 whitespace-nowrap"> U/L</td>
-                                <td className="px-6 py-4 whitespace-nowrap"> Up to 40</td>
-                            </tr>
+                            {students.map(student => (
+                                <tr key={student.id}>
+                                    <td>{student.name}</td>
+                                    <td>{student.number}</td>
+                                    <td>{student.test}</td>
+                                    <td>{student.date}</td>
+                                    <td>{student.time}</td>
+                                    <td>{student.action}</td>
+                                </tr>
+                            ))}
                         </tbody>
                     </table>
                 </div>
-                <div>
-                   <div className="grid grid-cols-2 gap-0 w-1/2 mt-5">
-                    <div > Performed By : </div>
-                    <div className="bg-blue-100">
-                    <input type="text" value={performedBy} onChange={(e) => setPerformedBy(e.target.value)}
-                                    className="border border-blue-300 px-3 py-2 rounded-md focus:outline-none focus:ring focus:border-blue-500 w-full"
-                                    placeholder="Performed By" />
-                    </div>
-                   </div>
-
-                </div>
-                <div className="grid grid-cols-2 gap-5 mr-0 w-1/2 right-0 mt-10">
-                    <button className="bg-red-500 p-4 rounded-full  hover:shadow-lg transform hover:scale-105 transition-all duration-300">Save Draft</button>
-                    <button className="bg-blue-500 p-4 rounded-full hover:shadow-lg transform hover:scale-105 transition-all duration-300">Submit</button>
-                </div>
             </div>
-
+        </div>
         </div>
     );
 }
 
-export default PT;
-
-
-
-        </div>
-    );
-}
-
-
-
-
-
-export default  NewLabReportrequest;
+export default NewLabReportrequest;

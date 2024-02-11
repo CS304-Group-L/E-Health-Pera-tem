@@ -1,4 +1,4 @@
-import React from "react";
+/*import React from "react";
 import newLabTest from "../../Assets/new_lab_test.png";
 import draftLabTest from "../../Assets/draft_lab_test.png";
 import submitedLabTest from "../../Assets/submit_lab_test.png";
@@ -29,7 +29,7 @@ const topButtons = [
         img: submitedLabTest,
         path: "/SubmittedLabReport"
     },
-    
+
     {
         id: 4,
         name: "All Lab Report Types",
@@ -46,4 +46,4 @@ const topButtons = [
     }
 ];
 
-
+*/
