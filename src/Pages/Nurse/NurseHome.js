@@ -13,41 +13,41 @@ const options = [
       name: "Ward Forms",
       bg_color: "bg-blue-500",
       img:  ward,
-      path:"/StudentNumberWard"
+      path:"/WardForm"
     },
     {
       id: 2,
       name: "Temperature Chart",
       bg_color: "bg-yellow-300",
       img: temperature,
-      path:"/StudentNumberTemperature"
+      path:"/TemperatureForm"
     },
     { id: 3, 
       name: "Intake Out Put Chart", 
       bg_color: "bg-green-400", 
       img:intake,
-      path:"/StudentNumberIntakeOutPutChart" 
+      path:"/IntakeOutPutForm" 
     },
     {
       id: 4,
       name: "Drug Chart",
       bg_color: "bg-purple-400",
       img: medicine,
-      path:"/StudentNumberDurg"
+      path:"/DrugForm"
     },
     {
         id: 5,
         name: "Full Blood Count Chart",
         bg_color: "bg-red-400",
         img: bloodcell,
-        path:"/StudentNumberFullBloodCount"
+        path:"/FullBloodCountForm"
       },
       {
         id: 6,
         name: "Exit",
         bg_color: "bg-blue-100",
         img: exit,
-        path:"/AllLabReports"
+        path:"/Service"
       },
   ];
 

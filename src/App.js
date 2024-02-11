@@ -73,6 +73,7 @@ import WardFrom from "./Pages/Nurse/WardForm.js";
 import TemperatureForm from "./Pages/Nurse/TemperatureForm.js";
 import IntakeOutPutForm  from "./Pages/Nurse/IntakeOutPutForm.js";
 import DrugForm from "./Pages/Nurse/DrugForm.js";
+import FullBloodCountForm from "./Pages/Nurse/FullBloodCountForm.js";
 
 
 import DoctorStudentNumber from "./Pages/Doctor/StudentNumber.js";
@@ -217,7 +218,9 @@ const router = createBrowserRouter([
 
       { path: "/IntakeOutPutForm", element: <IntakeOutPutForm /> },
 
-      { path: "/DrugForm", element: <DrugForm /> }
+      { path: "/DrugForm", element: <DrugForm /> },
+
+      { path:"/FullBloodCountForm" ,element:<FullBloodCountForm/>} 
     ],
   },
 
