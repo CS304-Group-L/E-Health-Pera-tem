@@ -27,13 +27,8 @@ function Login({ role }) {
 
       if (response.data === 'Login successful') {
         console.log('Role:', role);
-<<<<<<< HEAD
         navigate(`/${role}Home`);
-    } else {
-=======
-        navigate(`/${role}StudentNumber`);
       } else {
->>>>>>> 267345da1fa7f91bfbf67126799a125d690df4dc
         setErrorMessage(response.data || 'Login failed. Please try again!.');
       }
 

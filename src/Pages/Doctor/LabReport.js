@@ -46,7 +46,7 @@ const topButtons = [
         name: "Home",
         bg_color: "bg-white-300",
         img: home,
-        path: "/DoctorBoard"
+        path: "/DoctorHome"
     }
 ];
 const buttons = [
