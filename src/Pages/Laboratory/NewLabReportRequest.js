@@ -91,6 +91,14 @@ function NewLabReportrequest() {
                                 <th scope="col" className="px-6 py-3 text-left text-s font-medium text-black-500 uppercase tracking-wider">Action</th>
                             </tr>
                         </thead>
+                        <tr>
+                                <th scope="col" className="px-6 py-3 text-left text-s font-medium text-black-500 ZzZtracking-wider">Tharuka Samarakoon</th>
+                                <th scope="col" className="px-6 py-3 text-left text-s font-medium text-black-500 tracking-wider">S18494</th>
+                                <th scope="col" className="px-6 py-3 text-left text-s font-medium text-black-500 tracking-wider">2024.02.12</th>
+                                <th scope="col" className="px-6 py-3 text-left text-s font-medium text-black-500 tracking-wider">09.34</th>
+                                <th scope="col" className="px-6 py-3 text-left text-s font-medium text-black-500 tracking-wider">---</th>
+                            </tr>
+
                         <tbody>
                             {students.map(student => (
                                 <tr key={student.id}>
@@ -101,6 +109,7 @@ function NewLabReportrequest() {
                                     <td>{student.time}</td>
                                     <td>{student.action}</td>
                                 </tr>
+                                
                             ))}
                         </tbody>
                     </table>
