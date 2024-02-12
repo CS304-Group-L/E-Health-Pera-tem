@@ -8,6 +8,6 @@ import org.yaml.snakeyaml.events.Event;
 
 @EnableJpaRepositories
 @Repository
-public interface LaboratoryRepository extends JpaRepository<ReportDetails, Event.ID> {
+public interface LaboratoryRepository extends JpaRepository<ReportDetails, String> {
 }
 
