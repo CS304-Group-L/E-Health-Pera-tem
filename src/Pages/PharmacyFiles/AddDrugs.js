@@ -59,25 +59,31 @@ function AddDrugs({ role }) {
     setDrugData({ ...drugData, [e.target.name]: e.target.value });
   };
 
+  
   const handleSubmit = async (e) => {
     e.preventDefault();
-
+    console.log(drugData);
+  
     try {
       const response = await axios.post(
         "http://localhost:8080/api/v1/pharmacy/savePharmacy",
-        drugData
+        {
+          drug_name: drugData.drugName,
+          drug_brand: drugData.drugBrand,
+          quantity: parseInt(drugData.drugAmount)  // Convert drugAmount to integer
+        }
       );
       console.log(response.data);
-
+  
       console.log("Before navigation");
-
+  
       if (response.data === "Add successful") {
         console.log("Role:", role);
         navigate(`/drugStore`);
       } else {
         setErrorMessage(response.data || "Fail to add the drug");
       }
-
+  
       // Log after navigation
       console.log("After navigation");
     } catch (error) {
@@ -88,6 +94,7 @@ function AddDrugs({ role }) {
       }
     }
   };
+  
   return (
     <div>
       <div className="flex justify-center">
@@ -165,8 +172,10 @@ function AddDrugs({ role }) {
               />
             </div>
             {errorMessage && (
-  <p className="text-red-500 text-xs italic mb-4">{errorMessage.error || "An error occurred"}</p>
-)}
+              <p className="text-red-500 text-xs italic mb-4">
+                {errorMessage.error || "An error occurred"}
+              </p>
+            )}
             <div>
               <button className="px-4 py-2 text-white bg-red-800 rounded hover:bg-yellow-300 items-center justify-center text-center">
                 Add

@@ -60,23 +60,23 @@ function DeleteDrugs({ role }) {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-
+  
     try {
       const response = await axios.delete(
-        "http://localhost:8080/api/v1/pharmacy/{pharmacyId}",
+        `http://localhost:8080/api/v1/pharmacy/{pharmacyId}`, // Use template literal to include pharmacyId
         drugData
       );
       console.log(response.data);
-
+  
       console.log("Before navigation");
-
+  
       if (response.data === "Delete successful") {
         console.log("Role:", role);
-        navigate(`/DeleteDrugs1`);
+        navigate(`/DrugStore`);
       } else {
         setErrorMessage(response.data || "Fail to delete the drug");
       }
-
+  
       // Log after navigation
       console.log("After navigation");
     } catch (error) {
@@ -87,6 +87,7 @@ function DeleteDrugs({ role }) {
       }
     }
   };
+  
   return (
     <div>
       <div className="flex justify-center">
