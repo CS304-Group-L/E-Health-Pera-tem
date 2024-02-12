@@ -5,12 +5,32 @@ import { useGlobalFilter} from "react-table";
 import { Columns } from "./Clolumns";
 import ListOfLabReports from './ListOfLabReports.json';
 import { SearchLabTest } from "./SearchLabTset";
+import {  useEffect } from 'react';
 
 export const LabReportTable = ()=>{
 
     const [draggedItem,setDraggedItem] = useState(null);
     const [textBoxValue,setTextBoxValue] = useState('');
+    const [studentNumber, setStudentNumber] = useState('');
+    const [date, setDate] = useState('');
+    const [time, setTime] = useState('');
     const [doctorName,setDoctorName] = useState('');
+
+    useEffect(() => {
+        const getCurrentDate = () => {
+            const now = new Date();
+            const formattedDate = now.toISOString().slice(0, 10); // Get date in YYYY-MM-DD format
+            return formattedDate;
+        };
+        const getCurrentTime = () => {
+            const now = new Date();
+            const formattedTime = now.toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' }); // Get time in HH:MM format
+            return formattedTime;
+        };
+
+        setDate(getCurrentDate());
+        setTime(getCurrentTime());
+    }, []);
 
     const handleDoctorNameChange = (e) => {
         setDoctorName(e.target.value);
@@ -127,12 +147,18 @@ export const LabReportTable = ()=>{
                     <div className="bg-gray-100 m-3 p-5" >
                         
                         <div className="p-1 m-1">
-                            <div>
-                            Student Name : S.S.K.Rathnapriya
-                            </div>
-                               <div>
-                                Student Number : S/18/486
-                                </div> 
+                        <div className="px-6 py-4 whitespace-nowrap">Date : {date}</div>
+                    <div className="px-6 py-4 whitespace-nowrap">Time : {time}</div>
+                    <label className="block mb-2 m-5">
+                    Enter Enrollment Number:
+                        <div className='mt-5'>
+                            <input type="text" value={studentNumber} onChange={(e) => setStudentNumber(e.target.value)}
+                                className="border border-gray-300 px-3 py-2 rounded-md focus:outline-none focus:ring focus:border-blue-500 w-full resize-none bg-gray-100 h-50"
+                                placeholder="Enter description here"
+                            />
+                        </div>
+                    </label>
+                               
                             
                         </div>
                     <label >
@@ -157,6 +183,13 @@ export const LabReportTable = ()=>{
         className="border w-3/4 m-5 center"
       />
                     </div>
+                    <div className='m-5 mt-5 mr-10'>
+                        <button type="submit" className="text-black bg-red-800 rounded hover:bg-yellow-300 text-white px-4 py-2">
+                            Save & View Health Records
+                        </button>
+                    </div>
+
+                    
                     </div>
                     
                 </div>

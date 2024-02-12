@@ -7,7 +7,7 @@ const list = [
   {id: 2, name: "Services", path: "/Services"},
   {id: 3, name: "About", path: "/About"},
   {id: 4, name: "Contact Us", path: "/Contactus"},
-  {id: 5, name: "Login", path: "/Login"},
+  
 ]
 const Navbar = () => {
   return (

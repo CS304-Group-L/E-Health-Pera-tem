@@ -18,9 +18,9 @@ public class MedicineRecordService {
     public boolean addMedicineRecord(MedicineRecordeDto medicineRecordeDto){
         MedicineRecords medicineRecords=new MedicineRecords();
         medicineRecords.setStudentNumber(medicineRecordeDto.getStudentNumber());
-        medicineRecords.setMedicine(medicineRecordeDto.getMedicineList());
+        medicineRecords.setMedicineList(medicineRecordeDto.getMedicineList());
         medicineRecords.setTime(medicineRecordeDto.getTime());
-        medicineRecords.setDate(medicineRecords.getDate());
+        medicineRecords.setDate(medicineRecordeDto.getDate());
 
         medicineRecordeRepo.save(medicineRecords);
         return true;

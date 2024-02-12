@@ -13,7 +13,7 @@ const options = [
       name: "Ward Forms",
       bg_color: "bg-blue-500",
       img:  ward,
-      path:"/StudentNumberWard"
+      path:"/WardForm"
     },
     {
       id: 2,

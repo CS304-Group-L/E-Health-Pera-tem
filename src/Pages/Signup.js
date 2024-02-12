@@ -34,7 +34,7 @@ const Signup = () => {
       });
 
       console.log(response.data);
-      navigate("/Home")
+      navigate("/Service")
      
 
     } catch (error) {

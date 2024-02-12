@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import { useState,useEffect } from 'react';
 import home from "../../Assets/home.png"
 import { Link } from "react-router-dom";
 
@@ -23,6 +23,24 @@ function GiveMedicine() {
     const [enrollNumber, setEnrollNumber] = useState('');
     const [medicineName, setMedicineName] = useState('');
     const [prescriptionList, setPrescriptionList] = useState([]);
+    const [date, setDate] = useState('');
+    const [time, setTime] = useState('');
+
+    useEffect(() => {
+        const getCurrentDate = () => {
+            const now = new Date();
+            const formattedDate = now.toISOString().slice(0, 10); // Get date in YYYY-MM-DD format
+            return formattedDate;
+        };
+        const getCurrentTime = () => {
+            const now = new Date();
+            const formattedTime = now.toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' }); // Get time in HH:MM format
+            return formattedTime;
+        };
+
+        setDate(getCurrentDate());
+        setTime(getCurrentTime());
+    }, []);
 
     const handleAddMedicine = () => {
         if (medicineName.trim() !== '') {
@@ -45,12 +63,33 @@ function GiveMedicine() {
         setMedicineName(e.target.value);
     };
 
-    const handleSubmit = () => {
-        // Here you would send the data to the backend (API call).
-        //This is for now
-        console.log('Enroll Number:', enrollNumber);
-        console.log('Prescription List:', prescriptionList);
+    const handleSubmit = async () => {
+        try {
+            const response = await fetch('http://localhost:8080/api/v1/medicineRecord/giveMedicine', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                },
+                body: JSON.stringify({
+                    date, 
+                    time, 
+                    studentNumber: enrollNumber,
+                    medicineList: prescriptionList,
+                }),
+            });
+    
+            if (response.ok) {
+                const result = await response.json();
+                console.log('Backend response:', result);
+                // Handle any additional logic or UI updates here
+            } else {
+                console.error('Failed to give medicine');
+            }
+        } catch (error) {
+            console.error('Error while giving medicine:', error);
+        }
     };
+    
 
     return (
         <div className="block mb-2 font-semibold font-poppins">

@@ -4,6 +4,7 @@ import medicine from "../../Assets/medicine_icon.png";
 import lab from "../../Assets/lab icon.png";
 import medical from "../../Assets/medical.png"
 import { Link } from "react-router-dom";
+import { useLocation } from "react-router-dom";
 
 const options = [
   {
@@ -37,8 +38,15 @@ const options = [
 
 
 function DoctorHome() {
+  const location = useLocation();
+  const studentNumber = location?.state?.studentNumber || '';
+  
+console.log("Received Student Number:", studentNumber);
+
   return (
     <div>
+      {studentNumber}
+      <div>Give Medical Service For : {studentNumber}</div>
      
     <div className = "flex justify-center">
       <div className="grid w-1/2 grid-cols-2 gap-10 mt-20 ">

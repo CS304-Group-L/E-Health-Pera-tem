@@ -17,7 +17,7 @@ public class HealthRecordController {
 
     //add health records
     @PostMapping("addHealthRecords")
-    public boolean addHealthRecords(HealthRecordDto healthRecordDto){
+    public boolean addHealthRecords(@RequestBody HealthRecordDto healthRecordDto){
         return healthRecordService.addHealthRecords(healthRecordDto);
     }
 

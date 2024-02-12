@@ -12,6 +12,6 @@ import java.util.List;
 @Repository
 @EnableJpaRepositories
 public interface HealthRecordRepo extends JpaRepository<HealthRecords,Long> {
-    @Query(value = "SELECT * FROM HEALTH RECORDS WHERE student_number = ?1", nativeQuery = true)
+    @Query(value = "SELECT * FROM HEALTH_RECORDS WHERE student_number = ?1", nativeQuery = true)
     List<HealthRecords> getUserById(String studentNumber);
 }
