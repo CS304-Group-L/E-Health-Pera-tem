@@ -71,6 +71,36 @@ function SubmittedLabReport() {
                     )}
 
                 </div>
+
+                <div className="flex flex-col items-center">
+            <div className="mt-10  mb-6">
+                <h2>Student Information</h2>
+                </div>
+                <div className="bg-white border-b border-black-800">
+                    <table className="min-w-full divide-y divide-black-200 border border-gray-300">
+                        <thead className="bg-blue-200">
+                            <tr>
+                                <th scope="col" className="px-6 py-3 text-left text-s font-medium text-black-500 uppercase tracking-wider">Student Name</th>
+                                <th scope="col" className="px-6 py-3 text-left text-s font-medium text-black-500 uppercase tracking-wider">Student Number</th>
+                                <th scope="col" className="px-6 py-3 text-left text-s font-medium text-black-500 uppercase tracking-wider">Date</th>
+                                <th scope="col" className="px-6 py-3 text-left text-s font-medium text-black-500 uppercase tracking-wider">Time</th>
+                                <th scope="col" className="px-6 py-3 text-left text-s font-medium text-black-500 uppercase tracking-wider">Action</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                        <tr>
+                                <th scope="col" className="px-6 py-3 text-left text-s font-medium text-black-500 ZzZtracking-wider">Tharuka Samarakoon</th>
+                                <th scope="col" className="px-6 py-3 text-left text-s font-medium text-black-500 tracking-wider">S18494</th>
+                                <th scope="col" className="px-6 py-3 text-left text-s font-medium text-black-500 tracking-wider">2024.02.12</th>
+                                <th scope="col" className="px-6 py-3 text-left text-s font-medium text-black-500 tracking-wider">09.34</th>
+                                <th scope="col" className="px-6 py-3 text-left text-s font-medium text-black-500 tracking-wider">---</th>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+
+
             </div>
             
         
