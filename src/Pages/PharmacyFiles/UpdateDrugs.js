@@ -1,6 +1,6 @@
-import React from "react";
-
-import { Link } from "react-router-dom";
+import React, { useState } from "react";
+import { Link, useNavigate } from "react-router-dom";
+import axios from "axios";
 import home from "../../Assets/home.png";
 import add from "../../Assets/add.png";
 import view from "../../Assets/view.png";
@@ -13,28 +13,28 @@ const topButtons = [
     name: "Add Drugs",
     bg_color: "bg-green-600",
     img: add,
-    path: "/PharmacyFile/AddDrugs",
+    path: "/AddDrugs",
   },
   {
     id: 2,
     name: "Update Drugs",
     bg_color: "bg-blue-500",
     img: update,
-    path: "/PharmacyFile/UpdateDrugs",
+    path: "/UpdateDrugs",
   },
   {
     id: 3,
     name: "Delete Drugs",
     bg_color: "bg-purple-600",
     img: deelete,
-    path: "/PharmacyFile/DeleteDrugs",
+    path: "/DeleteDrugs",
   },
   {
     id: 4,
     name: "View Drugs",
     bg_color: "bg-yellow-300",
     img: view,
-    path: "/PharmacyFile/ViewDrugs",
+    path: "/ViewDrugs",
   },
   {
     id: 5,
@@ -45,7 +45,48 @@ const topButtons = [
   },
 ];
 
-function UpdateDrugs() {
+function UpdateDrugs({ role }) {
+  const [drugData, setDrugData] = useState({
+    drugName: "",
+    drugBrand: "",
+  });
+
+  const [errorMessage, setErrorMessage] = useState("");
+  const navigate = useNavigate();
+
+  const handleChange = (e) => {
+    setDrugData({ ...drugData, [e.target.name]: e.target.value });
+  };
+
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+
+    try {
+      const response = await axios.put(
+        "http://localhost:8080/api/v1/pharmacy/{pharmacyId}/decrease-quantity",
+        drugData
+      );
+      console.log(response.data);
+
+      console.log("Before navigation");
+
+      if (response.data === "Update successful") {
+        console.log("Role:", role);
+        navigate(`/UpdateDrugs1`);
+      } else {
+        setErrorMessage(response.data || "Fail to update the drug");
+      }
+
+      // Log after navigation
+      console.log("After navigation");
+    } catch (error) {
+      if (error.response) {
+        setErrorMessage(error.response.data || "Fail to update the drug");
+      } else {
+        setErrorMessage("Fail to update the drug");
+      }
+    }
+  };
   return (
     <div>
      
@@ -78,20 +119,28 @@ function UpdateDrugs() {
           <div className="mb-6 text-l px-3 py-2  text-blue-900 ">
             Drug Name
             <input
-              type="name"
-              placeholder="Drug Name"
-              className="w-full px-3 py-2 mb-6 border rounded"
-              required
-            />
+                className="w-full px-3 py-2 mb-6 border rounded"
+                id="drugName"
+                type="drugName"
+                placeholder="Enter Drug Name"
+                name="drugName"
+                value={drugData.drugName}
+                onChange={handleChange}
+                required
+              />
           </div>
           <div className="mb-6 text-l px-3 py-2  text-blue-900 ">
             Drug Brand
             <input
-              type="brand"
-              placeholder="Drug Brand"
-              className="w-full px-3 py-2 mb-6 border rounded"
-              required
-            />
+                className="w-full px-3 py-2 mb-6 border rounded"
+                id="drugBrand"
+                type="drugBrand"
+                placeholder="Enter Drug Brand"
+                name="drugBrand"
+                value={drugData.drugBrand}
+                onChange={handleChange}
+                required
+              />
           </div>
           <div>
             <Link to="/PharmacyFile/UpdateDrugs1">
