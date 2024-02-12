@@ -1,5 +1,5 @@
 import React from "react";
-
+import { useState, useEffect } from 'react';
 import { Link } from "react-router-dom";
 
 const topButtons = [
@@ -17,6 +17,27 @@ const topButtons = [
     }];
 
 function ViewPastHealthRecords(){
+
+    const [enrollNumber, setEnrollNumber] = useState("");
+  const [healthRecords, setHealthRecords] = useState([]);
+
+  useEffect(() => {
+    // Fetch health records from the backend when the component mounts
+    fetchHealthRecords();
+  }, []);
+
+  const fetchHealthRecords = async () => {
+    try {
+      const response = await fetch(
+        `http://localhost:8080/api/v1/healthRecord/viewHealthRecords?studentNumber=${enrollNumber}`
+      );
+      const data = await response.json();
+      setHealthRecords(data);
+    } catch (error) {
+      console.error("Error fetching health records:", error);
+    }
+  };
+
     return(
         <div>
             <div className="flex justify-center">
@@ -36,6 +57,40 @@ function ViewPastHealthRecords(){
                 </div>
 
             </div>
+            <div>
+        <div>
+          <label>
+            Enter Enrollment Number:
+            <input
+              type="text"
+              value={enrollNumber}
+              onChange={(e) => setEnrollNumber(e.target.value)}
+            />
+          </label>
+          <button onClick={fetchHealthRecords}>Fetch Health Records</button>
+        </div>
+        <h2>Health Records</h2>
+        <table>
+          <thead>
+            <tr>
+              <th>Date</th>
+              <th>Time</th>
+              <th>Student Number</th>
+              <th>Description</th>
+            </tr>
+          </thead>
+          <tbody>
+            {healthRecords.map((record) => (
+              <tr key={record.id}>
+                <td>{record.date}</td>
+                <td>{record.time}</td>
+                <td>{record.studentNumber}</td>
+                <td>{record.description}</td>
+              </tr>
+            ))}
+          </tbody>
+        </table>
+      </div>
         </div>
     );
 }

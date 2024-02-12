@@ -1,9 +1,6 @@
 package com.example.demo.entity.Doctor;
 
-import jakarta.persistence.Entity;
-import jakarta.persistence.GeneratedValue;
-import jakarta.persistence.Id;
-import jakarta.persistence.Table;
+import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
@@ -25,5 +22,10 @@ public class MedicineRecords {
     private String date;
     private String time;
     private String studentNumber;
-    private List<String> medicine;
+
+
+    @ElementCollection
+    @CollectionTable(name = "medicine_list", joinColumns = @JoinColumn(name = "record_id"))
+    @Column(name = "medicine")
+    private List<String> medicineList;;
 }

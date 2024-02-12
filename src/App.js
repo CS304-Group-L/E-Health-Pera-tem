@@ -56,6 +56,8 @@ import Urine_Protein from "./Pages/LabReports/Urine_Protein.js";
 import Liver_Profile_New from "./Pages/LabReports/Liver_Profile_New.js";
 import UFR from "./Pages/LabReports/UFR.js";
 import PT from "./Pages/LabReports/PT.js";
+import TotalBilirubin from "./Pages/LabReports/TotalBilirubin.js";
+import ALP from "./Pages/LabReports/ALP";
 
 import PharmacyHome from "./Pages/PharmacyFiles/PharmacyHome.js";
 import DrugStore from "./Pages/PharmacyFiles/drugStore.js";
@@ -74,6 +76,7 @@ import WardFrom from "./Pages/Nurse/WardForm.js";
 import TemperatureForm from "./Pages/Nurse/TemperatureForm.js";
 import IntakeOutPutForm  from "./Pages/Nurse/IntakeOutPutForm.js";
 import DrugForm from "./Pages/Nurse/DrugForm.js";
+import FullBloodCountForm from "./Pages/Nurse/FullBloodCountForm.js";
 
 
 import DoctorStudentNumber from "./Pages/Doctor/StudentNumber.js";
@@ -218,7 +221,9 @@ const router = createBrowserRouter([
 
       { path: "/IntakeOutPutForm", element: <IntakeOutPutForm /> },
 
-      { path: "/DrugForm", element: <DrugForm /> }
+      { path: "/DrugForm", element: <DrugForm /> },
+
+      { path:"/FullBloodCountForm" ,element:<FullBloodCountForm/>} 
     ],
   },
 
@@ -259,6 +264,8 @@ const router = createBrowserRouter([
   { path: "/UFR", element: <UFR /> },
 
   { path: "/PT", element: <PT /> },
+
+  {path: "/TotalBilirubin", element: <TotalBilirubin/>}
 ]);
 
 export default function App() {

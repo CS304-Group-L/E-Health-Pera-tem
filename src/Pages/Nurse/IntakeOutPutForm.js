@@ -24,12 +24,19 @@ function IntakeOutPutForm() {
         setDate(getCurrentDate());
         setTime(getCurrentTime());
     }, []);
+    const handleSubmit = (e) => {
+        e.preventDefault();
+        // Handle form submission here
+        console.log("Form submitted");
+    };
 
     return (
         <div className="flex flex-col items-center">
             <div className="text-center w-3/4 p-10 m-10">
                 <h1 className="text-xl font-bold underline mb-5">Health Center - University Of Peradeniya</h1>
                 <h2 className="text-2xl font-bold mb-5">Intake Out Put Chart</h2>
+                
+                <form onSubmit={handleSubmit}>
                 <div className="grid grid-cols-3 grid-rows-5 p-3 m-2 text-l">
                     <div> Name </div>
                     <div>:</div>
@@ -131,6 +138,12 @@ function IntakeOutPutForm() {
                         </tbody>
                     </table>
                 </div>
+                <button
+                        type="submit"
+                        className="mt-4 bg-blue-500 hover:bg-blue-700 text-white font-bold py-4 px-10 rounded focus:outline-none focus:shadow-outline"
+                    > Submit
+              </button>
+                </form>   
             </div>
         </div>
     );

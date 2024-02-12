@@ -24,45 +24,55 @@ const topButtons = [
 function CreateMedical() {
     const [enrollNumber, setEnrollNumber] = useState('');
     const [description, setDescription] = useState('');
+    const [examName, setExamName] = useState('');
     const [successMessage, setSuccessMessage] = useState('');
-    const [currentDateTime, setCurrentDateTime] = useState('');
+    const [date, setDate] = useState('');
+    const [time, setTime] = useState('');
     const navigate = useNavigate();
 
-    const updateCurrentDateTime = () => {
-        const now = new Date();
-        const formattedDateTime = now.toLocaleString('en-US', {
-          year: 'numeric',
-          month: 'short',
-          day: 'numeric',
-          hour: 'numeric',
-          minute: 'numeric',
-          second: 'numeric',
-          hour12: true,
-        });
-        setCurrentDateTime(formattedDateTime);
-      };
-
-      useEffect(() => {
-        updateCurrentDateTime();
-   
-        const interval = setInterval(() => {
-          updateCurrentDateTime();
-        }, 1000);
     
-        return () => clearInterval(interval);
-      }, []);
+    useEffect(() => {
+        const getCurrentDate = () => {
+            const now = new Date();
+            const formattedDate = now.toISOString().slice(0, 10); // Get date in YYYY-MM-DD format
+            return formattedDate;
+        };
+        const getCurrentTime = () => {
+            const now = new Date();
+            const formattedTime = now.toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' }); // Get time in HH:MM format
+            return formattedTime;
+        };
+
+        setDate(getCurrentDate());
+        setTime(getCurrentTime());
+    }, []);
 
 
-    const handleSubmit = (e) => {
+    const handleSubmit = async (e) => {
         e.preventDefault();
-
-        // Simulate a successful submission
-        //replace this with an actual API call when have a backend
-        setTimeout(() => {
-            setSuccessMessage('Data saved successfully.');
-
-            navigate('/DoctorBoard');
-        }, 1000);
+    
+        const response = await fetch('http://localhost:8080/api/v1/medicals/addMedicals', {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json',
+            },
+            body: JSON.stringify({
+                date,
+                time,
+                studentNumber: enrollNumber,
+                examName: examName,
+                description:description
+            }),
+        });
+    
+        if (response.ok) {
+            const result = await response.json();
+            setSuccessMessage(result.message);
+            navigate('/ViewPastMedicineRecords');
+        } else {
+            // Handle error
+            console.error('Failed to save data');
+        }
     };
 
     return (
@@ -89,11 +99,14 @@ function CreateMedical() {
             </div>
             <div className='m-10 mt-40 border border-gray-300 p-12 pb-20'>
                 {successMessage && <p>{successMessage}</p>}
-                <div className="mb-2 text-right text-gray-500">{currentDateTime}</div>
+                
+                                
                 <div className='text-3xl font-bold mb-8 underline'>
                     Give Medical
                 </div>
                 <form onSubmit={handleSubmit}>
+                <div className="px-6 py-4 whitespace-nowrap">Date : {date}</div>
+                <div className="px-6 py-4 whitespace-nowrap">Time : {time}</div>
                     <div className='m-5'>
                         <label>
                             Student Enrollment Number:
@@ -104,6 +117,15 @@ function CreateMedical() {
                             </div>
                         </label>
                     </div>
+                    <label className="block mb-2 m-5">
+                        Exam Name:
+                        <div className='mt-5'>
+                            <input type="text" value={examName} onChange={(e) => setExamName(e.target.value)}
+                                className="border border-gray-300 px-3 py-2 rounded-md focus:outline-none focus:ring focus:border-blue-500 w-full resize-none bg-gray-100 h-50"
+                                placeholder="Enter exam name here"
+                            />
+                        </div>
+                    </label>
                     <label className="block mb-2 m-5">
                         Doctor Report:
                         <div className='mt-5'>
